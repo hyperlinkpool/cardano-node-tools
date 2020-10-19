@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+	<property name="logging.path" value="${logging.path}" />
+	<statusListener class="ch.qos.logback.core.status.OnConsoleStatusListener" />
+	<appender name="consoleAppender" class="ch.qos.logback.core.ConsoleAppender">
+		<encoder>
+			<pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} %highlight(%-5level) %magenta(%-4relative) --- [ %thread{10} ] %cyan(%logger{20}) : %msg%n </pattern>
+		</encoder>
+	</appender>
+
+	<appender name="fileAppender" class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<file>${logging.path}</file>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<fileNamePattern>${logging.path}.%d{yyyy-MM-dd}</fileNamePattern>
+			<maxHistory>30</maxHistory>
+		</rollingPolicy>
+		<encoder>
+			<pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} %-5level %-4relative --- [%thread{10} ] %logger{35} - %msg%n</pattern>
+		</encoder>
+	</appender>
+
+	<logger name="kr.hyperlinkpool" level="info" />
+
+	<root level="info">
+		<appender-ref ref="fileAppender" />
+	</root>
+</configuration>
