@@ -100,6 +100,7 @@ public class Step1 implements PoolRegisterResult, Ordered, Runnable{
 			String poolMetaDataJsonUrl = null;
 			String inputValue = CommandListener.getInstance().listenCommand(MessageFactory.getInstance().getMessage("Metadata JSON 파일을 다운로드할 인터넷 주소를 입력하세요.(Q : 종료) : ", "M00047"), false);
 			if("Q".equalsIgnoreCase(inputValue)) {
+				poolRegisterDomain.setNextOrder(StepOrder.EXIT.getStepOrder());
 				result.setSuccess(false);
 				return;
 			}

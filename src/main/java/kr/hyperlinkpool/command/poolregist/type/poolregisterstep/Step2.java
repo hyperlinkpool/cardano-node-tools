@@ -90,6 +90,7 @@ public class Step2 implements PoolRegisterResult, Ordered, Runnable{
 			long poolPledge = 0L;
 			String inputValue = CommandListener.getInstance().listenCommand(MessageFactory.getInstance().getMessage("Pool 보증금을 입력해 주세요. (단위 : lovelace, 1 ADA = 1,000,000 lovelace). [Q : 취소] : ", "M00063"), false);
 			if("Q".equalsIgnoreCase(inputValue)) {
+				poolRegisterDomain.setNextOrder(StepOrder.EXIT.getStepOrder());
 				result.setSuccess(false);
 				return;
 			}
@@ -107,6 +108,7 @@ public class Step2 implements PoolRegisterResult, Ordered, Runnable{
 			long poolCost = 0L;
 			inputValue = CommandListener.getInstance().listenCommand(MessageFactory.getInstance().getMessage("Pool 고정 비용을 입력해 주세요. (단위 : lovelace, 1 ADA = 1,000,000 lovelace). [Q : 취소] : ", "M00065"), false);
 			if("Q".equalsIgnoreCase(inputValue)) {
+				poolRegisterDomain.setNextOrder(StepOrder.EXIT.getStepOrder());
 				result.setSuccess(false);
 				return;
 			}
@@ -130,6 +132,7 @@ public class Step2 implements PoolRegisterResult, Ordered, Runnable{
 			double poolMargin = 0.0D;
 			inputValue = CommandListener.getInstance().listenCommand(MessageFactory.getInstance().getMessage("Pool Margin을 입력해 주세요. (단위 : 100분위 소수점, 예: 3% => 0.03 으로 입력). [Q : 취소] : ", "M00067"), false);
 			if("Q".equalsIgnoreCase(inputValue)) {
+				poolRegisterDomain.setNextOrder(StepOrder.EXIT.getStepOrder());
 				result.setSuccess(false);
 				return;
 			}
@@ -153,6 +156,7 @@ public class Step2 implements PoolRegisterResult, Ordered, Runnable{
 			int relayNodeCount = 0;
 			inputValue = CommandListener.getInstance().listenCommand(MessageFactory.getInstance().getMessage("Relay Node 개수를 입력해 주세요. ( 단위 : 정수 1 이상 ) [Q : 취소] : ", "M00069"), false);
 			if("Q".equalsIgnoreCase(inputValue)) {
+				poolRegisterDomain.setNextOrder(StepOrder.EXIT.getStepOrder());
 				result.setSuccess(false);
 				return;
 			}
