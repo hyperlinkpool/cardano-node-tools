@@ -91,7 +91,7 @@ private RewardsWithdrawDomain rewardsWithdrawDomain;
 				paymentSigningKeyFilePath = cardanoKeysFolderString + NodeConstants.PATH_DELIMITER + NodeProperties.getString("cardano.keys.payment.skey");
 				stakeSigningKeyFilePath = cardanoKeysFolderString + NodeConstants.PATH_DELIMITER + NodeProperties.getString("cardano.keys.stake.skey");
 				txSignedFile = cardanoKeysFolderString +NodeConstants.PATH_DELIMITER + NodeProperties.getString("cardano.keys.tx.signed");
-				command = CommandExecutor.generateCommand(NodeCommandFormats.WITHDRAWING_REWARDS_SIGN_AND_SUBMIT_THE_TRANSACTIONS, cardanoCliName, txRawFilePath, paymentSigningKeyFilePath, stakeSigningKeyFilePath, txSignedFile);
+				command = CommandExecutor.generateCommand(NodeCommandFormats.WITHDRAWING_REWARDS_SIGN_THE_TRANSACTIONS, cardanoCliName, txRawFilePath, paymentSigningKeyFilePath, stakeSigningKeyFilePath, txSignedFile);
 				initializeProcessBuilder = CommandExecutor.initializeProcessBuilder(command);
 			}
 			

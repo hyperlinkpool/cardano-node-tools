@@ -325,7 +325,7 @@ public class NodeCommandFormats {
 			+ " --fee %s"
 			+ " --out-file %s";
 	
-	public static final String WITHDRAWING_REWARDS_SIGN_AND_SUBMIT_THE_TRANSACTIONS = ""
+	public static final String WITHDRAWING_REWARDS_SIGN_THE_TRANSACTIONS = ""
 			+ "%s"
 			+ " shelley"
 			+ " transaction"
