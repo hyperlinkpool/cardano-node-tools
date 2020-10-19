@@ -53,7 +53,7 @@ Block Producer 노드가 설치되어 있는 서버에서 Java로 실행하는 �
     - 6. Stake Pool Cold Keys & Cold Counter 생성
     - 7. Stake Pool VRF Key Pair 생성
     - 8. Stake Pool KES Key Pair 생성
-    - 9. Node Operation Certificate 생성\
+    - 9. Node Operation Certificate 생성
     - 99. 뒤로 가기
 - 2. ADA Balance Check, Pool에서 ADA 인출
     - 1. 현재 Stake Pool의 ADA Balance Check
