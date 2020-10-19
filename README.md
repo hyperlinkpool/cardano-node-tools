@@ -21,7 +21,7 @@
 - Ticker : HYPER
 - Pool ID : 263498e010c7a49bbfd7c4e1aab29809fca7ed993f9e14192a75871e
 
-- Social
+## Social
 - E-mail : hyperlinkpool@gmail.com
 - TWITTER : https://twitter.com/HYPERLINKPOOL
 - Telegram : https://t.me/HYPERLINKPOOL
