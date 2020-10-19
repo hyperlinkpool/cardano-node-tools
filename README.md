@@ -69,6 +69,7 @@
 
 ## Initial Configuration
 - config.properties 파일 작성 [참고:https://raw.githubusercontent.com/hyperlinkpool/cardano-node-tools/main/src/main/resources/config.properties]
+- Key Folder에 생성된 각종 키 정보는 반드시 백업을 해 두시기 바랍니다.
 ```jsx
 #Cardano Command
 cardano.cli.path=[카르다노 노드 실행 파일 경로를 작성해 주세요.]
