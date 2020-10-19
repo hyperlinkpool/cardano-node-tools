@@ -63,7 +63,7 @@
 
 # Installation
 
-## Delevopment Environment & Source Check out
+## Delevopment Environment
 - Install `java 1.8 or higher`
 - Install `Apache Maven latest`
 
