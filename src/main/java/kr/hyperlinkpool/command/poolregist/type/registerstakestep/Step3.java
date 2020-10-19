@@ -58,6 +58,7 @@ private RegisterStakeDomain registerStakeDomain;
 		String txIn = registerStakeDomain.getTxIn();
 		String txOut = registerStakeDomain.getTxOut();
 		long remainAmount = sumLovelace - keyDeposit - txFee;
+		MessagePrompter.promptMessage("", true);
 		MessagePrompter.promptMessage(MessageFactory.getInstance().getMessage("ADA 현재 보유량 : %s" , "M00088", String.valueOf(sumLovelace) + NodeConstants.POSTFIX_LOVELACE), true);
 		MessagePrompter.promptMessage(MessageFactory.getInstance().getMessage("Stake Register 필요량 : %s", "M00099" ,String.valueOf(keyDeposit) + NodeConstants.POSTFIX_LOVELACE), true);
 		MessagePrompter.promptMessage(MessageFactory.getInstance().getMessage("Transaction 수수료 : %s", "M00090", String.valueOf(txFee) + NodeConstants.POSTFIX_LOVELACE), true);
