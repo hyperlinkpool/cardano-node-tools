@@ -33,6 +33,7 @@
 3. Pool 등록 및 관리
 
 ## Menu Tree
+```jsx
 - 1. Key 생성, Stake 인증서 생성
     - 1. Payment Key Pair 생성
     - 2. Stake Key Pair 생성
@@ -58,6 +59,7 @@
     - 4. Pool 등록 상태 확인
     - 5. KES Key Rotation
     - 99. 뒤로 가기
+```
 
 # Installation
 
