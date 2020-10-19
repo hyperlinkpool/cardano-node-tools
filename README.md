@@ -1,31 +1,31 @@
 # Introduction
-안녕하세요. 한국 카르다노 Stake Pool Operator HYPER입니다. 노드 설치 후에 셋팅과 관리를 도와주는 툴을 제작하게 되었습니다.
-그 동안 Pool을 운영하면서 수작업으로 Command를 작성하던 작업을 시스템화하였으며, 수작업으로 발생할 수 있는 실수를 줄일 수 있도록 개발했습니다.
-노드를 관리하면서 사용하는 cardano-cli를 어느 정도 자동화할 수 있습니다.
-악성 소프트웨어로 오해받을 수 있기 때문에 Java를 이해하시는 Pool운영자가 사용해 보셨으면 좋겠습니다.
-Block Producer 노드가 설치되어 있는 서버에서 Java로 실행하는 소프트웨어 입니다.
+- 안녕하세요. 한국 카르다노 Stake Pool Operator HYPER입니다. 노드 설치 후에 셋팅과 관리를 도와주는 툴을 제작하게 되었습니다.
+- 그 동안 Pool을 운영하면서 수작업으로 Command를 작성하던 작업을 시스템화하였으며, 수작업으로 발생할 수 있는 실수를 줄일 수 있도록 개발했습니다.
+- 노드를 관리하면서 사용하는 cardano-cli를 어느 정도 자동화할 수 있습니다.
+- 악성 소프트웨어로 오해받을 수 있기 때문에 Java를 이해하시는 Pool운영자가 사용해 보셨으면 좋겠습니다.
+- Block Producer 노드가 설치되어 있는 서버에서 Java로 실행하는 소프트웨어 입니다.
 
-**Withdrawing rewards 개발중**
-**Retiring a Stake Pool 개발중**
+- **Withdrawing rewards 개발중**
+- **Retiring a Stake Pool 개발중**
 
-**TestNet은 지원하지 않습니다.**
-**면책조항 1 : 본 프로그램의 잘못된 사용으로 야기된 사항에 대해 제작자는 일체 책임이 없음을 말씀드립니다.**
-**면책조항 2 : 본 프로그램은 Freeware입니다. 따라서 사용의 강제성은 없으며, 수정, 배포, 사용 역시 자유이며, 이에 따른 책임은 사용자에게 있습니다.**
+- **TestNet은 지원하지 않습니다.**
+- **면책조항 1 : 본 프로그램의 잘못된 사용으로 야기된 사항에 대해 제작자는 일체 책임이 없음을 말씀드립니다.**
+- **면책조항 2 : 본 프로그램은 Freeware입니다. 따라서 사용의 강제성은 없으며, 수정, 배포, 사용 역시 자유이며, 이에 따른 책임은 사용자에게 있습니다.**
 
 ## Supported OS
-Java를 실행할 수 있는 모든 운영체제.
-Cardano Node가 실행되는 서버에서 실행 가능.
+- Java를 실행할 수 있는 모든 운영체제.
+- Cardano Node가 실행되는 서버에서 실행 가능.
 
 ## Developer Infomation
-Developer : Hyperlink Pool SPO
-Ticker : HYPER
-Pool ID : 263498e010c7a49bbfd7c4e1aab29809fca7ed993f9e14192a75871e
+- Developer : Hyperlink Pool SPO
+- Ticker : HYPER
+- Pool ID : 263498e010c7a49bbfd7c4e1aab29809fca7ed993f9e14192a75871e
 
 ## Social
-E-mail : hyperlinkpool@gmail.com
-TWITTER : https://twitter.com/HYPERLINKPOOL
-Telegram : https://t.me/HYPERLINKPOOL
-GITHUB : https://github.com/hyperlinkpool
+- E-mail : hyperlinkpool@gmail.com
+- TWITTER : https://twitter.com/HYPERLINKPOOL
+- Telegram : https://t.me/HYPERLINKPOOL
+- GITHUB : https://github.com/hyperlinkpool
 
 ## 주요 기능
 1. Key, 인증서 생성
