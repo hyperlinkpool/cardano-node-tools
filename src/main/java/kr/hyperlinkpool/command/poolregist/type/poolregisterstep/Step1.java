@@ -188,7 +188,7 @@ public class Step1 implements PoolRegisterResult, Ordered, Runnable{
 				continue;
 			}
 			
-			MessagePrompter.promptMessage(cardanoKeysPoolMetadataJsonFileHash, true);
+			MessagePrompter.promptMessage("Metadata Json Hash : " + cardanoKeysPoolMetadataJsonFileHash, true);
 			poolRegisterDomain.setPoolMetaDataJsonUrl(poolMetaDataJsonUrl);
 			poolRegisterDomain.setPoolMetaDataHash(cardanoKeysPoolMetadataJsonFileHash.trim());
 			poolRegisterDomain.setNextOrder(this.getOrder()+1);
