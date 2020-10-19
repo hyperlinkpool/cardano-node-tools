@@ -148,6 +148,6 @@ user.language=ko
 - Run `mvn package` 또는 Run `mvn install` 실행
 - `/target` 폴더에 cardano-node-tools-0.1.0-Beta-Release-jar-with-dependencies.jar 생성 확인
 
-## Exceution Application
+## Execution Application
 - -Dconfig.path : 위에서 작성한 config.properties내용이 포함되어 있는 파일의 전체 경로를 작성해야 합니다.
 - Run `java -Dconfig.path=/home/cardano/tools/config.properties -jar cardano-node-tools-0.1.0-Beta-Release-jar-with-dependencies.jar`
