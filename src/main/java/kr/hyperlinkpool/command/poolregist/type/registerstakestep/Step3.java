@@ -64,7 +64,7 @@ private RegisterStakeDomain registerStakeDomain;
 		MessagePrompter.promptMessage(MessageFactory.getInstance().getMessage("Transaction 수수료 : %s", "M00090", String.valueOf(txFee) + NodeConstants.POSTFIX_LOVELACE), true);
 		MessagePrompter.promptMessage(MessageFactory.getInstance().getMessage("처리 완료 후 잔여 예상량 : %s", "M00100", String.valueOf(remainAmount) + NodeConstants.POSTFIX_LOVELACE), true);
 		MessagePrompter.promptMessage("", true);
-		String inputValue = CommandListener.getInstance().listenCommand(MessageFactory.getInstance().getMessage("Stake Key를 Cardano Blockchain에 등록하시겠습니까? (Y/n) : ", "M00101"), false);
+		String inputValue = CommandListener.getInstance().listenCommand(MessageFactory.getInstance().getMessage("Stake Key를 등록하시겠습니까? (Y/n) : ", "M00101"), false);
 		
 		if("Y".equalsIgnoreCase(inputValue)) {
 			String cardanoCliName = NodeProperties.getString("cardano.cli.name");

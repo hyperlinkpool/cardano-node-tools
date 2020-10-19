@@ -107,7 +107,7 @@ public class MessageJP {
 		messageFormats.put("M00098", "이미 Stake Key가 등록되어 있습니다.");
 		messageFormats.put("M00099", "Stake Key Register 필요량 : %s");
 		messageFormats.put("M00100", "처리 완료 후 잔여 예상량 : %s");
-		messageFormats.put("M00101", "Stake Key를 Cardano Blockchain에 등록하시겠습니까? (Y/n) : ");
+		messageFormats.put("M00101", "Stake Key를 등록하시겠습니까? (Y/n) : ");
 		messageFormats.put("M00102", "Stake Key 등록에 실패하였습니다.");
 		messageFormats.put("M00103", "Pool 등록용 MetaData 생성을 진행합니다.");
 		messageFormats.put("M00104", "예시) [HYPER] Pool");
