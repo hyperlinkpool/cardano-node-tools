@@ -57,7 +57,7 @@ public class MessageJP {
 		messageFormats.put("M00048", "잘못된 URL 형식입니다. 다시 입력하세요.");
 		messageFormats.put("M00049", "URL 길이는 영문, 숫자, 기호 포함 64 Bytes(64자) 이하로 작성해야 합니다. Git Shorten URL을 이용하세요. https://git.io");
 		messageFormats.put("M00050", "잘못된 JSON파일 형식입니다. JSON파일을 확인하세요.");
-		messageFormats.put("M00051", "정확한 Meta 정보가 없는 JSON파일 형식입니다. JSON파일을 확인하세요.");
+		messageFormats.put("M00051", "Pool Meta정보(pool 이름, pool 설명, pool Ticker, 등)이 없는 JSON파일 형식입니다. URL을 다시 확인하세요.");
 		messageFormats.put("M00052", "pool 이름 : ");
 		messageFormats.put("M00053", "pool 설명 : ");
 		messageFormats.put("M00054", "pool Ticker : ");

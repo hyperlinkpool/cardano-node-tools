@@ -57,13 +57,13 @@ public class MessageKR {
 		messageFormats.put("M00048", "잘못된 URL 형식입니다. 다시 입력하세요.");
 		messageFormats.put("M00049", "URL 길이는 영문, 숫자, 기호 포함 64 Bytes(64자) 이하로 작성해야 합니다. Git Shorten URL을 이용하세요. https://git.io");
 		messageFormats.put("M00050", "잘못된 JSON파일 형식입니다. JSON파일을 확인하세요.");
-		messageFormats.put("M00051", "정확한 Meta 정보가 없는 JSON파일 형식입니다. JSON파일을 확인하세요.");
+		messageFormats.put("M00051", "Pool Meta정보(pool 이름, pool 설명, pool Ticker, 등)이 없는 JSON파일 형식입니다. URL을 다시 확인하세요.");
 		messageFormats.put("M00052", "pool 이름 : ");
 		messageFormats.put("M00053", "pool 설명 : ");
 		messageFormats.put("M00054", "pool Ticker : ");
 		messageFormats.put("M00055", "pool 홍보 홈페이지 주소 : ");
 		messageFormats.put("M00056", "선택사항) adapools.org 에 등록할 extended url : ");
-		messageFormats.put("M00057", "위에 입력한 정보가 맞습니까? (Y / n) : ");
+		messageFormats.put("M00057", "위에 입력한 정보가 맞습니까? (Y/n) : ");
 		messageFormats.put("M00058", "MetaData 파일을 저장하는 도중 에러가 발생했습니다.");
 		messageFormats.put("M00059", "MetaData 파일 용량은 512 bytes 이하로 작성해야 합니다. (현재 사이즈 : %s bytes)");
 		messageFormats.put("M00060", "MetaData 파일을 저장하는 도중 에러가 발생했습니다.");

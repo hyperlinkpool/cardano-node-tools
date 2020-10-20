@@ -125,7 +125,7 @@ public class Step1 implements PoolRegisterResult, Ordered, Runnable{
 				MessagePrompter.promptMessage(MessageFactory.getInstance().getMessage("잘못된 JSON파일 형식입니다. JSON파일을 확인하세요.", "M00050"), true);
 				continue;
 			} catch (JsonMappingException e) {
-				MessagePrompter.promptMessage(MessageFactory.getInstance().getMessage("정확한 Meta 정보가 없는 JSON파일 형식입니다. JSON파일을 확인하세요.", "M00051"), true);
+				MessagePrompter.promptMessage(MessageFactory.getInstance().getMessage("Pool Meta정보(pool 이름, pool 설명, pool Ticker, 등)이 없는 JSON파일 형식입니다. URL을 다시 확인하세요.", "M00051"), true);
 				continue;
 			} catch (IOException e) {
 				e.printStackTrace();

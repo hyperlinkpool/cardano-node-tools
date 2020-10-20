@@ -57,7 +57,7 @@ public class MessageUS {
 		messageFormats.put("M00048", "Invalid URL format. Please enter again.");
 		messageFormats.put("M00049", "The URL must be 64 Bytes (64 characters) or less including English, numbers, and symbols. Please use the Git Shorten URL. https://git.io");
 		messageFormats.put("M00050", "Incorrect JSON file format. Please check the JSON file.");
-		messageFormats.put("M00051", "This is a JSON file format without accurate Meta information. Please check the JSON file.");
+		messageFormats.put("M00051", "This is a JSON file format without Pool Meta information (pool name, pool description, pool ticker, etc.). Please check the URL again.");
 		messageFormats.put("M00052", "pool name:");
 		messageFormats.put("M00053", "pool description:");
 		messageFormats.put("M00054", "pool ticker : ");
