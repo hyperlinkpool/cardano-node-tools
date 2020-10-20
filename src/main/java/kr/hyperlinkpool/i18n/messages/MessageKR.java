@@ -66,7 +66,7 @@ public class MessageKR {
 		messageFormats.put("M00057", "위에 입력한 정보가 맞습니까? (Y/n) : ");
 		messageFormats.put("M00058", "MetaData 파일을 저장하는 도중 에러가 발생했습니다.");
 		messageFormats.put("M00059", "MetaData 파일 용량은 512 bytes 이하로 작성해야 합니다. (현재 사이즈 : %s bytes)");
-		messageFormats.put("M00060", "MetaData 파일을 저장하는 도중 에러가 발생했습니다.");
+		messageFormats.put("M00060", "MetaData 파일의 Hash값을 생성하는 도중 에러가 발생했습니다.");
 		messageFormats.put("M00061", "Cold Verification Key가 생성되지 않았습니다. 키 생성 후 다시 시도하세요.");
 		messageFormats.put("M00062", "VRF Verification Key가 생성되지 않았습니다. 키 생성 후 다시 시도하세요.");
 		messageFormats.put("M00063", "Pool 보증금을 입력해 주세요. (단위 : lovelace, 1 ADA = 1,000,000 lovelace). [Q : 취소] : ");
@@ -186,5 +186,6 @@ public class MessageKR {
 		messageFormats.put("M00151", "잔고가 충분하지 않습니다.");
 		messageFormats.put("M00152", "잔고 동기화에 시간이 걸릴 수 있습니다.");
 		messageFormats.put("M00153", "- TestNet은 지원하지 않습니다.");
+		messageFormats.put("M00154", "Cardano 로컬 Node가 중지 상태 또는 동기화중입니다. Cardano Node 동기화 완료 후 실행하세요.");
 	}
 }

@@ -19,12 +19,14 @@ Block Producer 노드가 설치되어 있는 서버에서 Java로 실행하는 �
 ```jsx
 - Withdrawing rewards 개발중
 - Retiring a Stake Pool 개발중
-- 일본어 번역중
 ```
 
 ## Supported OS
 - Java를 실행할 수 있는 모든 운영체제.
 - Cardano Node가 실행되는 서버에서 실행 가능.
+
+## Supported Language
+- 한국어, 영어, 일본어(etc. : 영어)
 
 ## Developer Infomation
 - Developer : Hyperlink Pool SPO

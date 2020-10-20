@@ -66,7 +66,7 @@ public class MessageUS {
 		messageFormats.put("M00057", "Is the information entered above correct? (Y/n):");
 		messageFormats.put("M00058", "An error occurred while saving the MetaData file.");
 		messageFormats.put("M00059", "MetaData file size must be less than 512 bytes. (Current size: %s bytes)");
-		messageFormats.put("M00060", "An error occurred while saving the MetaData file.");
+		messageFormats.put("M00060", "An error occurred while generating hash of the MetaData file.");
 		messageFormats.put("M00061", "The Cold Verification Key was not created. Please generate the key and try again.");
 		messageFormats.put("M00062", "VRF Verification Key was not created. Please generate the key and try again.");
 		messageFormats.put("M00063", "Please enter the pool deposit. (Unit: lovelace, 1 ADA = 1,000,000 lovelace). [Q : cancel]: ");
@@ -186,5 +186,6 @@ public class MessageUS {
 		messageFormats.put("M00151", "There is not enough balance.");
 		messageFormats.put("M00152", "It may takes some time to synchronize your balance.");
 		messageFormats.put("M00153", "- Do not support TestNet.");
+		messageFormats.put("M00154", "Cardano local node is stopped or synchronizing.Please run after completing Cardano Node synchronization.");
 	}
 }

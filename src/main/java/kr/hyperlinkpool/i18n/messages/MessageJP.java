@@ -7,183 +7,185 @@ public class MessageJP {
 	public static Map<String, String> messageFormats = null;
 	static {
 		messageFormats = new HashMap<String, String>();
-		messageFormats.put("M00001", "Stake 주소가 생성되지 않았습니다. アドレスを作成した後やり直してください。");
-		messageFormats.put("M00002", "Stake Key가 생성되지 않았습니다. 키 생성 후 다시 시도하세요.");
-		messageFormats.put("M00003", "(메인 메뉴 -> 3번 -> 1번 선택)");
-		messageFormats.put("M00004", "현재 보상량 : %s");
-		messageFormats.put("M00005", "인출할 수 있는 보상이 없습니다.");
-		messageFormats.put("M00006", "TxHash가 존재하지 않습니다.");
-		messageFormats.put("M00007", "인출 가능한 Rewards 수량 : %s");
-		messageFormats.put("M00008", "전송할 수량을 입력해 주세요.(입력 단위 : lovelace, 1 ADA = 1,000,000 lovelace, 취소 : Q) : ");
-		messageFormats.put("M00009", "수량이 부족합니다. 다시 입력하세요. 인출 가능 수량 : %s , 입력수량 : %s");
-		messageFormats.put("M00010", "프로세스 수행중 오류가 발생했습니다. : ");
-		messageFormats.put("M00011", "숫자를 입력해 주세요.");
-		messageFormats.put("M00012", "보유수량 : %s , 보상분 인출 수량 : %s , 수수료 : %s");
-		messageFormats.put("M00013", "인출 후 잔여 보상 수량 : %s");
-		messageFormats.put("M00014", "인출 후 총 보유 수량 : %s");
-		messageFormats.put("M00015", "인출하시겠습니까? (Y/n) : ");
-		messageFormats.put("M00016", "수수료 계산값이 실제 전송시 소요량보다 부족합니다. 수동입력으로 진행하시겠습니까?(Y/n) : ");
-		messageFormats.put("M00017", "화면에 보이는 수수료를 입력해 주세요. (Q : 취소) : ");
-		messageFormats.put("M00018", "수수료가 과도하게 높습니다. 다시 입력하세요. 수수료 허용치 : %s");
-		messageFormats.put("M00019", "다시 입력해 주세요.");
-		messageFormats.put("M00020", "취소되었습니다.");
-		messageFormats.put("M00021", "전송 실패하였습니다.");
-		messageFormats.put("M00022", "전송되었습니다.");
-		messageFormats.put("M00023", "주소를 입력해 주세요.(99 : 戻る) : ");
-		messageFormats.put("M00024", "유효한 주소가 아닙니다.");
-		messageFormats.put("M00025", "Payment 주소가 존재하지 않습니다. Payment 주소 생성 후 다시 시도하세요.");
-		messageFormats.put("M00026", "Pool 주소 : ");
-		messageFormats.put("M00027", "인출할 ADA가 없습니다.");
-		messageFormats.put("M00028", "보유 수량 : %s");
-		messageFormats.put("M00029", "보낼 주소를 입력해 주세요.(99 : 戻る) : ");
-		messageFormats.put("M00030", "현재 Pool 주소로 보낼 경우는 합산한 총액만 전송가능합니다. 전송 수수료를 제외한 나머지 총액이 전송됩니다.");
-		messageFormats.put("M00031", "진행하시겠습니까? (Y/n) :");
-		messageFormats.put("M00032", "1. 전송수량과 수수료의 합계가 보유수량보다 많을 경우,");
-		messageFormats.put("M00033", "2. 전송수량과 보유수량이 같을 경우,");
-		messageFormats.put("M00034", "보유수량에서 수수료를 제외한 나머지를 전송합니다.");
-		messageFormats.put("M00035", "보유수량 : %s , 전송수량 : %s , 수수료 : %s");
-		messageFormats.put("M00036", "Sender address : %s");
-		messageFormats.put("M00037", "Receiver address : %s");
-		messageFormats.put("M00038", "전송하시겠습니까? (Y/n)");
-		messageFormats.put("M00039", "이미 파일이 존재합니다. 삭제 후 다시 시도하세요.");
-		messageFormats.put("M00040", "Payment Verification Key가 생성되지 않았습니다. 키 생성 후 다시 시도하세요.");
-		messageFormats.put("M00041", "Stake Verification Key가 생성되지 않았습니다. 키 생성 후 다시 시도하세요.");
-		messageFormats.put("M00042", "정상 처리되었습니다.");
-		messageFormats.put("M00043", "KES Verification Key가 생성되지 않습니다. 키 생성 후 다시 시도하세요.");
-		messageFormats.put("M00044", "Cold Signing Key가 생성되지 않습니다. 키 생성 후 다시 시도하세요.");
-		messageFormats.put("M00045", "Cold Counter가 생성되지 않습니다. 키 생성 후 다시 시도하세요.");
-		messageFormats.put("M00046", "mainnet-shelley-genesis.json 파일이 존재하지 않습니다. 확인 후 다시 시도하세요.");
-		messageFormats.put("M00047", "Metadata JSON 파일을 다운로드할 인터넷 주소를 입력하세요.(Q : 종료) : ");
-		messageFormats.put("M00048", "잘못된 URL 형식입니다. 다시 입력하세요.");
-		messageFormats.put("M00049", "URL 길이는 영문, 숫자, 기호 포함 64 Bytes(64자) 이하로 작성해야 합니다. Git Shorten URL을 이용하세요. https://git.io");
-		messageFormats.put("M00050", "잘못된 JSON파일 형식입니다. JSON파일을 확인하세요.");
-		messageFormats.put("M00051", "Pool Meta정보(pool 이름, pool 설명, pool Ticker, 등)이 없는 JSON파일 형식입니다. URL을 다시 확인하세요.");
-		messageFormats.put("M00052", "pool 이름 : ");
-		messageFormats.put("M00053", "pool 설명 : ");
-		messageFormats.put("M00054", "pool Ticker : ");
-		messageFormats.put("M00055", "pool 홍보 홈페이지 주소 : ");
-		messageFormats.put("M00056", "선택사항) adapools.org 에 등록할 extended url : ");
-		messageFormats.put("M00057", "위에 입력한 정보가 맞습니까? (Y/n) : ");
-		messageFormats.put("M00058", "MetaData 파일을 저장하는 도중 에러가 발생했습니다.");
-		messageFormats.put("M00059", "MetaData 파일 용량은 512 bytes 이하로 작성해야 합니다. (현재 사이즈 : %s bytes)");
-		messageFormats.put("M00060", "MetaData 파일을 저장하는 도중 에러가 발생했습니다.");
-		messageFormats.put("M00061", "Cold Verification Key가 생성되지 않았습니다. 키 생성 후 다시 시도하세요.");
-		messageFormats.put("M00062", "VRF Verification Key가 생성되지 않았습니다. 키 생성 후 다시 시도하세요.");
-		messageFormats.put("M00063", "Pool 보증금을 입력해 주세요. (단위 : lovelace, 1 ADA = 1,000,000 lovelace). [Q : 취소] : ");
-		messageFormats.put("M00064", "입력값이 잘못되었습니다. 다시 입력하세요.");
-		messageFormats.put("M00065", "Pool 고정 비용을 입력해 주세요. (단위 : lovelace, 1 ADA = 1,000,000 lovelace). [Q : 취소] : ");
-		messageFormats.put("M00066", "Pool Cost는 최소 %s 이상이어야 합니다.");
-		messageFormats.put("M00067", "Pool Margin을 입력해 주세요. (단위 : 100분위 소수점, 예: 3% => 0.03 으로 입력). [Q : 취소] : ");
-		messageFormats.put("M00068", "1이하로 입력해야 합니다.");
-		messageFormats.put("M00069", "Relay Node 개수를 입력해 주세요. ( 단위 : 정수 1 이상 ) [Q : 취소] : ");
-		messageFormats.put("M00070", "Relay Node 정보를 입력하세요.");
-		messageFormats.put("M00071", "(예. 도메인네임:Port => relay.hyperlinkpool.kr:6000)");
-		messageFormats.put("M00072", "(예. xxx.xxx.xxx.xxx:Port => 123.123.123.123:6000)");
-		messageFormats.put("M00073", "예시의 형태대로 입력해 주세요.");
-		messageFormats.put("M00074", "Relay Node 정보가 중복되었습니다. 다시 입력하세요.");
-		messageFormats.put("M00075", "Pool 보증금 : %s");
-		messageFormats.put("M00076", "Pool 고정 비용 : %s");
-		messageFormats.put("M00077", "Pool Margin : %s");
-		messageFormats.put("M00078", "Pool 등록 인증서 생성중 오류가 발생했습니다.");
-		messageFormats.put("M00079", "Pool Delegation 인증서 생성중 오류가 발생했습니다.");
-		messageFormats.put("M00080", "Pool Registration 인증서가 생성되지 않았습니다. 인증서 생성 후 다시 시도하세요.");
-		messageFormats.put("M00081", "Pool Delegation 인증서가 생성되지 않았습니다. 인증서 생성 후 다시 시도하세요.");
-		messageFormats.put("M00082", "Payment Signing Key가 생성되지 않았습니다. 키 생성 후 다시 시도하세요.");
-		messageFormats.put("M00083", "Stake Signing Key가 생성되지 않습니다. 키 생성 후 다시 시도하세요.");
-		messageFormats.put("M00084", "Pool Id 확인중 에러가 발생했습니다.");
-		messageFormats.put("M00085", "Pool 정보 확인 중입니다. 좀 오래 걸려요.");
-		messageFormats.put("M00086", "Blockchain 확인중 에러가 발생했습니다.");
-		messageFormats.put("M00087", "ADA 보유량이 충분하지 않습니다.");
-		messageFormats.put("M00088", "ADA 현재 보유량 : %s");
-		messageFormats.put("M00089", "Pool Register 필요량 : %s");
-		messageFormats.put("M00090", "Transaction 수수료 : %s");
-		messageFormats.put("M00091", "Pool 정보를 등록하시겠습니까?(Y/n) : ");
-		messageFormats.put("M00092", "Pool 정보를 수정하시겠습니까?(Y/n) : ");
-		messageFormats.put("M00093", "처리 완료 후 잔여 예상량 : ");
-		messageFormats.put("M00094", "Pool 등록에 실패하였습니다.");
-		messageFormats.put("M00095", "등록되었습니다.");
-		messageFormats.put("M00096", "Stake Verification Key가 생성되지 않았습니다. 키 파일 생성 후 시도하세요.");
-		messageFormats.put("M00097", "Stake Certificate가 생성되지 않았습니다. 인증서 생성 후 시도하세요.");
-		messageFormats.put("M00098", "이미 Stake Key가 등록되어 있습니다.");
-		messageFormats.put("M00099", "Stake Key Register 필요량 : %s");
-		messageFormats.put("M00100", "처리 완료 후 잔여 예상량 : %s");
-		messageFormats.put("M00101", "Stake Key를 등록하시겠습니까? (Y/n) : ");
-		messageFormats.put("M00102", "Stake Key 등록에 실패하였습니다.");
-		messageFormats.put("M00103", "Pool 등록용 MetaData 생성을 진행합니다.");
-		messageFormats.put("M00104", "예시) [HYPER] Pool");
-		messageFormats.put("M00105", "pool 이름 : Hyperlink Pool");
-		messageFormats.put("M00106", "pool 설명 : We prepare for the era of hyperconnectivity.");
-		messageFormats.put("M00107", "pool Ticker(영문 5자 이내) : HYPER");
-		messageFormats.put("M00108", "pool 홍보 홈페이지 주소 : https://twitter.com/HYPERLINKPOOL");
-		messageFormats.put("M00109", "adapools.org 에 등록할 extended url. 선택사항이며 없으면 enter키를 입력하세요.(참고형식 https://a.adapools.org/extended-example) : https://git.io/JUMjN");
-		messageFormats.put("M00110", "pool Ticker(영문 5자 이내) : ");
-		messageFormats.put("M00111", "영문, 숫자 5자 이내로 입력하세요.");
-		messageFormats.put("M00112", "pool 홍보 홈페이지 주소 : ");
-		messageFormats.put("M00113", "선택사항) adapools.org 에 등록시킬 extended url. : ");
-		messageFormats.put("M00114", "MetaData 생성을 계속하시겠습니까? (Y/n) : ");
-		messageFormats.put("M00115", "위의 Json Contents를 인터넷 환경에서 다운로드할 수 있도록 파일로 제작하여 업로드 한 후, 업로드한 파일을 다운로드하는 URL을 기억하십시오.(추천 : Github GIST)");
-		messageFormats.put("M00116", "Core Node가 아닙니다. Core Node에서 실행하세요.");
-		messageFormats.put("M00117", "* KES Key는 Block에 서명하기 위해 필요합니다. Pool 운영자는 KES Key Periods가 만료되기 전에 KES Key를 갱신해야 합니다.");
-		messageFormats.put("M00118", "* KES Key를 갱신하지 않으면, 만료되는 Epoch 이후에 생성되는 Block에 서명하지 못하게 되므로, 반드시 만료 Periods가 도래하면 갱신하시기 바랍니다.");
-		messageFormats.put("M00119", "------------------------------ KES Key 정보 ------------------------------ ");
-		messageFormats.put("M00120", "- KES Key를 생성한 Periods : ");
-		messageFormats.put("M00121", "- KES Key가 만료되는 Periods : ");
-		messageFormats.put("M00122", "- KES Key 현재 Periods : ");
-		messageFormats.put("M00123", "- KES Key 잔여 Periods : ");
-		messageFormats.put("M00124", "- KES Key 잔여 Periods가 약 %s % 남았습니다.");
-		messageFormats.put("M00125", "KES Key Rotation을 진행하시겠습니까?.(Y/n) : ");
-		messageFormats.put("M00126", "기존의 KES Verification Key, KES, Signing Key를 삭제했습니다.");
-		messageFormats.put("M00127", "신규 KES Verification Key, KES Signing Key가 생성되었습니다.");
-		messageFormats.put("M00128", "신규 KES Period가 적용된 Node Certificate파일이 생성되었습니다.");
-		messageFormats.put("M00129", "신규 KES Signing Key와 Node Certificate파일을 Block Producer노드 Config 경로에 복사한 후 Block Producer를 재시작 해주세요.");
-		messageFormats.put("M00130", "신규 KES Signing Key : ");
-		messageFormats.put("M00131", "신규 Node Certificate : ");
-		messageFormats.put("M00132", "Pool 정보가 확인되었습니다. 정상 상태입니다.");
-		messageFormats.put("M00133", "Pool 등록 정보를 찾을 수 없습니다.");
-		messageFormats.put("M00134", "프로그램이 종료되었습니다.");
+		messageFormats.put("M00001", "ステークのアドレスが作成されていません。アドレスを作成した後、もう一度やり直してください。");
+		messageFormats.put("M00002", "ステークキーが作成されていません。キーの作成後、もう一度やり直してください。");
+		messageFormats.put("M00003", "(メインメニュー -> 3番目 -> 1番目 選択)");
+		messageFormats.put("M00004", "現在補償量 : %s");
+		messageFormats.put("M00005", "撤退することができる補償がありません");
+		messageFormats.put("M00006", "トランザクションハッシュがありません。");
+		messageFormats.put("M00007", "引き出し可能な補償量 : %s");
+		messageFormats.put("M00008", "転送数量を入力してください。(入力ユニット : lovelace, 1 ADA = 1,000,000 lovelace, キャンセル : Q) : ");
+		messageFormats.put("M00009", "数量が足りません。もう一度入力してください。引き出し可能の数量: %s , 入力の数量 : %s");
+		messageFormats.put("M00010", "プロセス実行中にエラーが発生されました。 : ");
+		messageFormats.put("M00011", "数字を入力してください。");
+		messageFormats.put("M00012", "保有の数量 : %s , 補償分引き出し数量 : %s , 手数料 : %s");
+		messageFormats.put("M00013", "引き出した後、残りの補償量 : %s");
+		messageFormats.put("M00014", "引き出した後、総保有の数量 : %s");
+		messageFormats.put("M00015", "引き出しますか？ (Y/n) : ");
+		messageFormats.put("M00016", "手数料の計算値が実際の送信時に所要量よりも足りません。直接の入力で続きますか？(Y/n) : ");
+		messageFormats.put("M00017", "画面に表示されてある手数料を入力してください。(Q : キャンセル) : ");
+		messageFormats.put("M00018", "手数料が高すぎます。手数料の許容値 : %s");
+		messageFormats.put("M00019", "もう一度入力してください。");
+		messageFormats.put("M00020", "キャンセルされました。");
+		messageFormats.put("M00021", "送信することができませんでした。");
+		messageFormats.put("M00022", "送信されました。");
+		messageFormats.put("M00023", "アドレスを入力してください。(99 : 戻る) : ");
+		messageFormats.put("M00024", "有効なアドレスではありません。");
+		messageFormats.put("M00025", "Paymentアドレスが作成されていません。Paymentアドレスを作成した後、やり直してください。");
+		messageFormats.put("M00026", "プールのアドレス : ");
+		messageFormats.put("M00027", "引き出すことができるADAがありません。");
+		messageFormats.put("M00028", "保有の数量 : %s");
+		messageFormats.put("M00029", "送信アドレスを入力してください。(99 : 戻る) : ");
+		messageFormats.put("M00030", "現プールアドレスに送信する場合は、合算した総額のみを送信できます。送信の手数料を除いた残りの金額が送信されます。");
+		messageFormats.put("M00031", "進みますか？(Y/n) :");
+		messageFormats.put("M00032", "1.送信量と手数料の合計が保有の数量より多い場合には、");
+		messageFormats.put("M00033", "2.送信量と保有の数量が同じ場合には、");
+		messageFormats.put("M00034", "保有の数量から手数料を除いた残りを送信します。");
+		messageFormats.put("M00035", "保有の数量 : %s , 送信の数量 : %s , 手数料 : %s");
+		messageFormats.put("M00036", "送信者のアドレス : %s");
+		messageFormats.put("M00037", "受信者のアドレス : %s");
+		messageFormats.put("M00038", "送信しますか？ (Y/n)");
+		messageFormats.put("M00039", "既にファイルがあります。削除した後、もう一度やり直してください。");
+		messageFormats.put("M00040", "PaymentのVerificationのKeyが作成されていません。キーの作成後、もう一度やり直してください。");
+		messageFormats.put("M00041", "StakeのVerificationのKeyが作成されていません。キーの作成後、もう一度やり直してください。");
+		messageFormats.put("M00042", "正常に処理されました。");
+		messageFormats.put("M00043", "KESのVerificationのKeyが作成されていません。キーの作成後、もう一度やり直してください。");
+		messageFormats.put("M00044", "ColdのSigningのKeyが作成されていません。キーの作成後、もう一度やり直してください。");
+		messageFormats.put("M00045", "ColdのCounterが作成されていません。キーの作成後、もう一度やり直してください。");
+		messageFormats.put("M00046", "mainnet-shelley-genesis.jsonのファイルがありません。確認後、もう一度やり直してください。");
+		messageFormats.put("M00047", "MetadataのJSONファイルをダウンロードすることができるインターネットアドレスを入力してください。(Q : キャンセル) : ");
+		messageFormats.put("M00048", "URLが正しくありません。もう一度入力してください。");
+		messageFormats.put("M00049", "URLの長さは、英文、数字、記号を含む64 Bytes（64文字）以下で作成する必要があります。Git Shorten URLをご利用下さい。https://git.io");
+		messageFormats.put("M00050", "JSONのファイルが間違っています。JSONのファイルを確認してください。");
+		messageFormats.put("M00051", "プールのMeta情報（プールの名、プールの説明、プール Ticker、など）がないJSONファイル形式です。URLをもう一度確認してください。");
+		messageFormats.put("M00052", "プールの名 : ");
+		messageFormats.put("M00053", "プールの説明 : ");
+		messageFormats.put("M00054", "プールのTicker : ");
+		messageFormats.put("M00055", "プールの広報ホームページアドレス : ");
+		messageFormats.put("M00056", "オプション）adapools.orgに登録するextended url : ");
+		messageFormats.put("M00057", "上記の入力した情報が正しいですか？ (Y/n) : ");
+		messageFormats.put("M00058", "MetaDataファイルを保存する際にエラーが発生されました。");
+		messageFormats.put("M00059", "MetaDataファイルの容量は、512 bytes以下に記述する必要があります。（現在のサイズ：%s bytes)");
+		messageFormats.put("M00060", "MetaDataファイルのHashを作成する際にエラーが発生されました。");
+		messageFormats.put("M00061", "ColdのVerificationのKeyが作成されていません。キーの作成後、もう一度やり直してください。");
+		messageFormats.put("M00062", "VRFのVerificationのKeyが作成されていません。キーの作成後、もう一度やり直してください。");
+		messageFormats.put("M00063", "プールの保証金を入力してください。(ユニット: lovelace, 1 ADA = 1,000,000 lovelace)。[Q : キャンセル] : ");
+		messageFormats.put("M00064", "入力値が間違っています。もう一度入力してください。");
+		messageFormats.put("M00065", "プールの固定費を入力してください。(ユニット : lovelace, 1 ADA = 1,000,000 lovelace)。[Q : キャンセル] : ");
+		messageFormats.put("M00066", "プールのCostは少なくとも%s以上である必要があります。");
+		messageFormats.put("M00067", "プールのMarginを入力してください。(ユニット : 100分位小数点, 例: 3％=> 0.03で入力). [Q : キャンセル] : ");
+		messageFormats.put("M00068", "1以下で入力する必要があります。");
+		messageFormats.put("M00069", "RelayのNodeの数を入力してください。( ユニット : 1以上の整数) [Q : キャンセル] : ");
+		messageFormats.put("M00070", "RelayのNodeの情報を入力してください。");
+		messageFormats.put("M00071", "(例. ドメイン名：Port => relay.hyperlinkpool.kr:6000)");
+		messageFormats.put("M00072", "(例. xxx.xxx.xxx.xxx:Port => 123.123.123.123:6000)");
+		messageFormats.put("M00073", "例のとおりで入力してください。");
+		messageFormats.put("M00074", "RelayのNode情報が重複されました。もう一度入力してください。");
+		messageFormats.put("M00075", "プールの保証金 : %s");
+		messageFormats.put("M00076", "プールの固定費 : %s");
+		messageFormats.put("M00077", "プールのMargin : %s");
+		messageFormats.put("M00078", "プール登録証明書の作成中にエラーが発生しました。");
+		messageFormats.put("M00079", "プールのDelegation証明書の作成中にエラーが発生しました。");
+		messageFormats.put("M00080", "プールのRegistrationの証明書が作成されていない。証明書の作成後、もう一度やり直してください。");
+		messageFormats.put("M00081", "プールのDelegationの証明書が作成されていない。証明書の作成後、もう一度やり直してください。");
+		messageFormats.put("M00082", "PaymentのSigningのキーが作成されていません。キーの作成後、もう一度やり直してください。");
+		messageFormats.put("M00083", "StakeのSigningのキーが作成されていません。キーの作成後、もう一度やり直してください。");
+		messageFormats.put("M00084", "プールのIDの確認中にエラーが発生しました。");
+		messageFormats.put("M00085", "プールの情報の確認中です。少し長い時間がかかります。");
+		messageFormats.put("M00086", "Blockchain確認中にエラーが発生しました。");
+		messageFormats.put("M00087", "ADA保有の数量が十分ではありません。");
+		messageFormats.put("M00088", "ADA現在の保有の数量 : %s");
+		messageFormats.put("M00089", "プールの登録の必要量 : %s");
+		messageFormats.put("M00090", "トランザクションの手数料 : %s");
+		messageFormats.put("M00091", "プールの情報を登録しますか？(Y/n): ");
+		messageFormats.put("M00092", "プールの情報を修正しますか？(Y/n) : ");
+		messageFormats.put("M00093", "処理完了後、残りの予想量 : ");
+		messageFormats.put("M00094", "プールの登録に失敗しました。");
+		messageFormats.put("M00095", "登録されました。");
+		messageFormats.put("M00096", "StakeのVerificationのKeyキーが作成されていません。キーの作成後、もう一度やり直してください。");
+		messageFormats.put("M00097", "StakeのCertificateの証明書が作成されていない。証明書の作成後、もう一度やり直してください。");
+		messageFormats.put("M00098", "すでにStakeのKeyが登録されています。");
+		messageFormats.put("M00099", "StakeのKeyの登録の必要量 : %s");
+		messageFormats.put("M00100", "処理完了後、残りの予想量 : %s");
+		messageFormats.put("M00101", "StakeのKeyを登録しますか？(Y/n) : ");
+		messageFormats.put("M00102", "Stakeのeyの登録に失敗しました。");
+		messageFormats.put("M00103", "プールの登録用のMetaDataの作成を行います。");
+		messageFormats.put("M00104", "예시) [HYPER] プール");
+		messageFormats.put("M00105", "プールの名 : Hyperlink Pool");
+		messageFormats.put("M00106", "プールの説明 : We prepare for the era of hyperconnectivity。");
+		messageFormats.put("M00107", "プールのTicker(英語5文字以内) : HYPER");
+		messageFormats.put("M00108", "プールの広報ホームページアドレス : https://twitter.com/HYPERLINKPOOL");
+		messageFormats.put("M00109", "adapools.orgに登録するextended url。オプションであり、存在しない場合、enterキーを入力してください。(参考形式 https://a.adapools.org/extended-example) : https://git.io/JUMjN");
+		messageFormats.put("M00110", "プールのTicker(英語5文字以内) : ");
+		messageFormats.put("M00111", "英語、数字5文字以内で入力してください。");
+		messageFormats.put("M00112", "プールの広報ホームページアドレス : ");
+		messageFormats.put("M00113", "オプション)adapools.orgに登録するextended url。: ");
+		messageFormats.put("M00114", "MetaDataの作成を行いますか？(Y/n) : ");
+		messageFormats.put("M00115", "上記のJsonのContentsをインターネット環境でダウンロードすることができるように、ファイルで製作して、アップロードした後、アップロードしたファイルをダウンロードするURLを覚えください。(추천 : Github GIST)");
+		messageFormats.put("M00116", "CoreのNodeではありません。CoreのNodeで実行してください。");
+		messageFormats.put("M00117", "* KESのKeyはBlockに署名するために必要です。プールオペレータはKESのKeyのPeriodsの期限が切れる前に、KESのKeyを更新する必要があります。");
+		messageFormats.put("M00118", "* KESのKeyを更新しなければ、有効期限が切れているEpoch以降に作成されたBlockに署名できませんので必ず期限Periodsが到来すると、更新してください。");
+		messageFormats.put("M00119", "------------------------------ KESのKeyの情報 ------------------------------ ");
+		messageFormats.put("M00120", "- KESのKeyが作成されたPeriods : ");
+		messageFormats.put("M00121", "- KESのKeyの有効期限が切れるPeriods : ");
+		messageFormats.put("M00122", "- KESのKeyの現在のPeriods : ");
+		messageFormats.put("M00123", "- KESのKeyの残りのPeriods : ");
+		messageFormats.put("M00124", "- KESのKeyの残りのPeriodsが約%s％残りました。");
+		messageFormats.put("M00125", "KESのKeyのRotationを進みますか？(Y/n) : ");
+		messageFormats.put("M00126", "既存のKESのVerificationのKey、KESのSigningのKeyが削除されました。");
+		messageFormats.put("M00127", "新規のKESのVerificationのKey、KESのSigningのKeyが作成されました。");
+		messageFormats.put("M00128", "新規のKESのPeriodが適用されたNodeのCertificateのファイルが作成されました。");
+		messageFormats.put("M00129", "新規のKESのSigningのKeyとNodeのCertificateのファイルをBlockProducerノードのConfigパスにコピーした後、BlockProducerを再起動してください。");
+		messageFormats.put("M00130", "新規のKESのSigningのKey : ");
+		messageFormats.put("M00131", "新規のNodeのCertificate : ");
+		messageFormats.put("M00132", "プールの情報が確認されました。通常の状態です。");
+		messageFormats.put("M00133", "プールの登録情報を見つけることができません。");
+		messageFormats.put("M00134", "アプリケーションが終了されました。");
 		messageFormats.put("M00135", "\n"
-				+ "1. 현재 Stake Pool의 ADA Balance Check\n"
-				+ "2. 다른 주소의 ADA Balance Check\n"
-				+ "3. 현재 Stake Pool의 ADA Reward Balance Check\n"
-				+ "4. 현재 Pool에서 다른 주소로 ADA 인출\n"
-				+ "5. 현재 Pool에서 보상분(Rewards) ADA 인출\n"
+				+ "1. 現在のステークプールのADAのBalanceのCheck\n"
+				+ "2. 他のアドレスのADAのBalanceのCheck\n"
+				+ "3. 現在のステークプールのADAのRewardのBalanceのCheck\n"
+				+ "4. 現在のプールから他のアドレスにADAの引き出し\n"
+				+ "5. 現在のプールからADAのRewardsの引き出し\n"
 				+ "99. 戻る");
-		messageFormats.put("M00136", "번호를 입력한 후 엔터키를 눌러주세요. : ");
+		messageFormats.put("M00136", "番号を入力した後、エンターキーを押してください。: ");
 		messageFormats.put("M00137", "\n"
-				+ "1. Payment Key Pair 생성\n"
-				+ "2. Stake Key Pair 생성\n"
-				+ "3. Payment Address 생성\n"
-				+ "4. Stake Address 생성\n"
-				+ "5. Stake Certificate 생성\n"
-				+ "6. Stake Pool Cold Keys & Cold Counter 생성\n"
-				+ "7. Stake Pool VRF Key Pair 생성\n"
-				+ "8. Stake Pool KES Key Pair 생성\n"
-				+ "9. Node Operation Certificate 생성\n"
+				+ "1. PaymentのKeyのPairの作成\n"
+				+ "2. StakeのKeyのPairの作成\n"
+				+ "3. PaymentのAddressの作成\n"
+				+ "4. StakeのAddressの作成\n"
+				+ "5. StakeのCertificateの作成\n"
+				+ "6. ステークプールのColdのKeys & ColdのCounterの作成\n"
+				+ "7. ステークプールのVRFのKeyのPairの作成\n"
+				+ "8. ステークプールのKESのKeyのPairの作成\n"
+				+ "9. NodeのOperationのCertificateの作成\n"
 				+ "99. 戻る");
 		messageFormats.put("M00138", "\n"
-				+ "1. Stake Key 등록(기본 등록은 2ADA가 소요되고(2020.10.09 기준 정보), 전송 수수료가 추가 소요됩니다.)\n"
-				+ "2. Metadata JSON 파일 생성\n"
-				+ "3. Pool 정보 등록 또는 갱신(Stake Key를 먼저 등록해야 하며, Pool 등록은 500ADA가 소요되고(2020.10.09 기준 정보), 이 후 갱신 시부터는 전송 수수료만 추가 소요됩니다.)\n"
-				+ "4. Pool 등록 상태 확인\n5. KES Key Rotation\n"
+				+ "1. StakeのKeyの登録(2ADAがかかり、（2020.10.09基準情報）、送信の手数料がかかります。)\n"
+				+ "2. MetadataのJSONのファイルの作成\n"
+				+ "3. ステークプールの情報登録または更新（StakeのKeyを最初に登録する必要があり、プールの登録は500ADAがかかり、（2020.10.09基準情報）、この後、更新の時からは送信の手数料のみかかります。)\n"
+				+ "4. ステークプールの登録状況確認\n"
+				+ "5. KESのKeyのRotation\n"
 				+ "99. 戻る");
 		messageFormats.put("M00139", "\n"
-				+ "1. Key 생성, Stake 인증서 생성\n"
-				+ "2. ADA Balance Check, Pool에서 ADA 인출\n"
-				+ "3. Stake Pool 등록 / 관리\n"
-				+ "99. 종료");
-		messageFormats.put("M00140", "입력 값이 잘못되었습니다.");
-		messageFormats.put("M00141", "URL 형식이 아닙니다.");
-		messageFormats.put("M00142", "통신 중 오류가 발생했습니다.");
-		messageFormats.put("M00143", "- Pool 운영을 약간 편하게 해줍니다. Beta 버전입니다. 사용중 버그가 있을 수 있습니다.\n");
-		messageFormats.put("M00144", "- Web 버전을 준비중에 있습니다. 여러분의 관심이 큰 힘이 됩니다.\n");
-		messageFormats.put("M00145", "- 면책조항 1 : 본 프로그램의 잘못된 사용으로 야기된 사항에 대해 제작자는 일체 책임이 없음을 말씀드립니다.\n");
-		messageFormats.put("M00146", "- 면책조항 2 : 본 프로그램은 Freeware입니다. 따라서 사용의 강제성은 없으며, 수정, 배포, 사용 역시 자유이며, 이에 따른 책임은 사용자에게 있습니다.\n");
-		messageFormats.put("M00147", "Stake Pool 주소 개수 : %s");
-		messageFormats.put("M00148", "      Stake Pool 주소 : %s");
-		messageFormats.put("M00149", "%3s   Stake Pool ID : %s");
-		messageFormats.put("M00150", "      Rewards Balance : %s");
-		messageFormats.put("M00151", "잔고가 충분하지 않습니다.");
-		messageFormats.put("M00152", "잔고 동기화에 시간이 걸릴 수 있습니다.");
-		messageFormats.put("M00153", "- TestNet은 지원하지 않습니다.");
+				+ "1. Keyの作成, Stakeの証明書の作成\n"
+				+ "2. ADAのBalanceのCheck, プールからADAの引き出し\n"
+				+ "3. ステークプールの登録 / 管理\n"
+				+ "99. 終了");
+		messageFormats.put("M00140", "入力値が間違いました。");
+		messageFormats.put("M00141", "URLが正しくありません。");
+		messageFormats.put("M00142", "通信中にエラーが発生されました。");
+		messageFormats.put("M00143", "- プール操作を少し楽にしてくれます。Beta版です。使用中のバグがあるとおもいます。\n");
+		messageFormats.put("M00144", "- Web版を用意しております。皆さんの関心が大きな力になります。\n");
+		messageFormats.put("M00145", "- 免責事項1：本プログラムの誤った使用生じた事項についてメーカーは一切の責任がないことを申し上げます。\n");
+		messageFormats.put("M00146", "- 免責事項2：本プログラムはFreewareですので、使用の強制性はありません。また、修正、配布、使用も自由であり、これに伴う責任はユーザーにあります。\n");
+		messageFormats.put("M00147", "ステークプールのアドレスの数 : %s");
+		messageFormats.put("M00148", "      ステークプールのアドレス : %s");
+		messageFormats.put("M00149", "%3s   ステークプールのID : %s");
+		messageFormats.put("M00150", "      RewardsのBalance : %s");
+		messageFormats.put("M00151", "残高が足りません。");
+		messageFormats.put("M00152", "残高同期に時間がかかることがあります。");
+		messageFormats.put("M00153", "- TestNetはサポートしていません。");
+		messageFormats.put("M00154", "CardanoのローカルNodeが停止状態または同期中です。CardanoのNodeの同期完了後に実行してください。");
 	}
 }

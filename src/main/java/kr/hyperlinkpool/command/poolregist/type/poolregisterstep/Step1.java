@@ -183,7 +183,7 @@ public class Step1 implements PoolRegisterResult, Ordered, Runnable{
 			String cardanoKeysPoolMetadataJsonFileHash = initializeProcessBuilder.getSuccessResultString();
 			failureResultString = initializeProcessBuilder.getFailureResultString();
 			if(failureResultString != null && failureResultString.length() > 0) {
-				MessagePrompter.promptMessage(MessageFactory.getInstance().getMessage("MetaData 파일을 저장하는 도중 에러가 발생했습니다.", "M00060"), true);
+				MessagePrompter.promptMessage(MessageFactory.getInstance().getMessage("MetaData 파일의 Hash값을 생성하는 도중 에러가 발생했습니다.", "M00060"), true);
 				MessagePrompter.promptMessage(failureResultString, true);
 				continue;
 			}

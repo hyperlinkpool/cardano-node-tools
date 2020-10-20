@@ -203,7 +203,7 @@ public class CommandExecutor {
 		 * Pre validation
 		 */
 		if(processResponse.getFailureResultString().indexOf("cardano-cli: Network.Socket.connect") > -1) {
-			MessagePrompter.promptMessage("Cardano 로컬 Node가 중지 상태 또는 동기화중입니다. Cardano Node 동기화 완료 후 실행하세요.", true);
+			MessagePrompter.promptMessage(MessageFactory.getInstance().getMessage("Cardano 로컬 Node가 중지 상태 또는 동기화중입니다. Cardano Node 동기화 완료 후 실행하세요.", "M00154"), true);
 		}
 		
 		return processResponse;
@@ -231,7 +231,7 @@ public class CommandExecutor {
 		 * Pre validation
 		 */
 		if(processResponse.getFailureResultString().indexOf("cardano-cli: Network.Socket.connect") > -1) {
-			MessagePrompter.promptMessage("Cardano 로컬 Node가 중지 상태 또는 동기화중입니다. Cardano Node 동기화 완료 후 실행하세요.", true);
+			MessagePrompter.promptMessage(MessageFactory.getInstance().getMessage("Cardano 로컬 Node가 중지 상태 또는 동기화중입니다. Cardano Node 동기화 완료 후 실행하세요.", "M00154"), true);
 		}
 		
 		return processResponse;
