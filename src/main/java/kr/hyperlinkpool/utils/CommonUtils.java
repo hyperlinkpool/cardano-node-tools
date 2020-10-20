@@ -18,7 +18,7 @@ public class CommonUtils {
 	}
 	
 	public static String nodeInfoParse(String[][] nodeInfos) {
-		StringBuffer result = new StringBuffer();
+		StringBuilder result = new StringBuilder();
 		int relayNodeCount = nodeInfos.length;
 		for(int i=0;i<relayNodeCount;i++) {
 			String type = nodeInfos[i][0];

@@ -254,12 +254,12 @@ public class CommandExecutor {
 		try {
 			fileReader = new FileReader(file);
 			bufferedReader = new BufferedReader(fileReader);
-			StringBuffer stringBuffer = new StringBuffer();
+			StringBuilder stringBuilder = new StringBuilder();
 			String buffer = null;
 			while((buffer = bufferedReader.readLine()) != null) {
-				stringBuffer.append(buffer);
+				stringBuilder.append(buffer);
 			}
-			fileContents = stringBuffer.toString();
+			fileContents = stringBuilder.toString();
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
 		} catch (IOException e) {
@@ -364,14 +364,14 @@ public class CommandExecutor {
 	
 	public static String getTxInDataOnTxList(List<Map<String, String>> txList) {
 		Iterator<Map<String, String>> txIterator = txList.iterator();
-		StringBuffer stringBuffer = new StringBuffer();
+		StringBuilder stringBuilder = new StringBuilder();
 		while (txIterator.hasNext()) {
 			Map<String, String> txData = (Map<String, String>) txIterator.next();
 			String TxHash = txData.get("TxHash").toString();
 			String TxIx = txData.get("TxIx").toString();
-			stringBuffer.append(" --tx-in ").append(TxHash).append("#").append(TxIx);
+			stringBuilder.append(" --tx-in ").append(TxHash).append("#").append(TxIx);
 		}
-		return stringBuffer.toString();
+		return stringBuilder.toString();
 	}
 	
 	public static String firstBlankSpaceRemove(String source) {
@@ -384,9 +384,9 @@ public class CommandExecutor {
 	}
 	
 	public static String getTxOutData(String receiveAddress, long sendLovelace) {
-		StringBuffer stringBuffer = new StringBuffer();
-		stringBuffer.append(" --tx-out ").append(receiveAddress).append("+").append(String.valueOf(sendLovelace));
-		return stringBuffer.toString();
+		StringBuilder stringBuilder = new StringBuilder();
+		stringBuilder.append(" --tx-out ").append(receiveAddress).append("+").append(String.valueOf(sendLovelace));
+		return stringBuilder.toString();
 	}
 
 	public static void pringStakePoolStatus(JSONArray rewardsData) {
