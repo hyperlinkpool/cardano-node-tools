@@ -51,12 +51,12 @@ Block Producer 노드가 설치되어 있는 서버에서 Java로 실행하는 �
     - 2. Stake Key Pair 생성
     - 3. Payment Address 생성
     - 4. Stake Address 생성
-    - 5. Stake Certificate 생성
-    - 6. Stake Pool Cold Keys & Cold Counter 생성
-    - 7. Stake Pool VRF Key Pair 생성
-    - 8. Stake Pool KES Key Pair 생성
-    - 9. Node Operation Certificate 생성
+    - 5. Stake Pool Cold Keys & Cold Counter 생성
+    - 6. Stake Pool VRF Key Pair 생성
+    - 7. Stake Pool KES Key Pair 생성
+    - 8. Node Operation Certificate 생성
     - 99. 뒤로 가기
+
 - 2. ADA Balance Check, Pool에서 ADA 인출
     - 1. 현재 Stake Pool의 ADA Balance Check
     - 2. 다른 주소의 ADA Balance Check
@@ -64,12 +64,16 @@ Block Producer 노드가 설치되어 있는 서버에서 Java로 실행하는 �
     - 4. 현재 Pool에서 다른 주소로 ADA 인출
     - 5. 현재 Pool에서 보상분(Rewards) ADA 인출
     - 99. 뒤로 가기
+
 - 3. Stake Pool 등록 / 관리
     - 1. Stake Key 등록(기본 등록은 2ADA가 소요되고(2020.10.09 기준 정보), 전송 수수료가 추가 소요됩니다.)
-    - 2. Metadata JSON 파일 생성
-    - 3. Pool 정보 등록 또는 갱신(Stake Key를 먼저 등록해야 하며, Pool 등록은 500ADA가 소요되고(2020.10.09 기준 정보), 이 후 갱신부터는 전송 수수료만 추가 소요됩니다.)
-    - 4. Pool 등록 상태 확인
-    - 5. KES Key Rotation
+    - 2. Stake Key 철회(보증금으로 등록한 2ADA(2020.10.09 기준 정보)를 돌려 받을 수 있습니다.)
+    - 3. Stake Key를 Pool에 위임
+    - 4. Metadata JSON 파일 생성
+    - 5. Pool 등록 또는 갱신 (Stake Key를 먼저 등록해야 하며, Pool 등록은 500ADA가 소요되고(2020.10.09 기준 정보), 이 후 갱신 시부터는 전송 수수료만 추가 소요됩니다.)
+    - 6. Pool 철회 (보증금으로 등록한 500ADA(2020.10.09 기준 정보)를 돌려 받을 수 있습니다.)
+    - 7. Pool 등록 상태 확인
+    - 8. KES Key Rotation
     - 99. 뒤로 가기
 ```
 
@@ -103,6 +107,8 @@ cardano.keys.stake.vkey=stake.vkey
 cardano.keys.stake.skey=stake.skey
 cardano.keys.stake.addr=stake.addr
 cardano.keys.stake.cert=stake.cert
+cardano.keys.stake.deregister.cert=stake.deregister.cert
+cardano.keys.stake.delegate.cert=stake.delegate.cert
 cardano.keys.cold.vkey=cold.vkey
 cardano.keys.cold.skey=cold.skey
 cardano.keys.cold.counter=cold.counter
