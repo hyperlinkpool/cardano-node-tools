@@ -38,8 +38,8 @@ public class ReadMe {
 		stringBuilder.append("* ADA : addr1qye30zk97awn7ec0s52vxq47k7funsmge4cpgzkmp99tx493runz7jwqvktew9j609y7240pwplndn47z49hup3rl9tsvdkjzt                                     *\n");
 		stringBuilder.append("* BTC : 3N21st18SUUFF3CHW8Pa9vaTGpjiR7LH16                                                                                                          *\n");
 		stringBuilder.append("* ETH : 0xb5805d55fa0b2ea7c589dd7bdae8c8c796723eed                                                                                                  *\n");
-		stringBuilder.append("* XRP : r3pb9PY6H6ZD3nPAbFAkrKnw9qjvpmbwPk / Destination Tag : 2878778027                                                                           *\n");
-		stringBuilder.append("* XLM : GCVXSHSMJN67UJIT5EYY7DN6UGCYKOBRLIJQ3N7QZJAZSY5NWTHRBHNK / MEMO : enyM1532434833993                                                         *\n");
+		stringBuilder.append("* XRP : raQwCVAJVqjrVm1Nj5SFRcX8i22BhdC9WA / Destination Tag : 2878778027                                                                           *\n");
+		stringBuilder.append("* XLM : GCZLCMUM4Q4H324CTT3753P6656CYR4KPLHYFPGYPGE6JVHONGLNRDI5 / MEMO : enyM1532434833993                                                         *\n");
 		stringBuilder.append("*****************************************************************************************************************************************************\n");
 		stringBuilder.append(MessageFactory.getInstance().getMessage("- Pool 운영을 약간 편하게 해줍니다. Beta 버전입니다. 사용중 버그가 있을 수 있습니다.\n", "M00143"));
 		stringBuilder.append(MessageFactory.getInstance().getMessage("- Web 버전을 준비중에 있습니다. 여러분의 관심이 큰 힘이 됩니다.\n", "M00144"));
@@ -82,8 +82,8 @@ public class ReadMe {
 		stringBuilder.append("* ADA : addr1qye30zk97awn7ec0s52vxq47k7funsmge4cpgzkmp99tx493runz7jwqvktew9j609y7240pwplndn47z49hup3rl9tsvdkjzt                                     *\n");
 		stringBuilder.append("* BTC : 3N21st18SUUFF3CHW8Pa9vaTGpjiR7LH16                                                                                                          *\n");
 		stringBuilder.append("* ETH : 0xb5805d55fa0b2ea7c589dd7bdae8c8c796723eed                                                                                                  *\n");
-		stringBuilder.append("* XRP : r3pb9PY6H6ZD3nPAbFAkrKnw9qjvpmbwPk / Destination Tag : 2878778027                                                                           *\n");
-		stringBuilder.append("* XLM : GCVXSHSMJN67UJIT5EYY7DN6UGCYKOBRLIJQ3N7QZJAZSY5NWTHRBHNK / MEMO : enyM1532434833993                                                         *\n");
+		stringBuilder.append("* XRP : raQwCVAJVqjrVm1Nj5SFRcX8i22BhdC9WA / Destination Tag : 2878778027                                                                           *\n");
+		stringBuilder.append("* XLM : GCZLCMUM4Q4H324CTT3753P6656CYR4KPLHYFPGYPGE6JVHONGLNRDI5 / MEMO : enyM1532434833993                                                         *\n");
 		stringBuilder.append("*****************************************************************************************************************************************************\n");
 		MessagePrompter.promptMessage(stringBuilder.toString(), true);
 	}
