@@ -74,7 +74,7 @@ public class KesKeyRotateHandler extends AbstractCommandHandler{
 		}
 		
 		if(remainKesPercents != 0) {
-			MessagePrompter.promptMessage(MessageFactory.getInstance().getMessage("- KES Key 잔여 Periods가 약 %s% 남았습니다.", "M00124", String.valueOf(remainKesPercents)), true);
+			MessagePrompter.promptMessage(MessageFactory.getInstance().getMessage("- KES Key 잔여 Periods가 약 %s %% 남았습니다.", "M00124", String.valueOf(remainKesPercents)), true);
 		}
 		MessagePrompter.promptMessage(MessageFactory.getInstance().getMessage("------------------------------ KES Key 정보 ------------------------------ ", "M00119"), true);
 		

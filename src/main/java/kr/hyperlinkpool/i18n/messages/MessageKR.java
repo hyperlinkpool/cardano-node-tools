@@ -73,7 +73,7 @@ public class MessageKR {
 		messageFormats.put("M00064", "입력값이 잘못되었습니다. 다시 입력하세요.");
 		messageFormats.put("M00065", "Pool 고정 비용을 입력해 주세요. (단위 : lovelace, 1 ADA = 1,000,000 lovelace). [Q : 취소] : ");
 		messageFormats.put("M00066", "Pool Cost는 최소 %s 이상이어야 합니다.");
-		messageFormats.put("M00067", "Pool Margin을 입력해 주세요. (단위 : 100분위 소수점, 예: 3% => 0.03 으로 입력). [Q : 취소] : ");
+		messageFormats.put("M00067", "Pool Margin을 입력해 주세요. (단위 : 100분위 소수점, 예: 3%% => 0.03 으로 입력). [Q : 취소] : ");
 		messageFormats.put("M00068", "1이하로 입력해야 합니다.");
 		messageFormats.put("M00069", "Relay Node 개수를 입력해 주세요. ( 단위 : 정수 1 이상 ) [Q : 취소] : ");
 		messageFormats.put("M00070", "Relay Node 정보를 입력하세요.");
@@ -130,7 +130,7 @@ public class MessageKR {
 		messageFormats.put("M00121", "- KES Key가 만료되는 Periods : ");
 		messageFormats.put("M00122", "- KES Key 현재 Periods : ");
 		messageFormats.put("M00123", "- KES Key 잔여 Periods : ");
-		messageFormats.put("M00124", "- KES Key 잔여 Periods가 약 %s % 남았습니다.");
+		messageFormats.put("M00124", "- KES Key 잔여 Periods가 약 %s %% 남았습니다.");
 		messageFormats.put("M00125", "KES Key Rotation을 진행하시겠습니까?.(Y / n) : ");
 		messageFormats.put("M00126", "기존의 KES Verification Key, KES, Signing Key를 삭제했습니다.");
 		messageFormats.put("M00127", "신규 KES Verification Key, KES Signing Key가 생성되었습니다.");

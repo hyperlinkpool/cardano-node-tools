@@ -73,7 +73,7 @@ public class MessageUS {
 		messageFormats.put("M00064", "The input value is incorrect. Please enter it again.");
 		messageFormats.put("M00065", "Please enter a fixed pool fee. (Unit: lovelace, 1 ADA = 1,000,000 lovelace). [Q : cancel]: ");
 		messageFormats.put("M00066", "Pool Cost must be at least %s.");
-		messageFormats.put("M00067", "Please enter the Pool Margin. (Unit: 100th decimal point, eg: 3% => Enter 0.03). [Q : cancel]: ");
+		messageFormats.put("M00067", "Please enter the Pool Margin. (Unit: 100th decimal point, eg: 3%% => Enter 0.03). [Q : cancel]: ");
 		messageFormats.put("M00068", "You must enter 1 or less.");
 		messageFormats.put("M00069", "Please enter the number of Relay Nodes. (Unit: integer 1 or more) [Q : cancel]: ");
 		messageFormats.put("M00070", "Please enter the relay node information.");
@@ -130,7 +130,7 @@ public class MessageUS {
 		messageFormats.put("M00121", "- Periods when KES Key expires: ");
 		messageFormats.put("M00122", "- KES Key Current Periods:");
 		messageFormats.put("M00123", "- KES Key Remaining Periods: ");
-		messageFormats.put("M00124", "- About %s% of KES Key Periods remain.");
+		messageFormats.put("M00124", "- About %s %% of KES Key Periods remain.");
 		messageFormats.put("M00125", "Do you want to proceed with KES Key Rotation?.(Y/n) : ");
 		messageFormats.put("M00126", "We have deleted the existing KES Verification Key, KES, and Signing Key.");
 		messageFormats.put("M00127", "New KES Verification Key, KES Signing Key have been created.");
