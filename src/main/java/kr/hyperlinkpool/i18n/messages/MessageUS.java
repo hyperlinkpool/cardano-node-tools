@@ -161,10 +161,12 @@ public class MessageUS {
 				+ "99. Go Back");
 		messageFormats.put("M00138", "\n"
 				+ "1. Register stake key(It requires 2 ADA at deposit.(October 9, 2020), and it's required a few transaction fee.)\n"
-				+ "2. Metadata JSON file creation\n"
-				+ "3. Pool information registration or update (You must register stake key at first, and it takes 500 ADA at deposit.(October 9, 2020). After that, it will be charged only transaction fee at modification.)\n"
-				+ "4. Check the status of pool registration\n"
-				+ "5. KES Key Rotation\n"
+				+ "2. Withdrawal of Stake Key(You can get back the 2ADA(October 9, 2020) registered as a deposit.)\n"
+				+ "3. Delegate Stake Key to Pool\n"
+				+ "4. Metadata JSON file creation\n"
+				+ "5. Pool information registration or update (You must register stake key at first, and it takes 500 ADA at deposit.(October 9, 2020). After that, it will be charged only transaction fee at modification.)\n"
+				+ "6. Check the status of pool registration\n"
+				+ "7. KES Key Rotation\n"
 				+ "99. Go Back");
 		messageFormats.put("M00139", "\n"
 				+ "1. Create Key & Certificate\n"
