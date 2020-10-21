@@ -166,8 +166,9 @@ public class MessageKR {
 				+ "3. Stake Key를 Pool에 위임\n"
 				+ "4. Metadata JSON 파일 생성\n"
 				+ "5. Pool 정보 등록 또는 갱신(Stake Key를 먼저 등록해야 하며, Pool 등록은 500ADA가 소요되고(2020.10.09 기준 정보), 이 후 갱신 시부터는 전송 수수료만 추가 소요됩니다.)\n"
-				+ "6. Pool 등록 상태 확인\n"
-				+ "7. KES Key Rotation\n"
+				+ "6. Pool 철회 (보증금으로 등록한 500ADA(2020.10.09 기준 정보)를 돌려 받을 수 있습니다.)\n"
+				+ "7. Pool 등록 상태 확인\n"
+				+ "8. KES Key Rotation\n"
 				+ "99. 뒤로 가기");
 		messageFormats.put("M00139", "\n"
 				+ "1. Key 생성, Stake 인증서 생성\n"
