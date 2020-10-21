@@ -180,7 +180,12 @@ public class HttpUtils {
 				MessagePrompter.promptMessage(MessageFactory.getInstance().getMessage("통신 중 오류가 발생했습니다.", "M00142"), true);
 			}
 		}
-		JSONObject jsonObject = new JSONObject(stringBuilder.toString());
+		
+		String result = stringBuilder.toString();
+		JSONObject jsonObject = null;
+		if(result != null && result.length() > 0) {
+			jsonObject = new JSONObject(stringBuilder.toString());
+		}
 		return jsonObject;
 	}
 }

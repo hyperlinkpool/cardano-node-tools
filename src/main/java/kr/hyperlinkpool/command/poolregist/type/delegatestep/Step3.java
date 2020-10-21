@@ -56,11 +56,16 @@ public class Step3 implements DelegateStakeAddressResult, Ordered, JobProcess{
 		 */
 		String poolId = delegateStakeAddressDomain.getPoolId();
 		JSONObject poolInfomation = HttpUtils.getPoolInfomation(poolId);
-		JSONObject pools = poolInfomation.getJSONObject("pools");
-		JSONObject delegatePoolInfomation = pools.getJSONObject("0");
-		
-		String name = delegatePoolInfomation.getString("db_name");
-		String ticker = delegatePoolInfomation.getString("db_ticker");
+		JSONObject pools = null;
+		JSONObject delegatePoolInfomation = null;
+		String name = null;
+		String ticker = null;
+		if(poolInfomation != null) {
+			pools = poolInfomation.getJSONObject("pools");
+			delegatePoolInfomation = pools.getJSONObject("0");
+			name = delegatePoolInfomation.getString("db_name");
+			ticker = delegatePoolInfomation.getString("db_ticker");
+		}
 		
 		MessagePrompter.promptMessage(MessageFactory.getInstance().getMessage("Pool ID : ", "M00164") + poolId, true);
 		MessagePrompter.promptMessage(MessageFactory.getInstance().getMessage("Pool 이름 : ", "M00052") + name, true);
