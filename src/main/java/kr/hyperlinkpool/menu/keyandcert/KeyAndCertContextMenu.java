@@ -20,11 +20,10 @@ public class KeyAndCertContextMenu implements JobProcess, Menu{
 			+ "2. Stake Key Pair 생성\n"
 			+ "3. Payment Address 생성\n"
 			+ "4. Stake Address 생성\n"
-			+ "5. Stake Certificate 생성\n"
-			+ "6. Stake Pool Cold Keys & Cold Counter 생성\n"
-			+ "7. Stake Pool VRF Key Pair 생성\n"
-			+ "8. Stake Pool KES Key Pair 생성\n"
-			+ "9. Node Operation Certificate 생성\n"
+			+ "5. Stake Pool Cold Keys & Cold Counter 생성\n"
+			+ "6. Stake Pool VRF Key Pair 생성\n"
+			+ "7. Stake Pool KES Key Pair 생성\n"
+			+ "8. Node Operation Certificate 생성\n"
 			+ "99. 뒤로 가기", "M00137");
 	
 	private boolean menuRunningState = false;
@@ -72,9 +71,6 @@ public class KeyAndCertContextMenu implements JobProcess, Menu{
 					break;
 				case STAKE_ADDRESS:
 					processResultDomain = CommandFactory.INSTANCE.createCommandHandler(NodeCommands.STAKE_ADDRESS_HANDLER).handleCommand(command);
-					break;
-				case STAKE_POOL_CREATE_A_REGISTRATION_CERTIFICATE:
-					processResultDomain = CommandFactory.INSTANCE.createCommandHandler(NodeCommands.STAKE_POOL_CREATE_A_REGISTRATION_CERTIFICATE_HANDLER).handleCommand(command);
 					break;
 				case POOL_REGISTRATION_GENERATE_COLD_KEY_AND_COLD_COUNTER:
 					processResultDomain = CommandFactory.INSTANCE.createCommandHandler(NodeCommands.POOL_REGISTRATION_GENERATE_COLD_KEY_AND_COLD_COUNTER_HANDLER).handleCommand(command);

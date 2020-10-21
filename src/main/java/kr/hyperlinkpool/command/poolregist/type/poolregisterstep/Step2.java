@@ -10,12 +10,13 @@ import kr.hyperlinkpool.constants.NodeInfo;
 import kr.hyperlinkpool.constants.StepOrder;
 import kr.hyperlinkpool.domain.ProcessResultDomain;
 import kr.hyperlinkpool.i18n.MessageFactory;
+import kr.hyperlinkpool.interfaces.JobProcess;
 import kr.hyperlinkpool.properties.NodeProperties;
 import kr.hyperlinkpool.utils.CommandListener;
 import kr.hyperlinkpool.utils.CommonUtils;
 import kr.hyperlinkpool.utils.MessagePrompter;
 
-public class Step2 implements PoolRegisterResult, Ordered, Runnable{
+public class Step2 implements PoolRegisterResult, Ordered, JobProcess{
 
 	private PoolRegisterDomain poolRegisterDomain;
 	
@@ -49,7 +50,7 @@ public class Step2 implements PoolRegisterResult, Ordered, Runnable{
 	public void run() {
 		/**
 		 * Step. 2
-		 * Stake pool registration certificate 생성
+		 * Stake Pool registration certificate 생성
 		 */
 		/**
 		 * cold.vkey 검사

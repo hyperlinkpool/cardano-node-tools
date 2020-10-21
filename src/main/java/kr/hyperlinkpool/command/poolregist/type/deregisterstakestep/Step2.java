@@ -1,4 +1,4 @@
-package kr.hyperlinkpool.command.poolregist.type.registerstakestep;
+package kr.hyperlinkpool.command.poolregist.type.deregisterstakestep;
 
 import java.io.File;
 import java.util.List;
@@ -8,8 +8,8 @@ import org.json.JSONObject;
 
 import kr.hyperlinkpool.command.NodeCommandFormats;
 import kr.hyperlinkpool.command.interfaces.Ordered;
-import kr.hyperlinkpool.command.poolregist.type.registerstakestep.domains.RegisterStakeDomain;
-import kr.hyperlinkpool.command.poolregist.type.registerstakestep.interfaces.RegisterStakeResult;
+import kr.hyperlinkpool.command.poolregist.type.deregisterstakestep.domains.DeRegisterStakeAddressDomain;
+import kr.hyperlinkpool.command.poolregist.type.deregisterstakestep.interfaces.DeRegisterStakeAddressResult;
 import kr.hyperlinkpool.constants.NodeConstants;
 import kr.hyperlinkpool.constants.StepOrder;
 import kr.hyperlinkpool.domain.ProcessResponse;
@@ -20,11 +20,11 @@ import kr.hyperlinkpool.properties.NodeProperties;
 import kr.hyperlinkpool.utils.CommandExecutor;
 import kr.hyperlinkpool.utils.MessagePrompter;
 
-public class Step2 implements RegisterStakeResult, Ordered, JobProcess{
+public class Step2 implements DeRegisterStakeAddressResult, Ordered, JobProcess{
 
-	private RegisterStakeDomain registerStakeDomain;
+	private DeRegisterStakeAddressDomain deRegisterStakeAddressDomain;
 	
-	private ProcessResultDomain<RegisterStakeDomain> result;
+	private ProcessResultDomain<DeRegisterStakeAddressDomain> result;
 	
 	@Override
 	public int getOrder() {
@@ -32,22 +32,22 @@ public class Step2 implements RegisterStakeResult, Ordered, JobProcess{
 	}
 
 	@Override
-	public ProcessResultDomain<RegisterStakeDomain> getResult() {
+	public ProcessResultDomain<DeRegisterStakeAddressDomain> getResult() {
 		return result;
 	}
 
 	@Override
-	public void setResult(ProcessResultDomain<RegisterStakeDomain> result) {
+	public void setResult(ProcessResultDomain<DeRegisterStakeAddressDomain> result) {
 		this.result = result;
-		this.registerStakeDomain = result.getResponseData();
+		this.deRegisterStakeAddressDomain = result.getResponseData();
 	}
 	
-	public RegisterStakeDomain getRegisterStakeDomain() {
+	public DeRegisterStakeAddressDomain getDeRegisterStakeAddressDomain() {
 		return result.getResponseData();
 	}
 
-	public void setRegisterStakeDomain(RegisterStakeDomain registerStakeDomain) {
-		this.registerStakeDomain = registerStakeDomain;
+	public void setDeRegisterStakeAddressDomain(DeRegisterStakeAddressDomain deRegisterStakeAddressDomain) {
+		this.deRegisterStakeAddressDomain = deRegisterStakeAddressDomain;
 	}
 	
 	@Override
@@ -56,7 +56,7 @@ public class Step2 implements RegisterStakeResult, Ordered, JobProcess{
 		 * Step 2
 		 * 전송 주소 입력 및 검증
 		 */
-		List<Map<String,String>> parseTxHashList = registerStakeDomain.getParseTxHashList();
+		List<Map<String,String>> parseTxHashList = deRegisterStakeAddressDomain.getParseTxHashList();
 		long sumLovelace = CommandExecutor.sumLoveLaceOnTxList(parseTxHashList);
 		MessagePrompter.promptMessage(MessageFactory.getInstance().getMessage("보유 수량 : %s", "M00028", sumLovelace + NodeConstants.POSTFIX_LOVELACE), true);
 		
@@ -76,14 +76,14 @@ public class Step2 implements RegisterStakeResult, Ordered, JobProcess{
 		CommandExecutor.initializeProcessBuilder(command);
 		
 		/**
-		 * Stake Cert 생성
+		 * Deregister Stake Cert 생성
 		 */
 		String cardanoKeysStakeVkeyString = cardanoKeysFolderString + NodeConstants.PATH_DELIMITER + NodeProperties.getString("cardano.keys.stake.vkey");
-		String cardanoKeysStakeCertOutputFilePathFilePath = cardanoKeysFolderString + NodeConstants.PATH_DELIMITER + NodeProperties.getString("cardano.keys.stake.cert");
-		command = CommandExecutor.generateCommand(NodeCommandFormats.STAKE_POOL_CREATE_A_REGISTRATION_CERTIFICATE, cardanoCliName, cardanoKeysStakeVkeyString, cardanoKeysStakeCertOutputFilePathFilePath);
+		String cardanoKeysStakeDeregisterCertOutputFilePathFilePath = cardanoKeysFolderString + NodeConstants.PATH_DELIMITER + NodeProperties.getString("cardano.keys.stake.deregister.cert");
+		command = CommandExecutor.generateCommand(NodeCommandFormats.STAKE_POOL_DEREGISTRATION_CERTIFICATE, cardanoCliName, cardanoKeysStakeVkeyString, cardanoKeysStakeDeregisterCertOutputFilePathFilePath);
 		ProcessResponse processResponse = CommandExecutor.initializeProcessBuilder(command);
 		if(processResponse.getFailureResultString() != null && processResponse.getFailureResultString().length() > 0) {
-			registerStakeDomain.setNextOrder(StepOrder.EXIT.getStepOrder());
+			deRegisterStakeAddressDomain.setNextOrder(StepOrder.EXIT.getStepOrder());
 			result.setSuccess(false);
 			MessagePrompter.promptMessage(MessageFactory.getInstance().getMessage("프로세스 수행중 오류가 발생했습니다. : ", "M00010") + processResponse.getFailureResultString(), true);
 			return;
@@ -93,7 +93,7 @@ public class Step2 implements RegisterStakeResult, Ordered, JobProcess{
 		 * Draft Transaction
 		 */
 		String txDraftFilePath = cardanoKeysFolderString + NodeConstants.PATH_DELIMITER + NodeProperties.getString("cardano.keys.tx.draft");
-		String cardanoKeysStakeCertString = cardanoKeysFolderString + cardanoKeysStakeCertOutputFilePathFilePath;
+		String cardanoKeysStakeDeregisterCertString = cardanoKeysStakeDeregisterCertOutputFilePathFilePath;
 		String txIn = CommandExecutor.getTxInDataOnTxList(parseTxHashList);
 		String txOut = null;
 		
@@ -106,14 +106,14 @@ public class Step2 implements RegisterStakeResult, Ordered, JobProcess{
 		/**
 		 * TxOut
 		 */
-		txOut = CommandExecutor.getTxOutData(registerStakeDomain.getReceiveAddress(), sumLovelace);
+		txOut = CommandExecutor.getTxOutData(deRegisterStakeAddressDomain.getReceiveAddress(), sumLovelace);
 		txOut = CommandExecutor.firstBlankSpaceRemove(txOut);
 		int txOutCount = 1;
 		
 		/**
 		 * Draft Transaction generate
 		 */
-		command = CommandExecutor.generateCommand(NodeCommandFormats.STAKE_POOL_DRAFT_TRANSACTION, cardanoCliName, txIn, txOut, txDraftFilePath, cardanoKeysStakeCertString);
+		command = CommandExecutor.generateCommand(NodeCommandFormats.STAKE_POOL_DRAFT_TRANSACTION, cardanoCliName, txIn, txOut, txDraftFilePath, cardanoKeysStakeDeregisterCertString);
 		CommandExecutor.initializeProcessBuilder(command);
 		
 		/**
@@ -128,8 +128,24 @@ public class Step2 implements RegisterStakeResult, Ordered, JobProcess{
 		 * 수수료가 모자라 수동입력한 경우 입력한 수수료로 계산되도록 한다.
 		 */
 		long txFee = Long.parseLong(txFeeString);
-		if(registerStakeDomain.isTxFeeReCalc()) {
-			txFee = registerStakeDomain.getTxFee();
+		if(deRegisterStakeAddressDomain.isTxFeeReCalc()) {
+			txFee = deRegisterStakeAddressDomain.getTxFee();
+		}
+		
+		/**
+		 * 현재 보유량에서 fee를 제외한 총량이 0보다 낮으면 철회 불가.
+		 */
+		long validateAmount = sumLovelace - txFee;
+		if(validateAmount < 0) {
+			MessagePrompter.promptMessage(MessageFactory.getInstance().getMessage("ADA 보유량이 충분하지 않습니다.", "M00087"), true);
+			MessagePrompter.promptMessage(MessageFactory.getInstance().getMessage("ADA 현재 보유량 : %s" , "M00088", String.valueOf(sumLovelace) + NodeConstants.POSTFIX_LOVELACE), true);
+			MessagePrompter.promptMessage(MessageFactory.getInstance().getMessage("Transaction 수수료 : %s", "M00090", String.valueOf(txFee) + NodeConstants.POSTFIX_LOVELACE), true);
+			MessagePrompter.promptMessage("", true);
+			
+			deRegisterStakeAddressDomain.setNextOrder(StepOrder.EXIT.getStepOrder());
+			result.setResponseData(deRegisterStakeAddressDomain);
+			result.setSuccess(false);
+			return;
 		}
 		
 		/**
@@ -140,34 +156,18 @@ public class Step2 implements RegisterStakeResult, Ordered, JobProcess{
 		long keyDeposit = protocolJsonObject.getLong("keyDeposit");
 		
 		/**
-		 * 현재 보유량에서 fee, keyDeposit을 제했을 때 총량이 0보다 낮으면 등록 불가. 
+		 * 돌려받는 보증금과 수수료를 제외한 txOut설정
 		 */
-		long validateAmount = sumLovelace - keyDeposit - txFee;
-		if(validateAmount < 0) {
-			MessagePrompter.promptMessage(MessageFactory.getInstance().getMessage("ADA 보유량이 충분하지 않습니다.", "M00087"), true);
-			MessagePrompter.promptMessage(MessageFactory.getInstance().getMessage("ADA 현재 보유량 : %s" , "M00088", String.valueOf(sumLovelace) + NodeConstants.POSTFIX_LOVELACE), true);
-			MessagePrompter.promptMessage(MessageFactory.getInstance().getMessage("Stake Register 필요량 : %s", "M00099" ,String.valueOf(keyDeposit) + NodeConstants.POSTFIX_LOVELACE), true);
-			MessagePrompter.promptMessage(MessageFactory.getInstance().getMessage("Transaction 수수료 : %s", "M00090", String.valueOf(txFee) + NodeConstants.POSTFIX_LOVELACE), true);
-			MessagePrompter.promptMessage("", true);
-			
-			registerStakeDomain.setNextOrder(StepOrder.EXIT.getStepOrder());
-			result.setResponseData(registerStakeDomain);
-			result.setSuccess(false);
-			return;
-		}
-		
-		/**
-		 * 보증금과 수수료를 제외한 txOut설정
-		 */
-		txOut = CommandExecutor.getTxOutData(registerStakeDomain.getReceiveAddress(), validateAmount);
+		long refundAmount = validateAmount + keyDeposit;
+		txOut = CommandExecutor.getTxOutData(deRegisterStakeAddressDomain.getReceiveAddress(), refundAmount);
 		txOut = CommandExecutor.firstBlankSpaceRemove(txOut);
 		
-		registerStakeDomain.setSumLovelace(sumLovelace);
-		registerStakeDomain.setKeyDeposit(keyDeposit);
-		registerStakeDomain.setTxIn(txIn);
-		registerStakeDomain.setTxOut(txOut);
-		registerStakeDomain.setTxFee(txFee);
-		registerStakeDomain.setNextOrder(this.getOrder() + 1);
-		result.setResponseData(registerStakeDomain);
+		deRegisterStakeAddressDomain.setSumLovelace(sumLovelace);
+		deRegisterStakeAddressDomain.setKeyDeposit(keyDeposit);
+		deRegisterStakeAddressDomain.setTxIn(txIn);
+		deRegisterStakeAddressDomain.setTxOut(txOut);
+		deRegisterStakeAddressDomain.setTxFee(txFee);
+		deRegisterStakeAddressDomain.setNextOrder(this.getOrder() + 1);
+		result.setResponseData(deRegisterStakeAddressDomain);
 	}
 }

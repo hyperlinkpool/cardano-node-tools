@@ -17,4 +17,6 @@ public class NodeConstants {
 	
 	public static final String DEFAULT_LOG_PATH = "./log/cardano-node-tools.log";
 	
+	public static final String RETRIEVE_ADAPOOLS_YOROI_POOLS_INFO_API = "https://a.adapools.org/yoroi-api/";
+	
 }

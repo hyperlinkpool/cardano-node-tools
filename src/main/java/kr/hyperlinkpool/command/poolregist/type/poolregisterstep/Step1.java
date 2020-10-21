@@ -19,13 +19,14 @@ import kr.hyperlinkpool.constants.StepOrder;
 import kr.hyperlinkpool.domain.ProcessResponse;
 import kr.hyperlinkpool.domain.ProcessResultDomain;
 import kr.hyperlinkpool.i18n.MessageFactory;
+import kr.hyperlinkpool.interfaces.JobProcess;
 import kr.hyperlinkpool.properties.NodeProperties;
 import kr.hyperlinkpool.utils.CommandExecutor;
 import kr.hyperlinkpool.utils.CommandListener;
 import kr.hyperlinkpool.utils.HttpUtils;
 import kr.hyperlinkpool.utils.MessagePrompter;
 
-public class Step1 implements PoolRegisterResult, Ordered, Runnable{
+public class Step1 implements PoolRegisterResult, Ordered, JobProcess{
 
 	private PoolRegisterDomain poolRegisterDomain;
 	
@@ -125,7 +126,7 @@ public class Step1 implements PoolRegisterResult, Ordered, Runnable{
 				MessagePrompter.promptMessage(MessageFactory.getInstance().getMessage("잘못된 JSON파일 형식입니다. JSON파일을 확인하세요.", "M00050"), true);
 				continue;
 			} catch (JsonMappingException e) {
-				MessagePrompter.promptMessage(MessageFactory.getInstance().getMessage("Pool Meta정보(pool 이름, pool 설명, pool Ticker, 등)이 없는 JSON파일 형식입니다. URL을 다시 확인하세요.", "M00051"), true);
+				MessagePrompter.promptMessage(MessageFactory.getInstance().getMessage("Pool Meta정보(Pool 이름, Pool 설명, Pool Ticker, 등)이 없는 JSON파일 형식입니다. URL을 다시 확인하세요.", "M00051"), true);
 				continue;
 			} catch (IOException e) {
 				e.printStackTrace();
@@ -140,10 +141,10 @@ public class Step1 implements PoolRegisterResult, Ordered, Runnable{
 			String extended = metadataDomain.getExtended();
 			
 			MessagePrompter.promptMessage("*******************************************************************************************************************", true);
-			MessagePrompter.promptMessage(MessageFactory.getInstance().getMessage("pool 이름 : ", "M00052") + name, true);
-			MessagePrompter.promptMessage(MessageFactory.getInstance().getMessage("pool 설명 : ", "M00053") + description, true);
-			MessagePrompter.promptMessage(MessageFactory.getInstance().getMessage("pool Ticker : ", "M00054") + ticker, true);
-			MessagePrompter.promptMessage(MessageFactory.getInstance().getMessage("pool 홍보 홈페이지 주소 : ", "M00055") + homepage, true);
+			MessagePrompter.promptMessage(MessageFactory.getInstance().getMessage("Pool 이름 : ", "M00052") + name, true);
+			MessagePrompter.promptMessage(MessageFactory.getInstance().getMessage("Pool 설명 : ", "M00053") + description, true);
+			MessagePrompter.promptMessage(MessageFactory.getInstance().getMessage("Pool Ticker : ", "M00054") + ticker, true);
+			MessagePrompter.promptMessage(MessageFactory.getInstance().getMessage("Pool 홍보 홈페이지 주소 : ", "M00055") + homepage, true);
 			if(metadataDomain.getExtended() == null || metadataDomain.getExtended().length() == 0) {
 				MessagePrompter.promptMessage(MessageFactory.getInstance().getMessage("선택사항) adapools.org 에 등록할 extended url : ", "M00056") + "-", true);
 			}else {

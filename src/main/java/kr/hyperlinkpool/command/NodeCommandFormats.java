@@ -129,6 +129,23 @@ public class NodeCommandFormats {
 			+ " --stake-verification-key-file %s"
 			+ " --out-file %s";
 	
+	public static final String STAKE_POOL_DEREGISTRATION_CERTIFICATE = ""
+			+ "%s"
+			+ " shelley"
+			+ " stake-address"
+			+ " deregistration-certificate"
+			+ " --stake-verification-key-file %s"
+			+ " --out-file %s";
+	
+	public static final String STAKE_POOL_DELEGATE_STAKE_CERTIFICATE = ""
+			+ "%s"
+			+ " shelley"
+			+ " stake-address"
+			+ " delegation-certificate"
+			+ " --stake-verification-key-file %s"
+			+ " --stake-pool-id %s"
+			+ " --out-file %s";
+			
 	public static final String STAKE_POOL_DRAFT_TRANSACTION = ""
 			+ "%s"
 			+ " shelley"

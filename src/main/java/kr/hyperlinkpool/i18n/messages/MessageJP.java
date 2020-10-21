@@ -37,14 +37,14 @@ public class MessageJP {
 		messageFormats.put("M00028", "保有の数量 : %s");
 		messageFormats.put("M00029", "送信アドレスを入力してください。(99 : 戻る) : ");
 		messageFormats.put("M00030", "現プールアドレスに送信する場合は、合算した総額のみを送信できます。送信の手数料を除いた残りの金額が送信されます。");
-		messageFormats.put("M00031", "進みますか？(Y/n) :");
+		messageFormats.put("M00031", "進みますか？(Y/n) : ");
 		messageFormats.put("M00032", "1.送信量と手数料の合計が保有の数量より多い場合には、");
 		messageFormats.put("M00033", "2.送信量と保有の数量が同じ場合には、");
 		messageFormats.put("M00034", "保有の数量から手数料を除いた残りを送信します。");
 		messageFormats.put("M00035", "保有の数量 : %s , 送信の数量 : %s , 手数料 : %s");
 		messageFormats.put("M00036", "送信者のアドレス : %s");
 		messageFormats.put("M00037", "受信者のアドレス : %s");
-		messageFormats.put("M00038", "送信しますか？ (Y/n)");
+		messageFormats.put("M00038", "送信しますか？ (Y/n) : ");
 		messageFormats.put("M00039", "既にファイルがあります。削除した後、もう一度やり直してください。");
 		messageFormats.put("M00040", "PaymentのVerificationのKeyが作成されていません。キーの作成後、もう一度やり直してください。");
 		messageFormats.put("M00041", "StakeのVerificationのKeyが作成されていません。キーの作成後、もう一度やり直してください。");
@@ -97,7 +97,7 @@ public class MessageJP {
 		messageFormats.put("M00088", "ADA現在の保有の数量 : %s");
 		messageFormats.put("M00089", "プールの登録の必要量 : %s");
 		messageFormats.put("M00090", "トランザクションの手数料 : %s");
-		messageFormats.put("M00091", "プールの情報を登録しますか？(Y/n): ");
+		messageFormats.put("M00091", "プールの情報を登録しますか？(Y/n) : ");
 		messageFormats.put("M00092", "プールの情報を修正しますか？(Y/n) : ");
 		messageFormats.put("M00093", "処理完了後、残りの予想量 : ");
 		messageFormats.put("M00094", "プールの登録に失敗しました。");
@@ -112,7 +112,8 @@ public class MessageJP {
 		messageFormats.put("M00103", "プールの登録用のMetaDataの作成を行います。");
 		messageFormats.put("M00104", "예시) [HYPER] プール");
 		messageFormats.put("M00105", "プールの名 : Hyperlink Pool");
-		messageFormats.put("M00106", "プールの説明 : We prepare for the era of hyperconnectivity。");
+		messageFormats.put("M00106", "プールの説明 : We prepare for the era of hyperconnectivitydelegateStakeAddressDomain.setNextOrder(StepOrder.EXIT.getStepOrder());\n"
+				+ "			result.setSuccess(false);。");
 		messageFormats.put("M00107", "プールのTicker(英語5文字以内) : HYPER");
 		messageFormats.put("M00108", "プールの広報ホームページアドレス : https://twitter.com/HYPERLINKPOOL");
 		messageFormats.put("M00109", "adapools.orgに登録するextended url。オプションであり、存在しない場合、enterキーを入力してください。(参考形式 https://a.adapools.org/extended-example) : https://git.io/JUMjN");
@@ -154,18 +155,19 @@ public class MessageJP {
 				+ "2. StakeのKeyのPairの作成\n"
 				+ "3. PaymentのAddressの作成\n"
 				+ "4. StakeのAddressの作成\n"
-				+ "5. StakeのCertificateの作成\n"
-				+ "6. ステークプールのColdのKeys & ColdのCounterの作成\n"
-				+ "7. ステークプールのVRFのKeyのPairの作成\n"
-				+ "8. ステークプールのKESのKeyのPairの作成\n"
-				+ "9. NodeのOperationのCertificateの作成\n"
+				+ "5. ステークプールのColdのKeys & ColdのCounterの作成\n"
+				+ "6. ステークプールのVRFのKeyのPairの作成\n"
+				+ "7. ステークプールのKESのKeyのPairの作成\n"
+				+ "8. NodeのOperationのCertificateの作成\n"
 				+ "99. 戻る");
 		messageFormats.put("M00138", "\n"
 				+ "1. StakeのKeyの登録(2ADAがかかり、（2020.10.09基準情報）、送信の手数料がかかります。)\n"
-				+ "2. MetadataのJSONのファイルの作成\n"
-				+ "3. ステークプールの情報登録または更新（StakeのKeyを最初に登録する必要があり、プールの登録は500ADAがかかり、（2020.10.09基準情報）、この後、更新の時からは送信の手数料のみかかります。)\n"
-				+ "4. ステークプールの登録状況確認\n"
-				+ "5. KESのKeyのRotation\n"
+				+ "2. Stake Key 철회(보증금으로 등록한 2ADA(2020.10.09 기준 정보)를 돌려 받을 수 있습니다.)\n"
+				+ "3. Stake Key를 Pool에 위임\n"
+				+ "4. MetadataのJSONのファイルの作成\n"
+				+ "5. ステークプールの情報登録または更新（StakeのKeyを最初に登録する必要があり、プールの登録は500ADAがかかり、（2020.10.09基準情報）、この後、更新の時からは送信の手数料のみかかります。)\n"
+				+ "6. ステークプールの登録状況確認\n"
+				+ "7. KESのKeyのRotation\n"
 				+ "99. 戻る");
 		messageFormats.put("M00139", "\n"
 				+ "1. Keyの作成, Stakeの証明書の作成\n"
@@ -187,5 +189,19 @@ public class MessageJP {
 		messageFormats.put("M00152", "残高同期に時間がかかることがあります。");
 		messageFormats.put("M00153", "- TestNetはサポートしていません。");
 		messageFormats.put("M00154", "CardanoのローカルNodeが停止状態または同期中です。CardanoのNodeの同期完了後に実行してください。");
+		messageFormats.put("M00155", "StakeのKeyが登録されていません。登録の後に撤回することができます。");
+		messageFormats.put("M00156", "委任されていません。");
+		messageFormats.put("M00157", "StakeのKeyを撤回しますか？ 注意）撤回すると、この後には、委任の報酬を受けることができません。(Y/n) : ");
+		messageFormats.put("M00158", "撤回されました。");
+		messageFormats.put("M00159", "プールに委任されています。撤回すると、再び委任する必要があります。続きますか？(Y/n) : ");
+		messageFormats.put("M00160", "StakeのKeyが登録されていません。登録の後に委任することができます。");
+		messageFormats.put("M00161", "委任するPoolのIDを入力してください。(Q : キャンセル) : ");
+		messageFormats.put("M00162", "PoolのIDは16進数の形式のみ可能です。例)[HYPER] = 263498e010c7a49bbfd7c4e1aab29809fca7ed993f9e14192a75871e");
+		messageFormats.put("M00163", "Stake Keyを委任しますか？(Y/n) : ");
+		messageFormats.put("M00164", "Pool ID : ");
+		messageFormats.put("M00165", "Poolに委任されています。委任の移動しますか？(Y/n) : ");
+		messageFormats.put("M00166", "委任されました。");
+		
+		messageFormats.put("E99999", "開発中です。");
 	}
 }

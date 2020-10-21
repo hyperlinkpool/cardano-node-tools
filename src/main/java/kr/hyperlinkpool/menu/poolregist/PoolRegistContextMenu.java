@@ -17,10 +17,13 @@ public class PoolRegistContextMenu implements JobProcess, Menu{
 	
 	private String poolRegistContextMenus = MessageFactory.getInstance().getMessage("\n"
 			+ "1. Stake Key 등록(기본 등록은 2ADA가 소요되고(2020.10.09 기준 정보), 전송 수수료가 추가 소요됩니다.)\n"
-			+ "2. Metadata JSON 파일 생성\n"
-			+ "3. Pool 정보 등록 또는 갱신(Stake Key를 먼저 등록해야 하며, Pool 등록은 500ADA가 소요되고(2020.10.09 기준 정보), 이 후 갱신 시부터는 전송 수수료만 추가 소요됩니다.)\n"
-			+ "4. Pool 등록 상태 확인\n"
-			+ "5. KES Key Rotation\n"
+			+ "2. Stake Key 철회(보증금으로 등록한 2ADA(2020.10.09 기준 정보)를 돌려 받을 수 있습니다.)\n"
+			+ "3. Stake Key를 Pool에 위임\n"
+			+ "4. Metadata JSON 파일 생성\n"
+			+ "5. Pool 등록 또는 갱신 (Stake Key를 먼저 등록해야 하며, Pool 등록은 500ADA가 소요되고(2020.10.09 기준 정보), 이 후 갱신 시부터는 전송 수수료만 추가 소요됩니다.)\n"
+			+ "6. Pool 철회 (보증금으로 등록한 500ADA(2020.10.09 기준 정보)를 돌려 받을 수 있습니다.)\n"
+			+ "7. Pool 등록 상태 확인\n"
+			+ "8. KES Key Rotation\n"
 			+ "99. 뒤로 가기", "M00138");
 	
 	private boolean menuRunningState = false;
@@ -61,11 +64,20 @@ public class PoolRegistContextMenu implements JobProcess, Menu{
 				case REGISTER_STAKE_ADDRESS_ON_THE_BLOCKCHAIN:
 					processResultDomain = CommandFactory.INSTANCE.createCommandHandler(NodeCommands.REGISTER_STAKE_ADDRESS_ON_THE_BLOCKCHAIN_HANDLER).handleCommand(command);
 					break;
+				case DEREGISTER_STAKE_ADDRESS_ON_THE_BLOCKCHAIN:
+					processResultDomain = CommandFactory.INSTANCE.createCommandHandler(NodeCommands.DEREGISTER_STAKE_ADDRESS_ON_THE_BLOCKCHAIN_HANDLER).handleCommand(command);
+					break;
+				case DELEGATE_STAKE_ADDRESS_ON_POOL:
+					processResultDomain = CommandFactory.INSTANCE.createCommandHandler(NodeCommands.DELEGATE_STAKE_ADDRESS_ON_POOL_HANDLER).handleCommand(command);
+					break;
 				case GENERATE_META_JSON:
 					processResultDomain = CommandFactory.INSTANCE.createCommandHandler(NodeCommands.GENERATE_META_JSON_HANDLER).handleCommand(command);
 					break;
 				case REGISTER_POOL:
 					processResultDomain = CommandFactory.INSTANCE.createCommandHandler(NodeCommands.REGISTER_POOL_HANDLER).handleCommand(command);
+					break;
+				case DEREGISTER_POOL:
+					processResultDomain = CommandFactory.INSTANCE.createCommandHandler(NodeCommands.DEREGISTER_POOL_HANDLER).handleCommand(command);
 					break;
 				case POOL_STATUS:
 					processResultDomain = CommandFactory.INSTANCE.createCommandHandler(NodeCommands.POOL_STATUS_HANDLER).handleCommand(command);

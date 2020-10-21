@@ -21,8 +21,8 @@ public class MessageUS {
 		messageFormats.put("M00012", "Amount held: %s, amount withdrawn for compensation: %s, fee: %s");
 		messageFormats.put("M00013", "Remaining compensation amount after withdrawal: %s");
 		messageFormats.put("M00014", "Total amount held after withdrawal: %s");
-		messageFormats.put("M00015", "Do you want to withdraw? (Y/n):");
-		messageFormats.put("M00016", "The calculated fee is less than the actual transmission required. Do you want to manually enter it? (Y/n): ");
+		messageFormats.put("M00015", "Do you want to withdraw? (Y/n) : ");
+		messageFormats.put("M00016", "The calculated fee is less than the actual transmission required. Do you want to manually enter it? (Y/n) : ");
 		messageFormats.put("M00017", "Please enter the fee shown on the screen. (Q: Cancel): ");
 		messageFormats.put("M00018", "The fee is too high. Please enter again. Fee allowance: %s");
 		messageFormats.put("M00019", "Please enter again.");
@@ -37,14 +37,14 @@ public class MessageUS {
 		messageFormats.put("M00028", "Current holding quantity: %s");
 		messageFormats.put("M00029", "Please enter the address you want to send (99 : Go Back): ");
 		messageFormats.put("M00030", "If sending to the current pool address, only the sum total can be sent. The total amount excluding the transfer fee will be sent.");
-		messageFormats.put("M00031", "Do you want to proceed? (Y/n) :");
+		messageFormats.put("M00031", "Do you want to proceed? (Y/n) : ");
 		messageFormats.put("M00032", "1. If the sum of the transmission quantity and the fee is greater than the holding quantity,");
 		messageFormats.put("M00033", "2. When the transmission quantity and the holding quantity are the same,");
 		messageFormats.put("M00034", "We will transfer the rest of the holding quantity minus the fee.");
 		messageFormats.put("M00035", "Retention quantity: %s, transfer quantity: %s, commission: %s");
 		messageFormats.put("M00036", "Sender address : %s");
 		messageFormats.put("M00037", "Receiver address : %s");
-		messageFormats.put("M00038", "Do you want to transfer? (Y/n)");
+		messageFormats.put("M00038", "Do you want to transfer? (Y/n) : ");
 		messageFormats.put("M00039", "The file already exists. Delete it and try again.");
 		messageFormats.put("M00040", "Payment Verification Key was not created. Please generate the key and try again.");
 		messageFormats.put("M00041", "The Stake Verification Key was not created. Please generate the key and try again.");
@@ -57,13 +57,13 @@ public class MessageUS {
 		messageFormats.put("M00048", "Invalid URL format. Please enter again.");
 		messageFormats.put("M00049", "The URL must be 64 Bytes (64 characters) or less including English, numbers, and symbols. Please use the Git Shorten URL. https://git.io");
 		messageFormats.put("M00050", "Incorrect JSON file format. Please check the JSON file.");
-		messageFormats.put("M00051", "This is a JSON file format without Pool Meta information (pool name, pool description, pool ticker, etc.). Please check the URL again.");
-		messageFormats.put("M00052", "pool name:");
-		messageFormats.put("M00053", "pool description:");
-		messageFormats.put("M00054", "pool ticker : ");
+		messageFormats.put("M00051", "This is a JSON file format without Pool Meta information (Pool name, Pool description, Pool ticker, etc.). Please check the URL again.");
+		messageFormats.put("M00052", "Pool name:");
+		messageFormats.put("M00053", "Pool description:");
+		messageFormats.put("M00054", "Pool ticker : ");
 		messageFormats.put("M00055", "Pool PR website address:");
 		messageFormats.put("M00056", "Optional) extended url to be registered on adapools.org: ");
-		messageFormats.put("M00057", "Is the information entered above correct? (Y/n):");
+		messageFormats.put("M00057", "Is the information entered above correct? (Y/n) : ");
 		messageFormats.put("M00058", "An error occurred while saving the MetaData file.");
 		messageFormats.put("M00059", "MetaData file size must be less than 512 bytes. (Current size: %s bytes)");
 		messageFormats.put("M00060", "An error occurred while generating hash of the MetaData file.");
@@ -97,9 +97,9 @@ public class MessageUS {
 		messageFormats.put("M00088", "ADA Current Holdings: %s");
 		messageFormats.put("M00089", "Pool Register required: %s");
 		messageFormats.put("M00090", "Transaction fee: %s");
-		messageFormats.put("M00091", "Do you want to register pool information? (Y/n): ");
-		messageFormats.put("M00092", "Do you want to modify the pool information? (Y/n): ");
-		messageFormats.put("M00093", "Estimated amount remaining after processing is complete:");
+		messageFormats.put("M00091", "Do you want to register pool information? (Y/n) : ");
+		messageFormats.put("M00092", "Do you want to modify the pool information? (Y/n) : ");
+		messageFormats.put("M00093", "Estimated amount remaining after completion : ");
 		messageFormats.put("M00094", "Pool registration failed.");
 		messageFormats.put("M00095", "Registered.");
 		messageFormats.put("M00096", "The Stake Verification Key was not created. Please try after creating the key file.");
@@ -107,20 +107,20 @@ public class MessageUS {
 		messageFormats.put("M00098", "The Stake Key is already registered.");
 		messageFormats.put("M00099", "Stake Key Register Required: %s");
 		messageFormats.put("M00100", "Estimated amount remaining after processing: %s");
-		messageFormats.put("M00101", "Would you like to register Stake Key? (Y/n):");
+		messageFormats.put("M00101", "Would you like to register Stake Key? (Y/n) : ");
 		messageFormats.put("M00102", "Failed to register Stake Key.");
 		messageFormats.put("M00103", "Proceeds to create MetaData for pool registration.");
 		messageFormats.put("M00104", "Example) [HYPER] Pool");
-		messageFormats.put("M00105", "pool name: Hyperlink Pool");
+		messageFormats.put("M00105", "Pool name: Hyperlink Pool");
 		messageFormats.put("M00106", "Description of the pool: We prepare for the era of hyperconnectivity.");
-		messageFormats.put("M00107", "pool Ticker (up to 5 characters in English): HYPER");
+		messageFormats.put("M00107", "Pool Ticker (up to 5 characters in English): HYPER");
 		messageFormats.put("M00108", "Pool PR website address: https://twitter.com/HYPERLINKPOOL");
 		messageFormats.put("M00109", "Extended url to be registered on adapools.org. Optional. If not, enter enter key. (Reference format https://a.adapools.org/extended-example): https://git.io/JUMjN");
-		messageFormats.put("M00110", "pool Ticker (up to 5 characters in English):");
+		messageFormats.put("M00110", "Pool Ticker (up to 5 characters in English):");
 		messageFormats.put("M00111", "Please enter within 5 alphanumeric characters.");
 		messageFormats.put("M00112", "Pool PR website address:");
-		messageFormats.put("M00113", "Optional) The extended url to be registered on adapools.org.: ");
-		messageFormats.put("M00114", "Do you want to continue creating MetaData? (Y/n): ");
+		messageFormats.put("M00113", "Optional) The extended url to be registered on adapools.org. : ");
+		messageFormats.put("M00114", "Do you want to continue creating MetaData? (Y/n) : ");
 		messageFormats.put("M00115", "After uploading the Json Contents above as a file so that you can download it in an Internet environment, remember the URL to download the uploaded file. (Recommend : Github GIST)");
 		messageFormats.put("M00116", "It's not a Core Node. Run it on a Core Node.");
 		messageFormats.put("M00117", "* KES Key is required to sign the Block. Pool Operators must renew the KES Key before expiration of the KES Key Periods.");
@@ -131,7 +131,7 @@ public class MessageUS {
 		messageFormats.put("M00122", "- KES Key Current Periods:");
 		messageFormats.put("M00123", "- KES Key Remaining Periods: ");
 		messageFormats.put("M00124", "- About %s% of KES Key Periods remain.");
-		messageFormats.put("M00125", "Do you want to proceed with KES Key Rotation?.(Y/n): ");
+		messageFormats.put("M00125", "Do you want to proceed with KES Key Rotation?.(Y/n) : ");
 		messageFormats.put("M00126", "We have deleted the existing KES Verification Key, KES, and Signing Key.");
 		messageFormats.put("M00127", "New KES Verification Key, KES Signing Key have been created.");
 		messageFormats.put("M00128", "The Node Certificate file with the new KES Period applied has been created.");
@@ -154,11 +154,10 @@ public class MessageUS {
 				+ "2. Create Stake Key Pair\n"
 				+ "3. Create Payment Address\n"
 				+ "4. Create Stake Address\n"
-				+ "5. Create Stake Certificate\n"
-				+ "6. Create Stake Pool Cold Keys & Cold Counter\n"
-				+ "7. Create Stake Pool VRF Key Pair\n"
-				+ "8. Create Stake Pool KES Key Pair\n"
-				+ "9. Create Node Operation Certificate\n"
+				+ "5. Create Stake Pool Cold Keys & Cold Counter\n"
+				+ "6. Create Stake Pool VRF Key Pair\n"
+				+ "7. Create Stake Pool KES Key Pair\n"
+				+ "8. Create Node Operation Certificate\n"
 				+ "99. Go Back");
 		messageFormats.put("M00138", "\n"
 				+ "1. Register stake key(It requires 2 ADA at deposit.(October 9, 2020), and it's required a few transaction fee.)\n"
@@ -187,5 +186,19 @@ public class MessageUS {
 		messageFormats.put("M00152", "It may takes some time to synchronize your balance.");
 		messageFormats.put("M00153", "- Do not support TestNet.");
 		messageFormats.put("M00154", "Cardano local node is stopped or synchronizing.Please run after completing Cardano Node synchronization.");
+		messageFormats.put("M00155", "Stake Key is not registered. You can withdraw after registration.");
+		messageFormats.put("M00156", "It's not delegated.");
+		messageFormats.put("M00157", "Would you like to withdraw your Stake Key? Note) If you withdraw, you will not be able to receive the delegation rewards.(Y/n) : ");
+		messageFormats.put("M00158", "It was withdrawn.");
+		messageFormats.put("M00159", "It was delegated to the pool. If you withdraw, you will have to delegate again. Would you continue?(Y/n) : ");
+		messageFormats.put("M00160", "The Stake Key is not registered. You can delegate after registration.");
+		messageFormats.put("M00161", "Enter the ID of the Pool to be delegated. (Q: Cancel):");
+		messageFormats.put("M00162", "Pool ID can only be in hexadecimal format. Ex) [HYPER] = 263498e010c7a49bbfd7c4e1aab29809fca7ed993f9e14192a75871e");
+		messageFormats.put("M00163", "Do you want to delegate Stake Key?(Y/n) : ");
+		messageFormats.put("M00164", "Pool ID : ");
+		messageFormats.put("M00165", "It is delegated to pool. Do you want to move another pool?(Y/n) : ");
+		messageFormats.put("M00166", "It was delegated.");
+		
+		messageFormats.put("E99999", "It is under development.");
 	}
 }

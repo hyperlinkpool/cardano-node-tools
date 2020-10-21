@@ -37,14 +37,14 @@ public class MessageKR {
 		messageFormats.put("M00028", "보유 수량 : %s");
 		messageFormats.put("M00029", "보낼 주소를 입력해 주세요.(99번 뒤로 가기) : ");
 		messageFormats.put("M00030", "현재 Pool 주소로 보낼 경우는 합산한 총액만 전송가능합니다. 전송 수수료를 제외한 나머지 총액이 전송됩니다.");
-		messageFormats.put("M00031", "진행하시겠습니까? (Y/n) :");
+		messageFormats.put("M00031", "진행하시겠습니까? (Y/n) : ");
 		messageFormats.put("M00032", "1. 전송수량과 수수료의 합계가 보유수량보다 많을 경우,");
 		messageFormats.put("M00033", "2. 전송수량과 보유수량이 같을 경우,");
 		messageFormats.put("M00034", "보유수량에서 수수료를 제외한 나머지를 전송합니다.");
 		messageFormats.put("M00035", "보유수량 : %s , 전송수량 : %s , 수수료 : %s");
 		messageFormats.put("M00036", "Sender address : %s");
 		messageFormats.put("M00037", "Receiver address : %s");
-		messageFormats.put("M00038", "전송하시겠습니까? (Y/n)");
+		messageFormats.put("M00038", "전송하시겠습니까? (Y/n) : ");
 		messageFormats.put("M00039", "이미 파일이 존재합니다. 삭제 후 다시 시도하세요.");
 		messageFormats.put("M00040", "Payment Verification Key가 생성되지 않았습니다. 키 생성 후 다시 시도하세요.");
 		messageFormats.put("M00041", "Stake Verification Key가 생성되지 않았습니다. 키 생성 후 다시 시도하세요.");
@@ -57,11 +57,11 @@ public class MessageKR {
 		messageFormats.put("M00048", "잘못된 URL 형식입니다. 다시 입력하세요.");
 		messageFormats.put("M00049", "URL 길이는 영문, 숫자, 기호 포함 64 Bytes(64자) 이하로 작성해야 합니다. Git Shorten URL을 이용하세요. https://git.io");
 		messageFormats.put("M00050", "잘못된 JSON파일 형식입니다. JSON파일을 확인하세요.");
-		messageFormats.put("M00051", "Pool Meta정보(pool 이름, pool 설명, pool Ticker, 등)이 없는 JSON파일 형식입니다. URL을 다시 확인하세요.");
-		messageFormats.put("M00052", "pool 이름 : ");
-		messageFormats.put("M00053", "pool 설명 : ");
-		messageFormats.put("M00054", "pool Ticker : ");
-		messageFormats.put("M00055", "pool 홍보 홈페이지 주소 : ");
+		messageFormats.put("M00051", "Pool Meta정보(Pool 이름, Pool 설명, Pool Ticker, 등)이 없는 JSON파일 형식입니다. URL을 다시 확인하세요.");
+		messageFormats.put("M00052", "Pool 이름 : ");
+		messageFormats.put("M00053", "Pool 설명 : ");
+		messageFormats.put("M00054", "Pool Ticker : ");
+		messageFormats.put("M00055", "Pool 홍보 홈페이지 주소 : ");
 		messageFormats.put("M00056", "선택사항) adapools.org 에 등록할 extended url : ");
 		messageFormats.put("M00057", "위에 입력한 정보가 맞습니까? (Y/n) : ");
 		messageFormats.put("M00058", "MetaData 파일을 저장하는 도중 에러가 발생했습니다.");
@@ -111,14 +111,14 @@ public class MessageKR {
 		messageFormats.put("M00102", "Stake Key 등록에 실패하였습니다.");
 		messageFormats.put("M00103", "Pool 등록용 MetaData 생성을 진행합니다.");
 		messageFormats.put("M00104", "예시) [HYPER] Pool");
-		messageFormats.put("M00105", "pool 이름 : Hyperlink Pool");
-		messageFormats.put("M00106", "pool 설명 : We prepare for the era of hyperconnectivity.");
-		messageFormats.put("M00107", "pool Ticker(영문 5자 이내) : HYPER");
-		messageFormats.put("M00108", "pool 홍보 홈페이지 주소 : https://twitter.com/HYPERLINKPOOL");
+		messageFormats.put("M00105", "Pool 이름 : Hyperlink Pool");
+		messageFormats.put("M00106", "Pool 설명 : We prepare for the era of hyperconnectivity.");
+		messageFormats.put("M00107", "Pool Ticker(영문 5자 이내) : HYPER");
+		messageFormats.put("M00108", "Pool 홍보 홈페이지 주소 : https://twitter.com/HYPERLINKPOOL");
 		messageFormats.put("M00109", "adapools.org 에 등록할 extended url. 선택사항이며 없으면 enter키를 입력하세요.(참고형식 https://a.adapools.org/extended-example) : https://git.io/JUMjN");
-		messageFormats.put("M00110", "pool Ticker(영문 5자 이내) : ");
+		messageFormats.put("M00110", "Pool Ticker(영문 5자 이내) : ");
 		messageFormats.put("M00111", "영문, 숫자 5자 이내로 입력하세요.");
-		messageFormats.put("M00112", "pool 홍보 홈페이지 주소 : ");
+		messageFormats.put("M00112", "Pool 홍보 홈페이지 주소 : ");
 		messageFormats.put("M00113", "선택사항) adapools.org 에 등록시킬 extended url. : ");
 		messageFormats.put("M00114", "MetaData 생성을 계속하시겠습니까? (Y / n) : ");
 		messageFormats.put("M00115", "위의 Json Contents를 인터넷 환경에서 다운로드할 수 있도록 파일로 제작하여 업로드 한 후, 업로드한 파일을 다운로드하는 URL을 기억하십시오.(추천 : Github GIST)");
@@ -162,10 +162,12 @@ public class MessageKR {
 				+ "99. 뒤로 가기");
 		messageFormats.put("M00138", "\n"
 				+ "1. Stake Key 등록(기본 등록은 2ADA가 소요되고(2020.10.09 기준 정보), 전송 수수료가 추가 소요됩니다.)\n"
-				+ "2. Metadata JSON 파일 생성\n"
-				+ "3. Pool 정보 등록 또는 갱신(Stake Key를 먼저 등록해야 하며, Pool 등록은 500ADA가 소요되고(2020.10.09 기준 정보), 이 후 갱신 시부터는 전송 수수료만 추가 소요됩니다.)\n"
-				+ "4. Pool 등록 상태 확인\n"
-				+ "5. KES Key Rotation\n"
+				+ "2. Stake Key 철회(보증금으로 등록한 2ADA(2020.10.09 기준 정보)를 돌려 받을 수 있습니다.)\n"
+				+ "3. Stake Key를 Pool에 위임\n"
+				+ "4. Metadata JSON 파일 생성\n"
+				+ "5. Pool 정보 등록 또는 갱신(Stake Key를 먼저 등록해야 하며, Pool 등록은 500ADA가 소요되고(2020.10.09 기준 정보), 이 후 갱신 시부터는 전송 수수료만 추가 소요됩니다.)\n"
+				+ "6. Pool 등록 상태 확인\n"
+				+ "7. KES Key Rotation\n"
 				+ "99. 뒤로 가기");
 		messageFormats.put("M00139", "\n"
 				+ "1. Key 생성, Stake 인증서 생성\n"
@@ -187,5 +189,19 @@ public class MessageKR {
 		messageFormats.put("M00152", "잔고 동기화에 시간이 걸릴 수 있습니다.");
 		messageFormats.put("M00153", "- TestNet은 지원하지 않습니다.");
 		messageFormats.put("M00154", "Cardano 로컬 Node가 중지 상태 또는 동기화중입니다. Cardano Node 동기화 완료 후 실행하세요.");
+		messageFormats.put("M00155", "Stake Key가 등록되어 있지 않습니다. 등록 이 후에 철회할 수 있습니다.");
+		messageFormats.put("M00156", "위임되지 않았습니다.");
+		messageFormats.put("M00157", "Stake Key를 철회하시겠습니까? 주의)철회하면 이 후에는 위임 보상을 받을 수 없습니다.(Y/n) : ");
+		messageFormats.put("M00158", "철회되었습니다.");
+		messageFormats.put("M00159", "Pool에 위임되어 있습니다. 철회하면 다시 위임을 해야 합니다. 진행하시겠습니까? (Y/n) : ");
+		messageFormats.put("M00160", "Stake Key가 등록되어 있지 않습니다. 등록 이 후에 위임할 수 있습니다.");
+		messageFormats.put("M00161", "위임할 Pool ID를 입력해 주세요. (Q : 취소) : ");
+		messageFormats.put("M00162", "Pool ID는 16진수 형태만 가능합니다. 예)[HYPER] = 263498e010c7a49bbfd7c4e1aab29809fca7ed993f9e14192a75871e");
+		messageFormats.put("M00163", "Stake Key를 위임하시겠습니까?(Y/n) : ");
+		messageFormats.put("M00164", "Pool ID : ");
+		messageFormats.put("M00165", "Pool에 위임되어 있습니다. 위임 이전을 진행하시겠습니까? (Y/n) : ");
+		messageFormats.put("M00166", "위임되었습니다.");
+		
+		messageFormats.put("E99999", "개발중입니다.");
 	}
 }

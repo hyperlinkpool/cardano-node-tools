@@ -10,7 +10,7 @@ public enum NodeCommands {
 	,STAKE_KEY_PAIR_HANDLER(StakeKeyPairHandler.class)
 	,PAYMENT_ADDRESS_HANDLER(PaymentAddressHandler.class)
 	,STAKE_ADDRESS_HANDLER(StakeAddressHandler.class)
-	,STAKE_POOL_CREATE_A_REGISTRATION_CERTIFICATE_HANDLER(StakePoolCreateAregistrationCertificateHandler.class)
+//	,STAKE_POOL_CREATE_A_REGISTRATION_CERTIFICATE_HANDLER(StakePoolCreateAregistrationCertificateHandler.class)
 	,POOL_REGISTRATION_GENERATE_COLD_KEY_AND_COLD_COUNTER_HANDLER(PoolRegistrationGenerateColdKeyAndColdCounterHandler.class)
 	,POOL_REGISTRATION_GENERATE_VRF_KEY_PAIR_HANDLER(PoolRegistrationGenerateVrfKeyPairHandler.class)
 	,POOL_REGISTRATION_GENERATE_KES_KEY_PAIR_HANDLER(PoolRegistrationGenerateKesKeyPairHandler.class)
@@ -23,8 +23,11 @@ public enum NodeCommands {
 	,CURRENT_STAKE_POOL_REWARDS_WITHDRAWING_HANDLER(CurrentStakePoolRewardsWithdrawingHandler.class)
 	
 	,REGISTER_STAKE_ADDRESS_ON_THE_BLOCKCHAIN_HANDLER(RegisterStakeAddressOnTheBlockchainHandler.class)
+	,DEREGISTER_STAKE_ADDRESS_ON_THE_BLOCKCHAIN_HANDLER(DeRegisterStakeAddressOnTheBlockchainHandler.class)
+	,DELEGATE_STAKE_ADDRESS_ON_POOL_HANDLER(DelegateStakeAddressOnPoolHandler.class)
 	,GENERATE_META_JSON_HANDLER(GenerateMetaJsonHandler.class)
 	,REGISTER_POOL_HANDLER(RegisterPoolHandler.class)
+	,DEREGISTER_POOL_HANDLER(DeRegisterPoolHandler.class)
 	,POOL_STATUS_HANDLER(PoolStatusHandler.class)
 	,KES_KEY_ROTATE_HANDLER(KesKeyRotateHandler.class)
 	;

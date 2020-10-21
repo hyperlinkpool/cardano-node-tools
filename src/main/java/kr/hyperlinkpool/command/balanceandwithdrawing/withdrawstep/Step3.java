@@ -13,12 +13,13 @@ import kr.hyperlinkpool.constants.StepOrder;
 import kr.hyperlinkpool.domain.ProcessResponse;
 import kr.hyperlinkpool.domain.ProcessResultDomain;
 import kr.hyperlinkpool.i18n.MessageFactory;
+import kr.hyperlinkpool.interfaces.JobProcess;
 import kr.hyperlinkpool.properties.NodeProperties;
 import kr.hyperlinkpool.utils.CommandExecutor;
 import kr.hyperlinkpool.utils.CommandListener;
 import kr.hyperlinkpool.utils.MessagePrompter;
 
-public class Step3 implements WithdrawResult, Ordered, Runnable{
+public class Step3 implements WithdrawResult, Ordered, JobProcess{
 
 	private WithdrawDomain withdrawDomain;
 	
@@ -73,7 +74,7 @@ public class Step3 implements WithdrawResult, Ordered, Runnable{
 		String inputValue = null;
 		if(receiveAddressString.equals(paymentAddressString)) {
 			MessagePrompter.promptMessage(MessageFactory.getInstance().getMessage("현재 Pool 주소로 보낼 경우는 합산한 총액만 전송가능합니다. 전송 수수료를 제외한 나머지 총액이 전송됩니다.", "M00029"), true);
-			inputValue = CommandListener.getInstance().listenCommand(MessageFactory.getInstance().getMessage("진행하시겠습니까? (Y/n) :", "M00030"), false);
+			inputValue = CommandListener.getInstance().listenCommand(MessageFactory.getInstance().getMessage("진행하시겠습니까? (Y/n) : ", "M00030"), false);
 			if(!"Y".equalsIgnoreCase(inputValue)) {
 				withdrawDomain.setNextOrder(StepOrder.EXIT.getStepOrder());
 				return;

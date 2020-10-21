@@ -24,10 +24,10 @@ public class GenerateMetaJsonHandler extends AbstractCommandHandler{
 		ProcessResultDomain<ProcessResponse> processResultDomain = new ProcessResultDomain<ProcessResponse>();
 		MessagePrompter.promptMessage(MessageFactory.getInstance().getMessage("Pool 등록용 MetaData 생성을 진행합니다.", "M00103"), true);
 		MessagePrompter.promptMessage(MessageFactory.getInstance().getMessage("예시) [HYPER] Pool", "M00104"), true);
-		MessagePrompter.promptMessage(MessageFactory.getInstance().getMessage("pool 이름 : Hyperlink Pool", "M00105"), true);
-		MessagePrompter.promptMessage(MessageFactory.getInstance().getMessage("pool 설명 : We prepare for the era of hyperconnectivity.", "M00106"), true);
-		MessagePrompter.promptMessage(MessageFactory.getInstance().getMessage("pool Ticker(영문 5자 이내) : HYPER", "M00107"), true);
-		MessagePrompter.promptMessage(MessageFactory.getInstance().getMessage("pool 홍보 홈페이지 주소 : https://twitter.com/HYPERLINKPOOL", "M00108"), true);
+		MessagePrompter.promptMessage(MessageFactory.getInstance().getMessage("Pool 이름 : Hyperlink Pool", "M00105"), true);
+		MessagePrompter.promptMessage(MessageFactory.getInstance().getMessage("Pool 설명 : We prepare for the era of hyperconnectivity.", "M00106"), true);
+		MessagePrompter.promptMessage(MessageFactory.getInstance().getMessage("Pool Ticker(영문 5자 이내) : HYPER", "M00107"), true);
+		MessagePrompter.promptMessage(MessageFactory.getInstance().getMessage("Pool 홍보 홈페이지 주소 : https://twitter.com/HYPERLINKPOOL", "M00108"), true);
 		MessagePrompter.promptMessage(MessageFactory.getInstance().getMessage("adapools.org 에 등록할 extended url. 선택사항이며 없으면 enter키를 입력하세요.(참고형식 https://a.adapools.org/extended-example) : https://git.io/JUMjN", "M00109"), true);
 		MessagePrompter.promptMessage("", true);
 		
@@ -35,14 +35,14 @@ public class GenerateMetaJsonHandler extends AbstractCommandHandler{
 		MetadataDomain metadataDomain = new MetadataDomain();
 		boolean mainLoop = true;
 		while(mainLoop) {
-			inputValue = CommandListener.getInstance().listenCommand(MessageFactory.getInstance().getMessage("pool 이름 : ", "M00052"), false);
+			inputValue = CommandListener.getInstance().listenCommand(MessageFactory.getInstance().getMessage("Pool 이름 : ", "M00052"), false);
 			metadataDomain.setName(inputValue);
-			inputValue = CommandListener.getInstance().listenCommand(MessageFactory.getInstance().getMessage("pool 설명 : ", "M00053"), false);
+			inputValue = CommandListener.getInstance().listenCommand(MessageFactory.getInstance().getMessage("Pool 설명 : ", "M00053"), false);
 			metadataDomain.setDescription(inputValue);
 			
 			boolean tickerLoop = true;
 			while(tickerLoop) {
-				inputValue = CommandListener.getInstance().listenCommand(MessageFactory.getInstance().getMessage("pool Ticker(영문 5자 이내) : ", "M00110"), false);
+				inputValue = CommandListener.getInstance().listenCommand(MessageFactory.getInstance().getMessage("Pool Ticker(영문 5자 이내) : ", "M00110"), false);
 				boolean tickerValidation = Pattern.matches("^[a-zA-Z0-9]*$", inputValue); 
 				if(!tickerValidation || inputValue.length() > 5) {
 					MessagePrompter.promptMessage("영문, 숫자 5자 이내로 입력하세요.", true);
@@ -52,16 +52,16 @@ public class GenerateMetaJsonHandler extends AbstractCommandHandler{
 				metadataDomain.setTicker(inputValue.toUpperCase());
 				tickerLoop = false;
 			}
-			inputValue = CommandListener.getInstance().listenCommand(MessageFactory.getInstance().getMessage("pool 홍보 홈페이지 주소 : ", "M00111"), false);
+			inputValue = CommandListener.getInstance().listenCommand(MessageFactory.getInstance().getMessage("Pool 홍보 홈페이지 주소 : ", "M00111"), false);
 			metadataDomain.setHomepage(inputValue);
 			inputValue = CommandListener.getInstance().listenCommand(MessageFactory.getInstance().getMessage("선택사항) adapools.org 에 등록시킬 extended url. : ", "M00112"), false);
 			metadataDomain.setExtended(inputValue);
 			
 			MessagePrompter.promptMessage("*******************************************************************************************************************", true);
-			MessagePrompter.promptMessage(MessageFactory.getInstance().getMessage("pool 이름 : ", "M00052") + metadataDomain.getName(), true);
-			MessagePrompter.promptMessage(MessageFactory.getInstance().getMessage("pool 설명 : ", "M00053") + metadataDomain.getDescription(), true);
-			MessagePrompter.promptMessage(MessageFactory.getInstance().getMessage("pool Ticker(영문 5자 이내) : ", "M00110") + metadataDomain.getTicker(), true);
-			MessagePrompter.promptMessage(MessageFactory.getInstance().getMessage("pool 홍보 홈페이지 주소 : ", "M00111") + metadataDomain.getHomepage(), true);
+			MessagePrompter.promptMessage(MessageFactory.getInstance().getMessage("Pool 이름 : ", "M00052") + metadataDomain.getName(), true);
+			MessagePrompter.promptMessage(MessageFactory.getInstance().getMessage("Pool 설명 : ", "M00053") + metadataDomain.getDescription(), true);
+			MessagePrompter.promptMessage(MessageFactory.getInstance().getMessage("Pool Ticker(영문 5자 이내) : ", "M00110") + metadataDomain.getTicker(), true);
+			MessagePrompter.promptMessage(MessageFactory.getInstance().getMessage("Pool 홍보 홈페이지 주소 : ", "M00111") + metadataDomain.getHomepage(), true);
 			if(metadataDomain.getExtended() == null || metadataDomain.getExtended().length() == 0) {
 				MessagePrompter.promptMessage(MessageFactory.getInstance().getMessage("선택사항) adapools.org에 등록할 extended url : ", "M00112") + "-", true);
 			}else {

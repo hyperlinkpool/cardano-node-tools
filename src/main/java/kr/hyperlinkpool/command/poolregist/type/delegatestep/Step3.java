@@ -1,11 +1,11 @@
-package kr.hyperlinkpool.command.poolregist.type.poolregisterstep;
+package kr.hyperlinkpool.command.poolregist.type.delegatestep;
 
 import org.json.JSONObject;
 
 import kr.hyperlinkpool.command.NodeCommandFormats;
 import kr.hyperlinkpool.command.interfaces.Ordered;
-import kr.hyperlinkpool.command.poolregist.type.poolregisterstep.domains.PoolRegisterDomain;
-import kr.hyperlinkpool.command.poolregist.type.poolregisterstep.interfaces.PoolRegisterResult;
+import kr.hyperlinkpool.command.poolregist.type.delegatestep.domains.DelegateStakeAddressDomain;
+import kr.hyperlinkpool.command.poolregist.type.delegatestep.interfaces.DelegateStakeAddressResult;
 import kr.hyperlinkpool.constants.NodeConstants;
 import kr.hyperlinkpool.constants.StepOrder;
 import kr.hyperlinkpool.domain.ProcessResponse;
@@ -15,65 +15,68 @@ import kr.hyperlinkpool.interfaces.JobProcess;
 import kr.hyperlinkpool.properties.NodeProperties;
 import kr.hyperlinkpool.utils.CommandExecutor;
 import kr.hyperlinkpool.utils.CommandListener;
+import kr.hyperlinkpool.utils.HttpUtils;
 import kr.hyperlinkpool.utils.MessagePrompter;
 
-public class Step5 implements PoolRegisterResult, Ordered, JobProcess{
+public class Step3 implements DelegateStakeAddressResult, Ordered, JobProcess{
 
-	private PoolRegisterDomain poolRegisterDomain;
+	private DelegateStakeAddressDomain delegateStakeAddressDomain;
 	
-	private ProcessResultDomain<PoolRegisterDomain> result;
+	private ProcessResultDomain<DelegateStakeAddressDomain> result;
 	
 	@Override
 	public int getOrder() {
-		return StepOrder.STEP5.getStepOrder();
+		return StepOrder.STEP3.getStepOrder();
 	}
 
 	@Override
-	public ProcessResultDomain<PoolRegisterDomain> getResult() {
+	public ProcessResultDomain<DelegateStakeAddressDomain> getResult() {
 		return result;
 	}
 
 	@Override
-	public void setResult(ProcessResultDomain<PoolRegisterDomain> result) {
+	public void setResult(ProcessResultDomain<DelegateStakeAddressDomain> result) {
 		this.result = result;
-		this.setPoolRegisterDomain(result.getResponseData());
+		this.delegateStakeAddressDomain = result.getResponseData();
+	}
+	
+	public DelegateStakeAddressDomain getDelegateStakeAddressDomain() {
+		return result.getResponseData();
 	}
 
-	public PoolRegisterDomain getPoolRegisterDomain() {
-		return poolRegisterDomain;
-	}
-
-	public void setPoolRegisterDomain(PoolRegisterDomain poolRegisterDomain) {
-		this.poolRegisterDomain = poolRegisterDomain;
+	public void setDelegateStakeAddressDomain(DelegateStakeAddressDomain delegateStakeAddressDomain) {
+		this.delegateStakeAddressDomain = delegateStakeAddressDomain;
 	}
 	
 	@Override
 	public void run() {
 		/**
-		 * Step 5
-		 * Pool 등록
+		 * Step 3
+		 * Stake Key 위임 등록
 		 */
-		long sumLovelace = poolRegisterDomain.getSumLovelace();
-		long receiverTotal = poolRegisterDomain.getReceiverTotal();
-		long poolDeposit = poolRegisterDomain.getPoolDeposit();
-		long txFee = poolRegisterDomain.getTxFee();
+		String poolId = delegateStakeAddressDomain.getPoolId();
+		JSONObject poolInfomation = HttpUtils.getPoolInfomation(poolId);
+		JSONObject pools = poolInfomation.getJSONObject("pools");
+		JSONObject delegatePoolInfomation = pools.getJSONObject("0");
 		
-		String txIn = poolRegisterDomain.getTxIn();
-		String txOut = poolRegisterDomain.getTxOut();
+		String name = delegatePoolInfomation.getString("db_name");
+		String ticker = delegatePoolInfomation.getString("db_ticker");
 		
-		String poolRegistMessage = null;
-		MessageFactory.getInstance().getMessage("ADA 현재 보유량 : %s", "M00088", String.valueOf(sumLovelace) + NodeConstants.POSTFIX_LOVELACE);
-		if(poolDeposit != 0) {
-			poolRegistMessage = MessageFactory.getInstance().getMessage("Pool 정보를 등록하시겠습니까?(Y/n) : ", "M00091");
-			MessagePrompter.promptMessage(MessageFactory.getInstance().getMessage("Pool Register 필요량 : %s", "M00089", String.valueOf(poolDeposit) + NodeConstants.POSTFIX_LOVELACE), true);
-		}else {
-			poolRegistMessage = MessageFactory.getInstance().getMessage("Pool 정보를 수정하시겠습니까?(Y/n) : ", "M00092");
-		}
-		MessagePrompter.promptMessage(MessageFactory.getInstance().getMessage("Transaction 수수료 : %s","M00090", String.valueOf(txFee) + NodeConstants.POSTFIX_LOVELACE), true);
-		MessagePrompter.promptMessage(MessageFactory.getInstance().getMessage("처리 완료 후 잔여 예상량 : %s","M00093", String.valueOf(receiverTotal) + NodeConstants.POSTFIX_LOVELACE), true);
+		MessagePrompter.promptMessage(MessageFactory.getInstance().getMessage("Pool ID : ", "M00164") + poolId, true);
+		MessagePrompter.promptMessage(MessageFactory.getInstance().getMessage("Pool 이름 : ", "M00052") + name, true);
+		MessagePrompter.promptMessage(MessageFactory.getInstance().getMessage("Pool Ticker : ", "M00054") + ticker, true);
+		
+		long sumLovelace = delegateStakeAddressDomain.getSumLovelace();
+		long txFee = delegateStakeAddressDomain.getTxFee();
+		String txIn = delegateStakeAddressDomain.getTxIn();
+		String txOut = delegateStakeAddressDomain.getTxOut();
+		long remainAmount = sumLovelace - txFee;
+		
+		MessagePrompter.promptMessage(MessageFactory.getInstance().getMessage("ADA 현재 보유량 : %s" , "M00088", String.valueOf(sumLovelace) + NodeConstants.POSTFIX_LOVELACE), true);
+		MessagePrompter.promptMessage(MessageFactory.getInstance().getMessage("Transaction 수수료 : %s", "M00090", String.valueOf(txFee) + NodeConstants.POSTFIX_LOVELACE), true);
+		MessagePrompter.promptMessage(MessageFactory.getInstance().getMessage("처리 완료 후 잔여 예상량 : %s", "M00100", String.valueOf(remainAmount) + NodeConstants.POSTFIX_LOVELACE), true);
 		MessagePrompter.promptMessage("", true);
-		
-		String inputValue = CommandListener.getInstance().listenCommand(poolRegistMessage, false);
+		String inputValue = CommandListener.getInstance().listenCommand(MessageFactory.getInstance().getMessage("Stake Key를 위임하시겠습니까?(Y/n) : ", "M00163"), false);
 		
 		if("Y".equalsIgnoreCase(inputValue)) {
 			String cardanoCliName = NodeProperties.getString("cardano.cli.name");
@@ -86,23 +89,19 @@ public class Step5 implements PoolRegisterResult, Ordered, JobProcess{
 			String ttl = String.valueOf(slotNo+200);
 			
 			String txRawFilePath = cardanoKeysFolderString + NodeConstants.PATH_DELIMITER + NodeProperties.getString("cardano.keys.tx.raw");
-			
-			String cardanoKeysPoolRegistrationCertFileString = cardanoKeysFolderString + NodeConstants.PATH_DELIMITER + NodeProperties.getString("cardano.keys.pool.registration.cert");
-			String cardanoKeysPoolDelegationCertFileString = cardanoKeysFolderString + NodeConstants.PATH_DELIMITER + NodeProperties.getString("cardano.keys.pool.delegation.cert");
-			String command = CommandExecutor.generateCommand(NodeCommandFormats.POOL_REGISTRATION_BUILD_THE_TRANSACTION, cardanoCliName, txIn, txOut, ttl, String.valueOf(txFee), txRawFilePath, cardanoKeysPoolRegistrationCertFileString, cardanoKeysPoolDelegationCertFileString);
+			String cardanoKeysDelegateStakeCertString = cardanoKeysFolderString + NodeConstants.PATH_DELIMITER + NodeProperties.getString("cardano.keys.stake.delegate.cert");
+			String command = CommandExecutor.generateCommand(NodeCommandFormats.STAKE_POOL_SUBMIT_THE_CERTIFICATE_WITH_A_TRANSACTION, cardanoCliName, txIn, txOut, ttl, String.valueOf(txFee), txRawFilePath, cardanoKeysDelegateStakeCertString);
 			ProcessResponse initializeProcessBuilder = CommandExecutor.initializeProcessBuilder(command);
 			String successResultString = initializeProcessBuilder.getSuccessResultString();
 			
 			String cardanoKeysPaymentSkeyPathString = null;
 			String cardanoKeysStakeSkeyPathString = null;
-			String cardanoKeysColdSkeyPathString = null;
 			String txSignedFile = null;
 			if(successResultString != null && successResultString.length() == 0) {
 				cardanoKeysPaymentSkeyPathString = cardanoKeysFolderString + NodeConstants.PATH_DELIMITER + NodeProperties.getString("cardano.keys.payment.skey");
 				cardanoKeysStakeSkeyPathString= cardanoKeysFolderString + NodeConstants.PATH_DELIMITER + NodeProperties.getString("cardano.keys.stake.skey");
-				cardanoKeysColdSkeyPathString= cardanoKeysFolderString + NodeConstants.PATH_DELIMITER + NodeProperties.getString("cardano.keys.cold.skey");
 				txSignedFile = cardanoKeysFolderString +NodeConstants.PATH_DELIMITER + NodeProperties.getString("cardano.keys.tx.signed");
-				command = CommandExecutor.generateCommand(NodeCommandFormats.POOL_REGISTRATION_SIGN_THE_TRANSACTION, cardanoCliName, txRawFilePath, cardanoKeysPaymentSkeyPathString, cardanoKeysStakeSkeyPathString, cardanoKeysColdSkeyPathString, txSignedFile);
+				command = CommandExecutor.generateCommand(NodeCommandFormats.STAKE_POOL_SIGN_THE_TRACSACTION, cardanoCliName, txRawFilePath, cardanoKeysPaymentSkeyPathString, cardanoKeysStakeSkeyPathString, txSignedFile);
 				initializeProcessBuilder = CommandExecutor.initializeProcessBuilder(command);
 			}
 			
@@ -122,7 +121,7 @@ public class Step5 implements PoolRegisterResult, Ordered, JobProcess{
 						while(loop) {
 							inputValue = CommandListener.getInstance().listenCommand(MessageFactory.getInstance().getMessage("화면에 보이는 수수료를 입력해 주세요. (Q : 취소) : ", "M00017"), false);
 							if("Q".equalsIgnoreCase(inputValue)) {
-								poolRegisterDomain.setNextOrder(StepOrder.EXIT.getStepOrder());
+								delegateStakeAddressDomain.setNextOrder(StepOrder.EXIT.getStepOrder());
 								result.setSuccess(false);
 								return;
 							}
@@ -141,9 +140,9 @@ public class Step5 implements PoolRegisterResult, Ordered, JobProcess{
 								}
 								
 								loop = false;
-								poolRegisterDomain.setNextOrder(this.getOrder()-1);
-								poolRegisterDomain.setTxFeeReCalc(true);
-								poolRegisterDomain.setTxFee(reCalcTxFee);
+								delegateStakeAddressDomain.setNextOrder(this.getOrder()-1);
+								delegateStakeAddressDomain.setTxFeeReCalc(true);
+								delegateStakeAddressDomain.setTxFee(reCalcTxFee);
 								return;
 							} catch (Exception e) {
 								MessagePrompter.promptMessage(MessageFactory.getInstance().getMessage("다시 입력해 주세요.", "M00019"), true);
@@ -151,7 +150,7 @@ public class Step5 implements PoolRegisterResult, Ordered, JobProcess{
 						}
 					}else {
 						MessagePrompter.promptMessage(MessageFactory.getInstance().getMessage("취소되었습니다.", "M00020"), true);
-						poolRegisterDomain.setNextOrder(StepOrder.EXIT.getStepOrder());
+						delegateStakeAddressDomain.setNextOrder(StepOrder.EXIT.getStepOrder());
 						result.setSuccess(false);
 						return;
 					}
@@ -159,21 +158,21 @@ public class Step5 implements PoolRegisterResult, Ordered, JobProcess{
 					if(failureResultString.indexOf("ValueNotConservedUTxO") > -1) {
 						MessagePrompter.promptMessage(MessageFactory.getInstance().getMessage("잔고가 충분하지 않습니다.", "M00151"), true);
 					}else {
-						MessagePrompter.promptMessage(MessageFactory.getInstance().getMessage("Pool 등록에 실패하였습니다.", "M00094"), true);
+						MessagePrompter.promptMessage(MessageFactory.getInstance().getMessage("Stake Key 등록에 실패하였습니다.", "M00102"), true);
 					}
-					poolRegisterDomain.setNextOrder(StepOrder.EXIT.getStepOrder());
+					delegateStakeAddressDomain.setNextOrder(StepOrder.EXIT.getStepOrder());
 					result.setSuccess(false);
 					return;
 				}
 			}
-			MessagePrompter.promptMessage(MessageFactory.getInstance().getMessage("등록되었습니다.", "M00095"), true);
+			MessagePrompter.promptMessage(MessageFactory.getInstance().getMessage("위임되었습니다.", "M00166"), true);
 			MessagePrompter.promptMessage(MessageFactory.getInstance().getMessage("잔고 동기화에 시간이 걸릴 수 있습니다.", "M00152"), true);
 			result.setSuccess(true);
 		}else {
 			MessagePrompter.promptMessage(MessageFactory.getInstance().getMessage("취소되었습니다.", "M00020"), true);
 			result.setSuccess(false);
 		}
-		poolRegisterDomain.setNextOrder(StepOrder.EXIT.getStepOrder());
-		result.setResponseData(poolRegisterDomain);
+		delegateStakeAddressDomain.setNextOrder(StepOrder.EXIT.getStepOrder());
+		result.setResponseData(delegateStakeAddressDomain);
 	}
 }

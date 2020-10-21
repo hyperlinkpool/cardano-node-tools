@@ -1,13 +1,14 @@
 package kr.hyperlinkpool.menu;
 
 import kr.hyperlinkpool.i18n.MessageFactory;
+import kr.hyperlinkpool.interfaces.JobProcess;
 import kr.hyperlinkpool.menu.balanceandwithdrawing.BalanceAndWithdrawingContextMenu;
 import kr.hyperlinkpool.menu.keyandcert.KeyAndCertContextMenu;
 import kr.hyperlinkpool.menu.poolregist.PoolRegistContextMenu;
 import kr.hyperlinkpool.utils.CommandListener;
 import kr.hyperlinkpool.utils.MessagePrompter;
 
-public class RootContextMenu implements Runnable, Menu{
+public class RootContextMenu implements JobProcess, Menu{
 
 	public static RootContextMenu instance;
 	

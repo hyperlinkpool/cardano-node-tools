@@ -11,12 +11,13 @@ import kr.hyperlinkpool.constants.StepOrder;
 import kr.hyperlinkpool.domain.ProcessResponse;
 import kr.hyperlinkpool.domain.ProcessResultDomain;
 import kr.hyperlinkpool.i18n.MessageFactory;
+import kr.hyperlinkpool.interfaces.JobProcess;
 import kr.hyperlinkpool.properties.NodeProperties;
 import kr.hyperlinkpool.utils.CommandExecutor;
 import kr.hyperlinkpool.utils.CommandListener;
 import kr.hyperlinkpool.utils.MessagePrompter;
 
-public class Step4 implements WithdrawResult, Ordered, Runnable{
+public class Step4 implements WithdrawResult, Ordered, JobProcess{
 
 	private WithdrawDomain withdrawDomain;
 	
