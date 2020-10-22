@@ -18,7 +18,6 @@ Block Producer 노드가 설치되어 있는 서버에서 Java로 실행하는 �
 ## 진행중인 개발 목록
 ```jsx
 - Withdrawing rewards 개발중
-- Retiring a Stake Pool 개발중
 ```
 
 ## Supported OS
