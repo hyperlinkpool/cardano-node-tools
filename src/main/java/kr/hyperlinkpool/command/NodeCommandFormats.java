@@ -352,4 +352,49 @@ public class NodeCommandFormats {
 			+ " --signing-key-file %s"
 			+ " --signing-key-file %s"
 			+ " --out-file %s";
+	
+	
+	public static final String POOL_DEREGIST_CREATE_DEREGISTRATION_CERTIFICATE = ""
+			+ "%s"
+			+ " shelley"
+			+ " stake-pool"
+			+ " deregistration-certificate"
+			+ " --cold-verification-key-file %s"
+			+ " --epoch %s"
+			+ " --out-file %s";
+	
+	public static final String POOL_DEREGIST_DRAFT_THE_TRANSACTION = ""
+			+ "%s"
+			+ " shelley"
+			+ " transaction"
+			+ " build-raw"
+			+ " %s"
+			+ " %s"
+			+ " --ttl 0"
+			+ " --fee 0"
+			+ " --out-file %s"
+			+ " --certificate-file %s";
+
+	public static final String POOL_DEREGIST_BUILD_THE_TRANSACTION = ""
+			+ "%s"
+			+ " shelley"
+			+ " transaction"
+			+ " build-raw"
+			+ " %s"
+			+ " %s"
+			+ " --ttl %s"
+			+ " --fee %s"
+			+ " --out-file %s"
+			+ " --certificate-file %s";
+	
+	public static final String POOL_DEREGIST_SIGN_THE_TRANSACTION = ""
+			+ "%s"
+			+ " shelley"
+			+ " transaction"
+			+ " sign"
+			+ " --tx-body-file %s"
+			+ " --signing-key-file %s"
+			+ " --signing-key-file %s"
+			+ " --mainnet"
+			+ " --out-file %s";
 }

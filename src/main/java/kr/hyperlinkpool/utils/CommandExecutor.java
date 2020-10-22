@@ -416,4 +416,18 @@ public class CommandExecutor {
 		}
 		return results;
 	}
+	
+	public static long[] parseFeeTooSmallUTxO(String failureResultString) {
+		int valueNotConservedUTxOIndexOf = failureResultString.indexOf("(FeeTooSmallUTxO");
+		String valueNotConservedUTxOString = failureResultString.substring(valueNotConservedUTxOIndexOf);
+		String valueString = valueNotConservedUTxOString.substring(0, valueNotConservedUTxOString.indexOf("))")+2);
+		String removedBracket = valueString.replaceAll("\\(", "").replaceAll("\\)", "");
+		String[] datas = removedBracket.split(NodeConstants.BLANK_SPACE);
+		long[] results = new long[2];
+		if(datas.length == 5) {
+			results[0] = Long.parseLong(datas[2]);
+			results[1] = Long.parseLong(datas[4]);
+		}
+		return results;
+	}
 }

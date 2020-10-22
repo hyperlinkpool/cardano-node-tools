@@ -185,7 +185,7 @@ public class MessageUS {
 		messageFormats.put("M00148", "     Stake Pool Address : %s");
 		messageFormats.put("M00149", "%3s  Stake Pool ID : %s");
 		messageFormats.put("M00150", "     Rewards Balance : %s");
-		messageFormats.put("M00151", "There is not enough balance.");
+		messageFormats.put("M00151", "There is not enough ADA balance in your current account. Please make a deposit of about 100 ADA and try again.");
 		messageFormats.put("M00152", "It may takes some time to synchronize your balance.");
 		messageFormats.put("M00153", "- Do not support TestNet.");
 		messageFormats.put("M00154", "Cardano local node is stopped or synchronizing.Please run after completing Cardano Node synchronization.");

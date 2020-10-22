@@ -186,7 +186,7 @@ public class MessageKR {
 		messageFormats.put("M00148", "     Stake Pool 주소 : %s");
 		messageFormats.put("M00149", "%3s  Stake Pool ID : %s");
 		messageFormats.put("M00150", "     Rewards Balance : %s");
-		messageFormats.put("M00151", "잔고가 충분하지 않습니다.");
+		messageFormats.put("M00151", "현재 계좌에 ADA 잔고가 충분하지 않습니다. 100 ADA 정도 입금 후에 재시도 하시기 바랍니다.");
 		messageFormats.put("M00152", "잔고 동기화에 시간이 걸릴 수 있습니다.");
 		messageFormats.put("M00153", "- TestNet은 지원하지 않습니다.");
 		messageFormats.put("M00154", "Cardano 로컬 Node가 중지 상태 또는 동기화중입니다. Cardano Node 동기화 완료 후 실행하세요.");

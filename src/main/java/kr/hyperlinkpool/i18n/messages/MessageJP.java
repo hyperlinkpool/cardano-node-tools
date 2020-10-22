@@ -186,7 +186,7 @@ public class MessageJP {
 		messageFormats.put("M00148", "      ステークプールのアドレス : %s");
 		messageFormats.put("M00149", "%3s   ステークプールのID : %s");
 		messageFormats.put("M00150", "      RewardsのBalance : %s");
-		messageFormats.put("M00151", "残高が足りません。");
+		messageFormats.put("M00151", "現在の口座にADA残高が足りません。100ADA程度入金した後、再試行してください。");
 		messageFormats.put("M00152", "残高同期に時間がかかることがあります。");
 		messageFormats.put("M00153", "- TestNetはサポートしていません。");
 		messageFormats.put("M00154", "CardanoのローカルNodeが停止状態または同期中です。CardanoのNodeの同期完了後に実行してください。");

@@ -14,6 +14,7 @@ public class NodeConstants {
 	public static final String CARDANO_NODE_FORGE_METRICS_OPERATIONAL_CERTIFICATE_EXPIRY_KES_PERIOD_INT_KEY = "cardano_node_Forge_metrics_operationalCertificateExpiryKESPeriod_int";
 	public static final String CARDANO_NODE_FORGE_METRICS_CURRENT_KES_PERIOD_INT_KEY = "cardano_node_Forge_metrics_currentKESPeriod_int";
 	public static final String CARDANO_NODE_FORGE_METRICS_REMAINING_KES_PERIODS_INT_KEY = "cardano_node_Forge_metrics_remainingKESPeriods_int";
+	public static final String CARDANO_NODE_CHAINDB_METRICS_EPOCH_INT_KEY = "cardano_node_ChainDB_metrics_epoch_int";
 	
 	public static final String DEFAULT_LOG_PATH = "./log/cardano-node-tools.log";
 	
