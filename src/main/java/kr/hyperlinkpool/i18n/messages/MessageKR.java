@@ -202,6 +202,12 @@ public class MessageKR {
 		messageFormats.put("M00164", "Pool ID : ");
 		messageFormats.put("M00165", "Pool에 위임되어 있습니다. 위임 이전을 진행하시겠습니까? (Y/n) : ");
 		messageFormats.put("M00166", "위임되었습니다.");
+		messageFormats.put("M00167", "은퇴할 Epoch를 입력해 주세요.(입력 가능 범위 : %s ~ %s, 현재 Epoch : %s), [Q : 취소] : ");
+		messageFormats.put("M00168", "입력 가능 범위를 초과했습니다. 다시 입력해 주세요.");
+		messageFormats.put("M00169", "현재 Pool의 은퇴를 진행하시겠습니까? (Y/n) : ");
+		messageFormats.put("M00170", "은퇴 Epoch : %s");
+		messageFormats.put("M00171", "은퇴 Epoch 이 후 현재 주소로 반환되는 ADA 보증금 : %s");
+		messageFormats.put("M00172", "Pool 은퇴 등록에 실패하였습니다.");
 		
 		messageFormats.put("E99999", "개발중입니다.");
 	}

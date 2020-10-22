@@ -14,7 +14,7 @@ public class MessageJP {
 		messageFormats.put("M00005", "撤退することができる補償がありません");
 		messageFormats.put("M00006", "トランザクションハッシュがありません。");
 		messageFormats.put("M00007", "引き出し可能な補償量 : %s");
-		messageFormats.put("M00008", "転送数量を入力してください。(入力ユニット : lovelace, 1 ADA = 1,000,000 lovelace, キャンセル : Q) : ");
+		messageFormats.put("M00008", "転送数量を入力してください。(入力ユニット : lovelace, 1 ADA = 1,000,000 lovelace, キャンセル：Q) : ");
 		messageFormats.put("M00009", "数量が足りません。もう一度入力してください。引き出し可能の数量: %s , 入力の数量 : %s");
 		messageFormats.put("M00010", "プロセス実行中にエラーが発生されました。 : ");
 		messageFormats.put("M00011", "数字を入力してください。");
@@ -23,7 +23,7 @@ public class MessageJP {
 		messageFormats.put("M00014", "引き出した後、総保有の数量 : %s");
 		messageFormats.put("M00015", "引き出しますか？ (Y/n) : ");
 		messageFormats.put("M00016", "手数料の計算値が実際の送信時に所要量よりも足りません。直接の入力で続きますか？(Y/n) : ");
-		messageFormats.put("M00017", "画面に表示されてある手数料を入力してください。(Q : キャンセル) : ");
+		messageFormats.put("M00017", "画面に表示されてある手数料を入力してください。(Q：キャンセル) : ");
 		messageFormats.put("M00018", "手数料が高すぎます。手数料の許容値 : %s");
 		messageFormats.put("M00019", "もう一度入力してください。");
 		messageFormats.put("M00020", "キャンセルされました。");
@@ -53,7 +53,7 @@ public class MessageJP {
 		messageFormats.put("M00044", "ColdのSigningのKeyが作成されていません。キーの作成後、もう一度やり直してください。");
 		messageFormats.put("M00045", "ColdのCounterが作成されていません。キーの作成後、もう一度やり直してください。");
 		messageFormats.put("M00046", "mainnet-shelley-genesis.jsonのファイルがありません。確認後、もう一度やり直してください。");
-		messageFormats.put("M00047", "MetadataのJSONファイルをダウンロードすることができるインターネットアドレスを入力してください。(Q : キャンセル) : ");
+		messageFormats.put("M00047", "MetadataのJSONファイルをダウンロードすることができるインターネットアドレスを入力してください。(Q：キャンセル) : ");
 		messageFormats.put("M00048", "URLが正しくありません。もう一度入力してください。");
 		messageFormats.put("M00049", "URLの長さは、英文、数字、記号を含む64 Bytes（64文字）以下で作成する必要があります。Git Shorten URLをご利用下さい。https://git.io");
 		messageFormats.put("M00050", "JSONのファイルが間違っています。JSONのファイルを確認してください。");
@@ -69,13 +69,13 @@ public class MessageJP {
 		messageFormats.put("M00060", "MetaDataファイルのHashを作成する際にエラーが発生されました。");
 		messageFormats.put("M00061", "ColdのVerificationのKeyが作成されていません。キーの作成後、もう一度やり直してください。");
 		messageFormats.put("M00062", "VRFのVerificationのKeyが作成されていません。キーの作成後、もう一度やり直してください。");
-		messageFormats.put("M00063", "プールの保証金を入力してください。(ユニット: lovelace, 1 ADA = 1,000,000 lovelace)。[Q : キャンセル] : ");
+		messageFormats.put("M00063", "プールの保証金を入力してください。(ユニット: lovelace, 1 ADA = 1,000,000 lovelace)。[Q：キャンセル] : ");
 		messageFormats.put("M00064", "入力値が間違っています。もう一度入力してください。");
-		messageFormats.put("M00065", "プールの固定費を入力してください。(ユニット : lovelace, 1 ADA = 1,000,000 lovelace)。[Q : キャンセル] : ");
+		messageFormats.put("M00065", "プールの固定費を入力してください。(ユニット : lovelace, 1 ADA = 1,000,000 lovelace)。[Q：キャンセル] : ");
 		messageFormats.put("M00066", "プールのCostは少なくとも%s以上である必要があります。");
-		messageFormats.put("M00067", "プールのMarginを入力してください。(ユニット : 100分位小数点, 例: 3％=> 0.03で入力). [Q : キャンセル] : ");
+		messageFormats.put("M00067", "プールのMarginを入力してください。(ユニット : 100分位小数点, 例: 3％=> 0.03で入力). [Q：キャンセル] : ");
 		messageFormats.put("M00068", "1以下で入力する必要があります。");
-		messageFormats.put("M00069", "RelayのNodeの数を入力してください。( ユニット : 1以上の整数) [Q : キャンセル] : ");
+		messageFormats.put("M00069", "RelayのNodeの数を入力してください。( ユニット : 1以上の整数) [Q：キャンセル] : ");
 		messageFormats.put("M00070", "RelayのNodeの情報を入力してください。");
 		messageFormats.put("M00071", "(例. ドメイン名：Port => relay.hyperlinkpool.kr:6000)");
 		messageFormats.put("M00072", "(例. xxx.xxx.xxx.xxx:Port => 123.123.123.123:6000)");
@@ -196,12 +196,18 @@ public class MessageJP {
 		messageFormats.put("M00158", "撤回されました。");
 		messageFormats.put("M00159", "プールに委任されています。撤回すると、再び委任する必要があります。続きますか？(Y/n) : ");
 		messageFormats.put("M00160", "StakeのKeyが登録されていません。登録の後に委任することができます。");
-		messageFormats.put("M00161", "委任するPoolのIDを入力してください。(Q : キャンセル) : ");
+		messageFormats.put("M00161", "委任するPoolのIDを入力してください。(Q：キャンセル) : ");
 		messageFormats.put("M00162", "PoolのIDは16進数の形式のみ可能です。例)[HYPER] = 263498e010c7a49bbfd7c4e1aab29809fca7ed993f9e14192a75871e");
 		messageFormats.put("M00163", "Stake Keyを委任しますか？(Y/n) : ");
 		messageFormats.put("M00164", "Pool ID : ");
 		messageFormats.put("M00165", "Poolに委任されています。委任の移動しますか？(Y/n) : ");
 		messageFormats.put("M00166", "委任されました。");
+		messageFormats.put("M00167", "引退するEpochを入力してください。（入力可能範囲：%s ~ %s、現在のEpoch：%s）[Q：キャンセル] : ");
+		messageFormats.put("M00168", "入力可能な範囲を超えています。再入力してください。");
+		messageFormats.put("M00169", "現在Poolの引退を行いますか？（Y / n）：");
+		messageFormats.put("M00170", "引退のEpoch : %s");
+		messageFormats.put("M00171", "引退のEpochこの後、現在のアドレスに返されるADAの保証金：%s");
+		messageFormats.put("M00172", "Poolの引退の登録に失敗しました。");
 		
 		messageFormats.put("E99999", "開発中です。");
 	}

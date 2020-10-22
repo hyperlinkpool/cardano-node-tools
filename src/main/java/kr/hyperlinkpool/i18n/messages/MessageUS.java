@@ -201,6 +201,12 @@ public class MessageUS {
 		messageFormats.put("M00164", "Pool ID : ");
 		messageFormats.put("M00165", "It is delegated to pool. Do you want to move another pool?(Y/n) : ");
 		messageFormats.put("M00166", "It was delegated.");
+		messageFormats.put("M00167", "Please enter the Epoch to retire.（range:%s ~ %s, epoch of present : %s）[Q : cancel] : ");
+		messageFormats.put("M00168", "It exceeds the input range. Please re-enter.");
+		messageFormats.put("M00169", "Are you sure of retirement of this pool? (Y / n) : ");
+		messageFormats.put("M00170", "Epoch of retirement : %s");
+		messageFormats.put("M00171", "After retiring of pool, It will be return ADA deposit : %s");
+		messageFormats.put("M00172", "Failed to register for pool retirement.");
 		
 		messageFormats.put("E99999", "It is under development.");
 	}
