@@ -1,21 +1,15 @@
 # Introduction
-- 안녕하세요. 한국 카르다노 Stake Pool Operator HYPER입니다. 노드 설치 후에 셋팅과 관리를 도와주는 서버용 지갑을 제작하게 되었습니다.
-- (Dear Community. This is Korea Cardano Stake Pool Operator a.k.a. HYPER. After installing the node, we have created a wallet for the server that helps setting and management.)
+- 안녕하세요. 한국 카르다노 Stake Pool Operator HYPER입니다. 노드 설치 후에 셋팅과 관리를 도와주는 서버용 지갑을 제작하게 되었습니다.(Dear Community. This is Korea Cardano Stake Pool Operator a.k.a. HYPER. After installing the node, we have created a wallet for the server that helps setting and management.)
 
-- ADA 송수신, ADA Rewards 인출, [Stake Pool 위임, 철회], [Pool 등록, 철회]등 Cardano 노드에서 사용하는 지갑입니다.
-- (It is a wallet used by Cardano nodes such as ADA transmission and reception, ADA Rewards withdrawal, [Stake Pool delegation, withdrawal], and [Pool registration, withdrawal], etc.)
+- ADA 송수신, ADA Rewards 인출, [Stake Pool 위임, 철회], [Pool 등록, 철회]등 Cardano 노드에서 사용하는 지갑입니다.(It is a wallet used by Cardano nodes such as ADA transmission and reception, ADA Rewards withdrawal, [Stake Pool delegation, withdrawal], and [Pool registration, withdrawal], etc.)
 
-- cardano-cli를 사용하는데 번거로운 수작업을 줄인 툴입니다.
-- (It is a tool that reduces the hassle of manual labor when using cardano-cli.)
+- cardano-cli를 사용하는데 번거로운 수작업을 줄인 툴입니다.(It is a tool that reduces the hassle of manual labor when using cardano-cli.)
 
-- 그 동안 Pool을 운영하면서 수작업으로 Command를 작성하던 작업을 시스템화하였으며, 수작업으로 발생할 수 있는 실수를 줄일 수 있도록 개발했습니다.
-- (During that time, while operating the pool, the task of manually writing commands has been systematized, and has been developed to reduce mistakes that can occur manually.)
+- 그 동안 Pool을 운영하면서 수작업으로 Command를 작성하던 작업을 시스템화하였으며, 수작업으로 발생할 수 있는 실수를 줄일 수 있도록 개발했습니다.(During that time, while operating the pool, the task of manually writing commands has been systematized, and has been developed to reduce mistakes that can occur manually.)
 
-- 악성 소프트웨어로 오해받을 수 있기 때문에 Java를 이해하시는 Pool운영자가 사용해 보셨으면 좋겠습니다.
-- (It can be misunderstood as malicious software, so I hope that a Pool operator who understands Java will use it.)
+- 악성 소프트웨어로 오해받을 수 있기 때문에 Java를 이해하시는 Pool운영자가 사용해 보셨으면 좋겠습니다.(It can be misunderstood as malicious software, so I hope that a Pool operator who understands Java will use it.)
 
-- Block Producer 노드가 설치되어 있는 서버에서 Java로 실행하는 소프트웨어 입니다.
-- (This software is executed in Java on the server where the Block Producer node is installed.)
+- Block Producer 노드가 설치되어 있는 서버에서 Java로 실행하는 소프트웨어 입니다.(This software is executed in Java on the server where the Block Producer node is installed.)
 
 **TestNet은 지원하지 않습니다.(TestNet is not supported.)**
 
