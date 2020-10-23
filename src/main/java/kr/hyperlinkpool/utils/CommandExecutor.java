@@ -395,9 +395,9 @@ public class CommandExecutor {
 		MessagePrompter.promptMessage("================================================================================================", true);
 		for(int i=0;i<length;i++) {
 			JSONObject stakePoolInfoJsonObject = rewardsData.getJSONObject(i);
-			MessagePrompter.promptMessage(MessageFactory.getInstance().getMessage("     Stake Pool 주소 : %s", "M00148", stakePoolInfoJsonObject.getString("address")), true);
+			MessagePrompter.promptMessage(MessageFactory.getInstance().getMessage("     Stake Key 주소 : %s", "M00148", stakePoolInfoJsonObject.getString("address")), true);
 			String delegation = JSONObject.NULL.equals(stakePoolInfoJsonObject.get("delegation")) ? MessageFactory.getInstance().getMessage("위임되지 않았습니다.", "M00156") : stakePoolInfoJsonObject.getString("delegation");
-			MessagePrompter.promptMessage(MessageFactory.getInstance().getMessage("%3s  Stake Pool ID : %s", "M00149", String.valueOf(i+1), delegation), true);
+			MessagePrompter.promptMessage(MessageFactory.getInstance().getMessage("%3s  위임된 Pool ID : %s", "M00149", String.valueOf(i+1), delegation), true);
 			MessagePrompter.promptMessage(MessageFactory.getInstance().getMessage("     Rewards Balance : %s", "M00150", String.valueOf(stakePoolInfoJsonObject.getLong("rewardAccountBalance")) + NodeConstants.POSTFIX_LOVELACE), true);
 			MessagePrompter.promptMessage("================================================================================================", true);
 		}

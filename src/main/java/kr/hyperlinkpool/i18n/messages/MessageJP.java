@@ -146,8 +146,9 @@ public class MessageJP {
 				+ "1. 現在の財布のADAのバランスチェック\n"
 				+ "2. 他の財布のADAのバランスチェック\n"
 				+ "3. 現在の財布のADAの報酬のバランスチェック\n"
-				+ "4. 現在の財布から他の財布にADAの引き出し\n"
-				+ "5. 現在の財布からADAの報酬の引き出し\n"
+				+ "4. 他の財布のADAの報酬のバランスチェック\n"
+				+ "5. 現在の財布から他の財布にADAの引き出し\n"
+				+ "6. 現在の財布からADAの報酬の引き出し\n"
 				+ "99. 戻る");
 		messageFormats.put("M00136", "番号を入力した後、エンターキーを押してください。: ");
 		messageFormats.put("M00137", "\n"
@@ -183,8 +184,8 @@ public class MessageJP {
 		messageFormats.put("M00145", "- 免責事項1：本プログラムの誤った使用生じた事項についてメーカーは一切の責任がないことを申し上げます。\n");
 		messageFormats.put("M00146", "- 免責事項2：本プログラムはFreewareですので、使用の強制性はありません。また、修正、配布、使用も自由であり、これに伴う責任はユーザーにあります。\n");
 		messageFormats.put("M00147", "ステークプールのアドレスの数 : %s");
-		messageFormats.put("M00148", "      ステークプールのアドレス : %s");
-		messageFormats.put("M00149", "%3s   ステークプールのID : %s");
+		messageFormats.put("M00148", "      ステークキーのアドレス : %s");
+		messageFormats.put("M00149", "%3s   委任されたプールのID : %s");
 		messageFormats.put("M00150", "      RewardsのBalance : %s");
 		messageFormats.put("M00151", "現在の口座にADA残高が足りません。100ADA程度入金した後、再試行してください。");
 		messageFormats.put("M00152", "残高同期に時間がかかることがあります。");

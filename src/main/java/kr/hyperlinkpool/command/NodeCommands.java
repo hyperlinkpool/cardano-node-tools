@@ -19,6 +19,7 @@ public enum NodeCommands {
 	,BALANCE_CHECK_STAKEPOOL_ADA_HANDLER(BalanceCheckStakePoolAdaHandler.class)
 	,BALANCE_CHECK_ANOTHER_ADDRESS_ADA_HANDLER(BalanceCheckAnotherAddressAdaHandler.class)
 	,BALANCE_CHECK_STAKE_POOL_REWARDS_HANDLER(BalanceCheckStakePoolRewardsHandler.class)
+	,BALANCE_CHECK_ANOTHER_STAKE_POOL_REWARDS_HANDLER(BalanceCheckAnotherStakePoolRewardsHandler.class)
 	,CURRENT_STAKE_POOL_ADA_WITHDRAWING_HANDLER(CurrentStakePoolAdaWithdrawingHandler.class)
 	,CURRENT_STAKE_POOL_REWARDS_WITHDRAWING_HANDLER(CurrentStakePoolRewardsWithdrawingHandler.class)
 	

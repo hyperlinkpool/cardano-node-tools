@@ -145,8 +145,9 @@ public class MessageUS {
 				+ "1. Balance check of the current wallet\n"
 				+ "2. Balance check of another wallet\n"
 				+ "3. Rewards balance check of the current wallet\n"
-				+ "4. Withdrawal from the current wallet to another wallet\n"
-				+ "5. Rewards withdrawal to the current wallet\n"
+				+ "4. Rewards balance check of another wallet\n"
+				+ "5. Withdrawal from the current wallet to another wallet\n"
+				+ "6. Rewards withdrawal to the current wallet\n"
 				+ "99. Go Back");
 		messageFormats.put("M00136", "Enter the number,and press Enter. :");
 		messageFormats.put("M00137", "\n"
@@ -182,8 +183,8 @@ public class MessageUS {
 		messageFormats.put("M00145", "- Disclaimer 1: Please note that the creators are not responsible for any matters caused by incorrect use of this program.\n");
 		messageFormats.put("M00146", "- Disclaimer 2: This program is freeware. Therefore, there is no compulsory use, and modification, distribution, and use are also free, and the user is responsible for this.\n");
 		messageFormats.put("M00147", "Stake Pool address count : %s");
-		messageFormats.put("M00148", "     Stake Pool Address : %s");
-		messageFormats.put("M00149", "%3s  Stake Pool ID : %s");
+		messageFormats.put("M00148", "     Stake Key Address : %s");
+		messageFormats.put("M00149", "%3s  Delegated Pool ID : %s");
 		messageFormats.put("M00150", "     Rewards Balance : %s");
 		messageFormats.put("M00151", "There is not enough ADA balance in your current account. Please make a deposit of about 100 ADA and try again.");
 		messageFormats.put("M00152", "It may takes some time to synchronize your balance.");

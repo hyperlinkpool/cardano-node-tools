@@ -19,8 +19,9 @@ public class BalanceAndWithdrawingContextMenu implements JobProcess, Menu{
 			+ "1. 현재 지갑의 ADA Balance Check\n"
 			+ "2. 다른 지갑의 ADA Balance Check\n"
 			+ "3. 현재 지갑의 ADA Reward Balance Check\n"
-			+ "4. 현재 지갑에서 다른 지갑으로 ADA 인출\n"
-			+ "5. 현재 지갑에서 보상분(Rewards) ADA 인출\n"
+			+ "4. 다른 지갑의 ADA Reward Balance Check\n"
+			+ "5. 현재 지갑에서 다른 지갑으로 ADA 인출\n"
+			+ "6. 현재 지갑에서 보상분(Rewards) ADA 인출\n"
 			+ "99. 뒤로 가기", "M00135");
 			
 	private boolean menuRunningState = false;
@@ -65,6 +66,9 @@ public class BalanceAndWithdrawingContextMenu implements JobProcess, Menu{
 					break;
 				case BALANCE_CHECK_STAKE_POOL_REWARDS:
 					processResultDomain = CommandFactory.INSTANCE.createCommandHandler(NodeCommands.BALANCE_CHECK_STAKE_POOL_REWARDS_HANDLER).handleCommand(command);
+					break;
+				case BALANCE_CHECK_ANOTHER_STAKE_POOL_REWARDS:
+					processResultDomain = CommandFactory.INSTANCE.createCommandHandler(NodeCommands.BALANCE_CHECK_ANOTHER_STAKE_POOL_REWARDS_HANDLER).handleCommand(command);
 					break;
 				case CURRENT_STAKE_POOL_ADA_WITHDRAWING:
 					processResultDomain = CommandFactory.INSTANCE.createCommandHandler(NodeCommands.CURRENT_STAKE_POOL_ADA_WITHDRAWING_HANDLER).handleCommand(command);

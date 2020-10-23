@@ -145,8 +145,9 @@ public class MessageKR {
 				+ "1. 현재 지갑의 ADA Balance Check\n"
 				+ "2. 다른 지갑의 ADA Balance Check\n"
 				+ "3. 현재 지갑의 ADA Reward Balance Check\n"
-				+ "4. 현재 지갑에서 다른 지갑으로 ADA 인출\n"
-				+ "5. 현재 지갑에서 보상분(Rewards) ADA 인출\n"
+				+ "4. 다른 지갑의 ADA Reward Balance Check\n"
+				+ "5. 현재 지갑에서 다른 지갑으로 ADA 인출\n"
+				+ "6. 현재 지갑에서 보상분(Rewards) ADA 인출\n"
 				+ "99. 뒤로 가기");
 		messageFormats.put("M00136", "번호를 입력한 후 엔터키를 눌러주세요. : ");
 		messageFormats.put("M00137", "\n"
@@ -183,8 +184,8 @@ public class MessageKR {
 		messageFormats.put("M00145", "- 면책조항 1 : 본 프로그램의 잘못된 사용으로 야기된 사항에 대해 제작자는 일체 책임이 없음을 말씀드립니다.\n");
 		messageFormats.put("M00146", "- 면책조항 2 : 본 프로그램은 Freeware입니다. 따라서 사용의 강제성은 없으며, 수정, 배포, 사용 역시 자유이며, 이에 따른 책임은 사용자에게 있습니다.\n");
 		messageFormats.put("M00147", "Stake Pool 주소 개수 : %s");
-		messageFormats.put("M00148", "     Stake Pool 주소 : %s");
-		messageFormats.put("M00149", "%3s  Stake Pool ID : %s");
+		messageFormats.put("M00148", "     Stake Key 주소 : %s");
+		messageFormats.put("M00149", "%3s  위임된 Pool ID : %s");
 		messageFormats.put("M00150", "     Rewards Balance : %s");
 		messageFormats.put("M00151", "현재 계좌에 ADA 잔고가 충분하지 않습니다. 100 ADA 정도 입금 후에 재시도 하시기 바랍니다.");
 		messageFormats.put("M00152", "잔고 동기화에 시간이 걸릴 수 있습니다.");
