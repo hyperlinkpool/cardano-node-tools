@@ -42,7 +42,7 @@
 - Telegram : https://t.me/HYPERLINKPOOL
 - GITHUB : https://github.com/hyperlinkpool
 
-## 주요 기능()
+## 주요 기능(Main Function)
 1. Key, 인증서 생성(1. Create Key & Certificate)
 2. ADA Balance Check, ADA 인출, Pool Rewards 인출(2. ADA Balance Check, Withdraw ADA)
 3. Stake Pool 등록 및 관리(3. Register pool / Manage pool)
