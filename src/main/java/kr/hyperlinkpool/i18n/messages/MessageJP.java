@@ -29,13 +29,13 @@ public class MessageJP {
 		messageFormats.put("M00020", "キャンセルされました。");
 		messageFormats.put("M00021", "送信することができませんでした。");
 		messageFormats.put("M00022", "送信されました。");
-		messageFormats.put("M00023", "アドレスを入力してください。(99 : 戻る) : ");
+		messageFormats.put("M00023", "（99 : 戻る）: ");
 		messageFormats.put("M00024", "有効なアドレスではありません。");
 		messageFormats.put("M00025", "Paymentアドレスが作成されていません。Paymentアドレスを作成した後、やり直してください。");
 		messageFormats.put("M00026", "プールのアドレス : ");
 		messageFormats.put("M00027", "引き出すことができるADAがありません。");
 		messageFormats.put("M00028", "保有の数量 : %s");
-		messageFormats.put("M00029", "送信アドレスを入力してください。(99 : 戻る) : ");
+		messageFormats.put("M00029", "送信アドレスを入力してください。（99 : 戻る）: ");
 		messageFormats.put("M00030", "現プールアドレスに送信する場合は、合算した総額のみを送信できます。送信の手数料を除いた残りの金額が送信されます。");
 		messageFormats.put("M00031", "進みますか？(Y/n) : ");
 		messageFormats.put("M00032", "1.送信量と手数料の合計が保有の数量より多い場合には、");
@@ -162,12 +162,12 @@ public class MessageJP {
 				+ "8. NodeのOperationのCertificateの作成\n"
 				+ "99. 戻る");
 		messageFormats.put("M00138", "\n"
-				+ "1. ステークキーの登録（2ADAがかかり、送信の手数料がかかります。）\n"
-				+ "2. ステークキーの撤回（保証金として登録した2ADAを取り戻すことができます。）\n"
+				+ "1. ステークキーの登録（2ADAがかかり、（2020.10.09基準情報）、送信の手数料がかかります。）\n"
+				+ "2. ステークキーの撤回（保証金として登録した2ADA、（2020.10.09基準情報）、を取り戻すことができます。）\n"
 				+ "3. ステークキーをプールに委任\n"
 				+ "4. MetadataのJSONのファイルの作成\n"
-				+ "5. ステークプールの情報登録または更新（StakeのKeyを最初に登録する必要があり、プールの登録は500ADAがかかり、この後、更新の時からは送信の手数料のみかかります。)\n"
-				+ "6. ステークプールの撤回（保証金として登録した500ADAを取り戻すことができます。）\n"
+				+ "5. ステークプールの情報登録または更新（StakeのKeyを最初に登録する必要があり、プールの登録は500ADAがかかり、（2020.10.09基準情報）、この後、更新の時からは送信の手数料のみかかります。)\n"
+				+ "6. ステークプールの撤回（保証金として登録した500ADA、（2020.10.09基準情報）、を取り戻すことができます。）\n"
 				+ "7. ステークプールの登録状況確認\n"
 				+ "8. KESのKeyのRotation\n"
 				+ "99. 戻る");
@@ -209,7 +209,8 @@ public class MessageJP {
 		messageFormats.put("M00170", "引退のEpoch : %s");
 		messageFormats.put("M00171", "引退のEpochこの後、現在のアドレスに返されるADAの保証金：%s");
 		messageFormats.put("M00172", "Poolの引退の登録に失敗しました。");
-		
+		messageFormats.put("M00173", "ADAのWalletのアドレスを入力してください。（ex. Ddz... , Ae2..., addr1...）");
+		messageFormats.put("M00174", "Stakeのアドレスを入力してください。（ex. stake1... ）");
 		messageFormats.put("E99999", "開発中です。");
 	}
 }

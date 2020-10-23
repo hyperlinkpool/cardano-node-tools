@@ -20,7 +20,8 @@ public class BalanceCheckAnotherStakePoolRewardsHandler extends AbstractCommandH
 		ProcessResultDomain<ProcessResponse> processResultDomain = new ProcessResultDomain<>();
 		boolean loop = true; 
 		while(loop) {
-			String address = CommandListener.getInstance().listenCommand(MessageFactory.getInstance().getMessage("주소를 입력해 주세요.(99번 뒤로 가기) : ", "M00023"), false);
+			MessagePrompter.promptMessage(MessageFactory.getInstance().getMessage("Stake 주소를 입력해 주세요.(ex. stake1... )", "M00174"), true);
+			String address = CommandListener.getInstance().listenCommand(MessageFactory.getInstance().getMessage("(99 : 뒤로 가기) : ", "M00023"), false);
 			try {
 				int parseInt = Integer.parseInt(address);
 				switch(ExitCommand.getKeyCommand(parseInt)) {

@@ -23,7 +23,8 @@ public class BalanceCheckAnotherAddressAdaHandler extends AbstractCommandHandler
 		ProcessResultDomain<ProcessResponse> processResultDomain = new ProcessResultDomain<>();
 		boolean loop = true; 
 		while(loop) {
-			String address = CommandListener.getInstance().listenCommand(MessageFactory.getInstance().getMessage("주소를 입력해 주세요.(99번 뒤로 가기) : ", "M00023"), false);
+			MessagePrompter.promptMessage(MessageFactory.getInstance().getMessage("ADA Wallet 주소를 입력해 주세요.(ex. Ddz... , Ae2... , addr1...)", "M00173"), true);
+			String address = CommandListener.getInstance().listenCommand(MessageFactory.getInstance().getMessage("(99 : 뒤로 가기) : ", "M00023"), false);
 			try {
 				int parseInt = Integer.parseInt(address);
 				switch(ExitCommand.getKeyCommand(parseInt)) {

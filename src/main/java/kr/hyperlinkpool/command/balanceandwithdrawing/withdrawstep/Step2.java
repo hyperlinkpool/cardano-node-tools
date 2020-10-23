@@ -64,7 +64,7 @@ public class Step2 implements WithdrawResult, Ordered, JobProcess{
 		 */
 		boolean loop = true;
 		while(loop) {
-			String address = CommandListener.getInstance().listenCommand(MessageFactory.getInstance().getMessage("보낼 주소를 입력해 주세요.(99번 뒤로 가기) : ", "M00029"), false);
+			String address = CommandListener.getInstance().listenCommand(MessageFactory.getInstance().getMessage("보낼 주소를 입력해 주세요.(99 : 뒤로 가기) : ", "M00029"), false);
 			try {
 				int parseInt = Integer.parseInt(address);
 				switch(ExitCommand.getKeyCommand(parseInt)) {

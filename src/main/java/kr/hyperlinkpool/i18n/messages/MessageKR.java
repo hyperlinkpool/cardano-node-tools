@@ -29,13 +29,13 @@ public class MessageKR {
 		messageFormats.put("M00020", "취소되었습니다.");
 		messageFormats.put("M00021", "전송 실패하였습니다.");
 		messageFormats.put("M00022", "전송되었습니다.");
-		messageFormats.put("M00023", "주소를 입력해 주세요.(99번 뒤로 가기) : ");
+		messageFormats.put("M00023", "(99 : 뒤로 가기) : ");
 		messageFormats.put("M00024", "유효한 주소가 아닙니다.");
 		messageFormats.put("M00025", "Payment 주소가 존재하지 않습니다. Payment 주소 생성 후 다시 시도하세요.");
 		messageFormats.put("M00026", "Pool 주소 : ");
 		messageFormats.put("M00027", "인출할 ADA가 없습니다.");
 		messageFormats.put("M00028", "보유 수량 : %s");
-		messageFormats.put("M00029", "보낼 주소를 입력해 주세요.(99번 뒤로 가기) : ");
+		messageFormats.put("M00029", "보낼 주소를 입력해 주세요.(99 : 뒤로 가기) : ");
 		messageFormats.put("M00030", "현재 Pool 주소로 보낼 경우는 합산한 총액만 전송가능합니다. 전송 수수료를 제외한 나머지 총액이 전송됩니다.");
 		messageFormats.put("M00031", "진행하시겠습니까? (Y/n) : ");
 		messageFormats.put("M00032", "1. 전송수량과 수수료의 합계가 보유수량보다 많을 경우,");
@@ -162,12 +162,12 @@ public class MessageKR {
 				+ "9. Node Operation Certificate 생성\n"
 				+ "99. 뒤로 가기");
 		messageFormats.put("M00138", "\n"
-				+ "1. Stake Key 등록(기본 등록은 2ADA가 소요되고 전송 수수료가 추가 소요됩니다.)\n"
-				+ "2. Stake Key 철회(보증금으로 등록한 2ADA를 돌려 받을 수 있습니다.)\n"
+				+ "1. Stake Key 등록(기본 등록은 2ADA가 소요되고(2020.10.09 기준 정보), 전송 수수료가 추가 소요됩니다.)\n"
+				+ "2. Stake Key 철회(보증금으로 등록한 2ADA(2020.10.09 기준 정보)를 돌려 받을 수 있습니다.)\n"
 				+ "3. Stake Key를 Pool에 위임\n"
 				+ "4. Metadata JSON 파일 생성\n"
-				+ "5. Pool 정보 등록 또는 갱신(Stake Key를 먼저 등록해야 하며, Pool 등록은 500ADA가 소요되고, 이 후 갱신 시부터는 전송 수수료만 추가 소요됩니다.)\n"
-				+ "6. Pool 철회 (보증금으로 등록한 500ADA를 돌려 받을 수 있습니다.)\n"
+				+ "5. Pool 정보 등록 또는 갱신(Stake Key를 먼저 등록해야 하며, Pool 등록은 500ADA가 소요되고(2020.10.09 기준 정보), 이 후 갱신 시부터는 전송 수수료만 추가 소요됩니다.)\n"
+				+ "6. Pool 철회 (보증금으로 등록한 500ADA(2020.10.09 기준 정보)를 돌려 받을 수 있습니다.)\n"
 				+ "7. Pool 등록 상태 확인\n"
 				+ "8. KES Key Rotation\n"
 				+ "99. 뒤로 가기");
@@ -209,7 +209,8 @@ public class MessageKR {
 		messageFormats.put("M00170", "은퇴 Epoch : %s");
 		messageFormats.put("M00171", "은퇴 Epoch 이 후 현재 주소로 반환되는 ADA 보증금 : %s");
 		messageFormats.put("M00172", "Pool 은퇴 등록에 실패하였습니다.");
-		
+		messageFormats.put("M00173", "ADA Wallet 주소를 입력해 주세요.(ex. Ddz... , Ae2... , addr1...)");
+		messageFormats.put("M00174", "Stake 주소를 입력해 주세요.(ex. stake1... )");
 		messageFormats.put("E99999", "개발중입니다.");
 	}
 }

@@ -29,13 +29,13 @@ public class MessageUS {
 		messageFormats.put("M00020", "Cancelled.");
 		messageFormats.put("M00021", "Transfer failed.");
 		messageFormats.put("M00022", "Transfered.");
-		messageFormats.put("M00023", "Please enter your address (99 : Go Back): ");
+		messageFormats.put("M00023", "(99 : Go Back) : ");
 		messageFormats.put("M00024", "This is not a valid address.");
 		messageFormats.put("M00025", "Payment address does not exist. Please create a payment address and try again.");
-		messageFormats.put("M00026", "Current Pool Address:");
+		messageFormats.put("M00026", "Current Pool Address : ");
 		messageFormats.put("M00027", "There is no ADA to withdraw.");
-		messageFormats.put("M00028", "Current holding quantity: %s");
-		messageFormats.put("M00029", "Please enter the address you want to send (99 : Go Back): ");
+		messageFormats.put("M00028", "Current holding quantity : %s");
+		messageFormats.put("M00029", "Please enter the address you want to send (99 : Go Back) : ");
 		messageFormats.put("M00030", "If sending to the current pool address, only the sum total can be sent. The total amount excluding the transfer fee will be sent.");
 		messageFormats.put("M00031", "Do you want to proceed? (Y/n) : ");
 		messageFormats.put("M00032", "1. If the sum of the transmission quantity and the fee is greater than the holding quantity,");
@@ -161,12 +161,12 @@ public class MessageUS {
 				+ "8. Create Node Operation Certificate\n"
 				+ "99. Go Back");
 		messageFormats.put("M00138", "\n"
-				+ "1. Register stake key(It requires 2 ADA at deposit, and it's required a few transaction fee.)\n"
-				+ "2. Withdrawal of Stake Key(You can get back the 2ADA that registered as a deposit.)\n"
+				+ "1. Register stake key(It requires 2 ADA at deposit.(October 9, 2020), and it's required a few transaction fee.)\n"
+				+ "2. Withdrawal of Stake Key(You can get back the 2ADA(October 9, 2020) registered as a deposit.)\n"
 				+ "3. Delegate Stake Key to Pool\n"
 				+ "4. Metadata JSON file creation\n"
-				+ "5. Pool information registration or update (You must register stake key at first, and it takes 500 ADA at deposit. After that, it will be charged only transaction fee at modification.)\n"
-				+ "6. Withdrawal of Pool (You can get back the 500ADA that registered as a deposit.)\n"
+				+ "5. Pool information registration or update (You must register stake key at first, and it takes 500 ADA at deposit.(October 9, 2020). After that, it will be charged only transaction fee at modification.)\n"
+				+ "6. Withdrawal of Pool (You can get back the 500ADA(October 9, 2020) registered as a deposit.)\n"
 				+ "7. Check the status of pool registration\n"
 				+ "8. KES Key Rotation\n"
 				+ "99. Go Back");
@@ -208,7 +208,8 @@ public class MessageUS {
 		messageFormats.put("M00170", "Epoch of retirement : %s");
 		messageFormats.put("M00171", "After retiring of pool, It will be return ADA deposit : %s");
 		messageFormats.put("M00172", "Failed to register for pool retirement.");
-		
+		messageFormats.put("M00173", "Please enter a wallet address.(ex. Ddz... , Ae2... , addr1...)");
+		messageFormats.put("M00174", "Please enter a stake address.(ex. stake1... )");
 		messageFormats.put("E99999", "It is under development.");
 	}
 }
