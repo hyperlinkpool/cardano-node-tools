@@ -29,7 +29,7 @@
 - Cardano Node가 실행되는 서버에서 실행 가능.(It can be run on the server running Cardano Node.)
 
 ## Supported Language
-- 한국어(Korean), 영어(English), 일본어(Japanese), (etc. : 영어(English))
+- 한국어(Korean), 영어(English), 일본어(Japanese), (Other languages : 영어(English))
 
 ## Developer Infomation
 - Developer : Hyperlink Pool SPO
