@@ -90,7 +90,9 @@
 ## Initial Configuration
 - config.properties 파일 작성 [ex)https://raw.githubusercontent.com/hyperlinkpool/cardano-node-tools/main/src/main/resources/config.properties]
 ```diff
-- Key Folder에 생성된 각종 키 정보는 반드시 백업을 해 두시기 바랍니다.(Make sure to back up all kinds of key information created in Key Folder.)
+- 아래 Properties 중 cardano.keys 로 시작되는 각종 키 정보(skey, vkey, etc)는 반드시 백업을 해 두시기 바랍니다.(Among below the properties, you make sure to back up various key information starting with [cardano.keys].)
+- 이 Key들은 Daedalus 지갑의 복구 단어와 동일한 효과를 지닌 키입니다. 유출되면 여러분의 소중한 자산을 강탈당할 수 있습니다.(These keys have the same effect as the recovery words of Daedalus wallet. If these are leaked, your valuable assets can be robbed.)
+- 이 Key들은 ADA인출, Rewards인출, Pool생성, Pool위임, 철회등을 하는데 사용되는 매우 중요한 파일들이므로 보관 및 관리에 주의하시기 바랍니다.(These keys are very important files used for ADA withdrawal, Rewards withdrawal, Pool creation, Pool delegation, and withdrawal, so please be careful to store and manage them.)
 ```
 
 ```jsx
