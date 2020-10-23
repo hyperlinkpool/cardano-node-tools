@@ -8,7 +8,7 @@ public class MessageKR {
 	static {
 		messageFormats = new HashMap<String, String>();
 		messageFormats.put("M00001", "Stake 주소가 생성되지 않았습니다. 주소 생성 후 다시 시도하세요.");
-		messageFormats.put("M00002", "Stake Key가 생성되지 않았습니다. 키 생성 후 다시 시도하세요.");
+		messageFormats.put("M00002", "Stake Key가 Blockchain에 등록되지 않았습니다. 키 등록 후 다시 시도하세요.");
 		messageFormats.put("M00003", "(메인 메뉴 -> 3번 -> 1번 선택)");
 		messageFormats.put("M00004", "현재 보상량 : %s");
 		messageFormats.put("M00005", "인출할 수 있는 보상이 없습니다.");

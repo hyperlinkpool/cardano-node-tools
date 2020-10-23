@@ -8,7 +8,7 @@ public class MessageUS {
 	static {
 		messageFormats = new HashMap<String, String>();
 		messageFormats.put("M00001", "The stake address was not created. Please create an address and try again.");
-		messageFormats.put("M00002", "The stake key was not created. Please generate the key and try again.");
+		messageFormats.put("M00002", "The stake key is not registered on the blockchain. After registering the key, please try again.");
 		messageFormats.put("M00003", "(Main Menu -> No. 3 -> No. 1)");
 		messageFormats.put("M00004", "Current rewards : %s");
 		messageFormats.put("M00005", "There are no rewards that can be withdrawn.");

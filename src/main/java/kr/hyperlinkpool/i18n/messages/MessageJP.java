@@ -8,7 +8,7 @@ public class MessageJP {
 	static {
 		messageFormats = new HashMap<String, String>();
 		messageFormats.put("M00001", "ステークのアドレスが作成されていません。アドレスを作成した後、もう一度やり直してください。");
-		messageFormats.put("M00002", "ステークキーが作成されていません。キーの作成後、もう一度やり直してください。");
+		messageFormats.put("M00002", "ステークキーがブロックチェーンに登録されていません。キーの登録後、もう一度やり直してください。");
 		messageFormats.put("M00003", "(メインメニュー -> 3番目 -> 1番目 選択)");
 		messageFormats.put("M00004", "現在補償量 : %s");
 		messageFormats.put("M00005", "撤退することができる補償がありません");
