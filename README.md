@@ -5,9 +5,9 @@
 
 - cardano-cli를 사용하는데 번거로운 수작업을 줄인 툴입니다.(It is a tool that reduces the hassle of manual labor when using cardano-cli.)
 
-- 그 동안 Pool을 운영하면서 수작업으로 Command를 작성하던 작업을 시스템화하였으며, 수작업으로 발생할 수 있는 실수를 줄일 수 있도록 개발했습니다.(During that time, while operating the pool, the task of manually writing commands has been systematized, and has been developed to reduce mistakes that can occur manually.)
+- 그 동안 Pool을 운영하면서 수작업으로 Command를 작성하던 작업을 시스템화하였으며, 수작업으로 발생할 수 있는 실수를 줄일 수 있도록 개발했습니다.(During that time, while operating the pool, the task of manually writing commands has been systematized, and has been developed to reduce mistakes that was operated manually.)
 
-- 악성 소프트웨어로 오해받을 수 있기 때문에 Java를 이해하시는 Pool운영자가 사용해 보셨으면 좋겠습니다.(It can be misunderstood as malicious software, so I hope that a Pool operator who understands Java will use it.)
+- 악성 소프트웨어로 오해받을 수 있기 때문에 Java를 이해하시는 Pool운영자가 사용해 보셨으면 좋겠습니다.(It can be misunderstood as malicious software, so I hope that SPO, who understands Java, will use it.)
 
 - Block Producer 노드가 설치되어 있는 서버에서 Java로 실행하는 소프트웨어 입니다.(This software is executed in Java on the server where the Block Producer node is installed.)
 
