@@ -142,11 +142,11 @@ public class MessageUS {
 		messageFormats.put("M00133", "Pool properties could not be found.");
 		messageFormats.put("M00134", "Application has shutdowned");
 		messageFormats.put("M00135", "\n"
-				+ "1. Balance check of the current stake pool\n"
-				+ "2. Balance check of another address\n"
-				+ "3. Rewards balance check of the current stake pool\n"
-				+ "4. Withdrawal from the current pool to another address\n"
-				+ "5. Rewards withdrawal to the current pool\n"
+				+ "1. Balance check of the current wallet\n"
+				+ "2. Balance check of another wallet\n"
+				+ "3. Rewards balance check of the current wallet\n"
+				+ "4. Withdrawal from the current wallet to another wallet\n"
+				+ "5. Rewards withdrawal to the current wallet\n"
 				+ "99. Go Back");
 		messageFormats.put("M00136", "Enter the number,and press Enter. :");
 		messageFormats.put("M00137", "\n"
@@ -171,7 +171,7 @@ public class MessageUS {
 				+ "99. Go Back");
 		messageFormats.put("M00139", "\n"
 				+ "1. Create Key & Certificate\n"
-				+ "2. ADA Balance Check, Withdraw ADA and Rewards\n"
+				+ "2. ADA Balance Check, Withdraw ADA\n"
 				+ "3. Register pool / Manage pool\n"
 				+ "99. Exit");
 		messageFormats.put("M00140", "The input value is invalid.");

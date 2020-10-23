@@ -143,11 +143,11 @@ public class MessageJP {
 		messageFormats.put("M00133", "プールの登録情報を見つけることができません。");
 		messageFormats.put("M00134", "アプリケーションが終了されました。");
 		messageFormats.put("M00135", "\n"
-				+ "1. 現在のステークプールのADAのBalanceのCheck\n"
-				+ "2. 他のアドレスのADAのBalanceのCheck\n"
-				+ "3. 現在のステークプールのADAのRewardのBalanceのCheck\n"
-				+ "4. 現在のプールから他のアドレスにADAの引き出し\n"
-				+ "5. 現在のプールからADAのRewardsの引き出し\n"
+				+ "1. 現在の財布のADAのバランスチェック\n"
+				+ "2. 他の財布のADAのバランスチェック\n"
+				+ "3. 現在の財布のADAの報酬のバランスチェック\n"
+				+ "4. 現在の財布から他の財布にADAの引き出し\n"
+				+ "5. 現在の財布からADAの報酬の引き出し\n"
 				+ "99. 戻る");
 		messageFormats.put("M00136", "番号を入力した後、エンターキーを押してください。: ");
 		messageFormats.put("M00137", "\n"
@@ -172,7 +172,7 @@ public class MessageJP {
 				+ "99. 戻る");
 		messageFormats.put("M00139", "\n"
 				+ "1. Keyの作成, Stakeの証明書の作成\n"
-				+ "2. ADAのBalanceのCheck, プールからADAの引き出し\n"
+				+ "2. 財布のADAのバランスチェック, ADAの引き出し\n"
 				+ "3. ステークプールの登録 / 管理\n"
 				+ "99. 終了");
 		messageFormats.put("M00140", "入力値が間違いました。");

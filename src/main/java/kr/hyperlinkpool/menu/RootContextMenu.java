@@ -14,7 +14,7 @@ public class RootContextMenu implements JobProcess, Menu{
 	
 	private String rootContextMenus = MessageFactory.getInstance().getMessage("\n"
 			+ "1. Key 생성, Stake 인증서 생성\n"
-			+ "2. ADA Balance Check, Pool에서 ADA 인출\n"
+			+ "2. ADA Balance Check, ADA 인출\n"
 			+ "3. Stake Pool 등록 / 관리\n"
 			+ "99. 종료", "M00139");
 	

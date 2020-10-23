@@ -16,11 +16,11 @@ public class BalanceAndWithdrawingContextMenu implements JobProcess, Menu{
 	public static BalanceAndWithdrawingContextMenu instance;
 	
 	private String balanceAndWithdrawingContextMenus = MessageFactory.getInstance().getMessage("\n"
-			+ "1. 현재 Stake Pool의 ADA Balance Check\n"
-			+ "2. 다른 주소의 ADA Balance Check\n"
-			+ "3. 현재 Stake Pool의 ADA Reward Balance Check\n"
-			+ "4. 현재 Pool에서 다른 주소로 ADA 인출\n"
-			+ "5. 현재 Pool에서 보상분(Rewards) ADA 인출\n"
+			+ "1. 현재 지갑의 ADA Balance Check\n"
+			+ "2. 다른 지갑의 ADA Balance Check\n"
+			+ "3. 현재 지갑의 ADA Reward Balance Check\n"
+			+ "4. 현재 지갑에서 다른 지갑으로 ADA 인출\n"
+			+ "5. 현재 지갑에서 보상분(Rewards) ADA 인출\n"
 			+ "99. 뒤로 가기", "M00135");
 			
 	private boolean menuRunningState = false;

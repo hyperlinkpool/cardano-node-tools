@@ -142,11 +142,11 @@ public class MessageKR {
 		messageFormats.put("M00133", "Pool 등록 정보를 찾을 수 없습니다.");
 		messageFormats.put("M00134", "프로그램이 종료되었습니다.");
 		messageFormats.put("M00135", "\n"
-				+ "1. 현재 Stake Pool의 ADA Balance Check\n"
-				+ "2. 다른 주소의 ADA Balance Check\n"
-				+ "3. 현재 Stake Pool의 ADA Reward Balance Check\n"
-				+ "4. 현재 Pool에서 다른 주소로 ADA 인출\n"
-				+ "5. 현재 Pool에서 보상분(Rewards) ADA 인출\n"
+				+ "1. 현재 지갑의 ADA Balance Check\n"
+				+ "2. 다른 지갑의 ADA Balance Check\n"
+				+ "3. 현재 지갑의 ADA Reward Balance Check\n"
+				+ "4. 현재 지갑에서 다른 지갑으로 ADA 인출\n"
+				+ "5. 현재 지갑에서 보상분(Rewards) ADA 인출\n"
 				+ "99. 뒤로 가기");
 		messageFormats.put("M00136", "번호를 입력한 후 엔터키를 눌러주세요. : ");
 		messageFormats.put("M00137", "\n"
@@ -172,7 +172,7 @@ public class MessageKR {
 				+ "99. 뒤로 가기");
 		messageFormats.put("M00139", "\n"
 				+ "1. Key 생성, Stake 인증서 생성\n"
-				+ "2. ADA Balance Check, Pool에서 ADA 인출\n"
+				+ "2. ADA Balance Check, ADA 인출\n"
 				+ "3. Stake Pool 등록 / 관리\n"
 				+ "99. 종료");
 		messageFormats.put("M00140", "입력 값이 잘못되었습니다.");
