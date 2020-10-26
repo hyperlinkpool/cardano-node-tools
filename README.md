@@ -11,6 +11,8 @@
 
 - Block Producer 노드가 설치되어 있는 서버에서 Java로 실행하는 소프트웨어 입니다.(This software is executed in Java on the server where the Block Producer node is installed.)
 
+- 일반 노드에서 실행할 경우, config의 Key folder와 Key name 등을 일치시킬 경우, [KES Key Rotation]기능을 제외한 다른 기능은 사용가능합니다.(Case. running in a normal node : if you match the config key folder, key names, etc, you will use other functions except for [KES Key Rotation].)
+
 **TestNet은 지원하지 않습니다.(TestNet is not supported.)**
 
 **면책조항 1 : 본 프로그램의 잘못된 사용으로 야기된 사항에 대해 제작자는 일체 책임이 없음을 말씀드립니다.**
