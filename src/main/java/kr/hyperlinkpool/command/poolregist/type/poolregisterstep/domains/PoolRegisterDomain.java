@@ -27,7 +27,7 @@ public class PoolRegisterDomain {
 	
 	private long txFee;
 	
-	private boolean isTxFeeReCalc;
+	private boolean isTxFeeReCalc = false;
 	
 	private long poolDeposit;
 	

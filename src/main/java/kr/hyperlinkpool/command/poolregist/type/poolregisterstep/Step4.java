@@ -219,17 +219,22 @@ public class Step4 implements PoolRegisterResult, Ordered, JobProcess{
 			return;
 		}
 		
-		String poolId = processBuilder.getSuccessResultString().trim();
-		String cardanoCliNameFullPath = NodeProperties.getString("cardano.cli.path") + NodeConstants.PATH_DELIMITER + cardanoCliName;
-		command = CommandExecutor.generateCommand(NodeCommandFormats.POOL_REGISTRATION_YOUR_POOLID_IN_THE_NETWORK_LEDGER_STATE, cardanoCliNameFullPath, poolId);
-		MessagePrompter.promptMessage(MessageFactory.getInstance().getMessage("Pool 정보 확인 중입니다. 좀 오래 걸려요.", "M00085"), true);
-		processBuilder = CommandExecutor.initializeProcessBuilderWithBash(command);
-		failureResultString = processBuilder.getFailureResultString();
-		if(failureResultString != null && failureResultString.length() > 0){
-			MessagePrompter.promptMessage(MessageFactory.getInstance().getMessage("Blockchain 확인중 에러가 발생했습니다.", "M00086"), true);
-			poolRegisterDomain.setNextOrder(StepOrder.EXIT.getStepOrder());
-			result.setSuccess(false);
-			return;
+		/**
+		 * 수수료가 모자라 수동입력한 경우 다시 Pool을 검사하지 않는다.
+		 */
+		if(!poolRegisterDomain.isTxFeeReCalc()) {
+			String poolId = processBuilder.getSuccessResultString().trim();
+			String cardanoCliNameFullPath = NodeProperties.getString("cardano.cli.path") + NodeConstants.PATH_DELIMITER + cardanoCliName;
+			command = CommandExecutor.generateCommand(NodeCommandFormats.POOL_REGISTRATION_YOUR_POOLID_IN_THE_NETWORK_LEDGER_STATE, cardanoCliNameFullPath, poolId);
+			MessagePrompter.promptMessage(MessageFactory.getInstance().getMessage("Pool 정보 확인 중입니다. 좀 오래 걸려요.", "M00085"), true);
+			processBuilder = CommandExecutor.initializeProcessBuilderWithBash(command);
+			failureResultString = processBuilder.getFailureResultString();
+			if(failureResultString != null && failureResultString.length() > 0){
+				MessagePrompter.promptMessage(MessageFactory.getInstance().getMessage("Blockchain 확인중 에러가 발생했습니다.", "M00086"), true);
+				poolRegisterDomain.setNextOrder(StepOrder.EXIT.getStepOrder());
+				result.setSuccess(false);
+				return;
+			}
 		}
 		
 		/**
