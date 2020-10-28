@@ -3,9 +3,6 @@ package kr.hyperlinkpool.i18n.messages;
 import java.util.HashMap;
 import java.util.Map;
 
-import kr.hyperlinkpool.i18n.MessageFactory;
-import kr.hyperlinkpool.utils.CommandListener;
-
 public class MessageKR {
 	public static Map<String, String> messageFormats = null;
 	static {
