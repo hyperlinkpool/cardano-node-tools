@@ -9,9 +9,7 @@
 
 - 악성 소프트웨어로 오해받을 수 있기 때문에 Java를 이해하시는 Pool운영자가 사용해 보셨으면 좋겠습니다.(It can be misunderstood as malicious software, so I hope that SPO, who understands Java, will use it.)
 
-- Block Producer 노드가 설치되어 있는 서버에서 Java로 실행하는 소프트웨어 입니다.(This software is executed in Java on the server where the Block Producer node is installed.)
-
-- 일반 노드에서 실행할 경우, config의 Key folder와 Key name 등을 일치시킬 경우, [KES Key Rotation]기능을 제외한 다른 기능은 사용가능합니다.(Case. running in a normal node : if you match the config key folder, key names, etc, you will use other functions except for [KES Key Rotation].)
+- 노드가 설치되어 있는 서버에서 Java로 실행하는 소프트웨어 입니다.(This software is executed in Java on the server where a node is installed.)
 
 **TestNet은 지원하지 않습니다.(TestNet is not supported.)**
 

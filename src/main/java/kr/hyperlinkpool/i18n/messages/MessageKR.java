@@ -3,6 +3,9 @@ package kr.hyperlinkpool.i18n.messages;
 import java.util.HashMap;
 import java.util.Map;
 
+import kr.hyperlinkpool.i18n.MessageFactory;
+import kr.hyperlinkpool.utils.CommandListener;
+
 public class MessageKR {
 	public static Map<String, String> messageFormats = null;
 	static {
@@ -211,6 +214,8 @@ public class MessageKR {
 		messageFormats.put("M00172", "Pool 은퇴 등록에 실패하였습니다.");
 		messageFormats.put("M00173", "ADA Wallet 주소를 입력해 주세요.(ex. Ddz... , Ae2... , addr1...)");
 		messageFormats.put("M00174", "Stake 주소를 입력해 주세요.(ex. stake1... )");
+		messageFormats.put("M00175", "BlockProducer가 아닙니다. BlockProducer가 아닐 경우, 관련 Key(KES singing key, Cold signing key, Cold Counter key)가 있다면 KES Roation을 진행할 수 있습니다.");
+		messageFormats.put("M00176", "현재 Node에서 KES Rotation을 진행하시겠습니까?(Y/n) : ");
 		messageFormats.put("E99999", "개발중입니다.");
 	}
 }

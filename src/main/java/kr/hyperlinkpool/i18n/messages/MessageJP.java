@@ -211,6 +211,8 @@ public class MessageJP {
 		messageFormats.put("M00172", "Poolの引退の登録に失敗しました。");
 		messageFormats.put("M00173", "ADAのWalletのアドレスを入力してください。（ex. Ddz... , Ae2..., addr1...）");
 		messageFormats.put("M00174", "Stakeのアドレスを入力してください。（ex. stake1... ）");
+		messageFormats.put("M00175", "BlockProducerではありません。BlockProducerではない場合は、関連するKey（KES singing key、Cold signing key、Cold Counter key）があればKES Key Roationを進めることができます。");
+		messageFormats.put("M00176", "現在NodeでKES Key Rotationを進めますか？(Y/n)：");
 		messageFormats.put("E99999", "開発中です。");
 	}
 }

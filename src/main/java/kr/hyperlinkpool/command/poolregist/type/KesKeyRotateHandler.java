@@ -23,8 +23,11 @@ public class KesKeyRotateHandler extends AbstractCommandHandler{
 	public ProcessResultDomain<ProcessResponse> handleCommand(Object... commands) {
 		ProcessResultDomain<ProcessResponse> processResultDomain = new ProcessResultDomain<>();
 		processResultDomain.setSuccess(false);
+		
+		boolean isPreceedNotCoreNode = false;
+		
 		/**
-		 * KES Perios 확인
+		 * KES Periods 확인
 		 */
 		String cardanoCoreNodeMetricsUrl=NodeProperties.getString("cardano.core.node.metrics.url");
 		Map<String, String> cardanoCoreNodeMetricsInfo = HttpUtils.readNodeMeticsInfo(cardanoCoreNodeMetricsUrl);
@@ -38,47 +41,58 @@ public class KesKeyRotateHandler extends AbstractCommandHandler{
 			currentKesPeriod = Integer.parseInt(cardanoCoreNodeMetricsInfo.get(NodeConstants.CARDANO_NODE_FORGE_METRICS_CURRENT_KES_PERIOD_INT_KEY));
 			remainingKesPeriods = Integer.parseInt(cardanoCoreNodeMetricsInfo.get(NodeConstants.CARDANO_NODE_FORGE_METRICS_REMAINING_KES_PERIODS_INT_KEY));
 		} catch (Exception e) {
-			MessagePrompter.promptMessage(MessageFactory.getInstance().getMessage("Core Node가 아닙니다. Core Node에서 실행하세요.", "M00116"), true);
-			processResultDomain.setSuccess(false);
-			return processResultDomain;
+			MessagePrompter.promptMessage("", true);
+			MessagePrompter.promptMessage(MessageFactory.getInstance().getMessage("Block Producer가 아닙니다. Block Producer가 아닐 경우, 관련 Key(KES singing key, Cold signing key, Cold Counter key)가 있다면 KES Roation을 진행할 수 있습니다.", "M00175"), true);
+			String isPreceedNotCoreNodeCommand = CommandListener.getInstance().listenCommand(MessageFactory.getInstance().getMessage("현재 Node에서 KES Rotation을 진행하시겠습니까? (Y/n) : ", "M00176"), false);
+			if("Y".equalsIgnoreCase(isPreceedNotCoreNodeCommand)) {
+				isPreceedNotCoreNode = true;
+			}else{
+				processResultDomain.setSuccess(false);
+				return processResultDomain;
+			}
 		}
 		
-		MessagePrompter.promptMessage(MessageFactory.getInstance().getMessage("* KES Key는 Block에 서명하기 위해 필요합니다. Pool 운영자는 KES Key Periods가 만료되기 전에 KES Key를 갱신해야 합니다.", "M00117"), true);
-		MessagePrompter.promptMessage(MessageFactory.getInstance().getMessage("* KES Key를 갱신하지 않으면, 만료되는 Epoch 이후에 생성되는 Block에 서명하지 못하게 되므로, 반드시 만료 Periods가 도래하면 갱신하시기 바랍니다.", "M00118"), true);
-		MessagePrompter.promptMessage(MessageFactory.getInstance().getMessage("------------------------------ KES Key 정보 ------------------------------ ", "M00119"), true);
-		MessagePrompter.promptMessage(MessageFactory.getInstance().getMessage("- KES Key를 생성한 Periods : ", "M00120") + operationalCertificateStartKesPeriod, true);
-		MessagePrompter.promptMessage(MessageFactory.getInstance().getMessage("- KES Key가 만료되는 Periods : ", "M00121") + operationalCertificateExpiryKesPeriod, true);
-		MessagePrompter.promptMessage(MessageFactory.getInstance().getMessage("- KES Key 현재 Periods : ", "M00122") + currentKesPeriod, true);
-		MessagePrompter.promptMessage(MessageFactory.getInstance().getMessage("- KES Key 잔여 Periods : ", "M00123") + remainingKesPeriods, true);
-		/**
-		 * 잔여 기간 10% 미만 체크
-		 */
-		int calcRemainEpocePercent = (remainingKesPeriods / (operationalCertificateExpiryKesPeriod - operationalCertificateStartKesPeriod))*100;
-		int remainKesPercents = 0;
-		if( calcRemainEpocePercent < 10) {
-			remainKesPercents = calcRemainEpocePercent;
+		String listenCommand = null;
+		if(isPreceedNotCoreNode) {
+			listenCommand = "Y"; 
+		}else {
+			MessagePrompter.promptMessage(MessageFactory.getInstance().getMessage("* KES Key는 Block에 서명하기 위해 필요합니다. Pool 운영자는 KES Key Periods가 만료되기 전에 KES Key를 갱신해야 합니다.", "M00117"), true);
+			MessagePrompter.promptMessage(MessageFactory.getInstance().getMessage("* KES Key를 갱신하지 않으면, 만료되는 Epoch 이후에 생성되는 Block에 서명하지 못하게 되므로, 반드시 만료 Periods가 도래하면 갱신하시기 바랍니다.", "M00118"), true);
+			MessagePrompter.promptMessage(MessageFactory.getInstance().getMessage("------------------------------ KES Key 정보 ------------------------------ ", "M00119"), true);
+			MessagePrompter.promptMessage(MessageFactory.getInstance().getMessage("- KES Key를 생성한 Periods : ", "M00120") + operationalCertificateStartKesPeriod, true);
+			MessagePrompter.promptMessage(MessageFactory.getInstance().getMessage("- KES Key가 만료되는 Periods : ", "M00121") + operationalCertificateExpiryKesPeriod, true);
+			MessagePrompter.promptMessage(MessageFactory.getInstance().getMessage("- KES Key 현재 Periods : ", "M00122") + currentKesPeriod, true);
+			MessagePrompter.promptMessage(MessageFactory.getInstance().getMessage("- KES Key 잔여 Periods : ", "M00123") + remainingKesPeriods, true);
+			/**
+			 * 잔여 기간 10% 미만 체크
+			 */
+			int calcRemainEpocePercent = (remainingKesPeriods / (operationalCertificateExpiryKesPeriod - operationalCertificateStartKesPeriod))*100;
+			int remainKesPercents = 0;
+			if( calcRemainEpocePercent < 10) {
+				remainKesPercents = calcRemainEpocePercent;
+			}
+			
+			/**
+			 * 잔여 기간 30% 미만 체크
+			 */
+			if( calcRemainEpocePercent < 30) {
+				remainKesPercents = calcRemainEpocePercent;
+			}
+			
+			/**
+			 * 잔여 기간 50% 미만 체크
+			 */
+			if( calcRemainEpocePercent < 50) {
+				remainKesPercents = calcRemainEpocePercent;
+			}
+			
+			if(remainKesPercents != 0) {
+				MessagePrompter.promptMessage(MessageFactory.getInstance().getMessage("- KES Key 잔여 Periods가 약 %s %% 남았습니다.", "M00124", String.valueOf(remainKesPercents)), true);
+			}
+			MessagePrompter.promptMessage(MessageFactory.getInstance().getMessage("------------------------------ KES Key 정보 ------------------------------ ", "M00119"), true);
+			listenCommand = CommandListener.getInstance().listenCommand(MessageFactory.getInstance().getMessage("KES Key Rotation을 진행하시겠습니까?.(Y/n) : ", "M00125"), false);
 		}
 		
-		/**
-		 * 잔여 기간 30% 미만 체크
-		 */
-		if( calcRemainEpocePercent < 30) {
-			remainKesPercents = calcRemainEpocePercent;
-		}
-		
-		/**
-		 * 잔여 기간 50% 미만 체크
-		 */
-		if( calcRemainEpocePercent < 50) {
-			remainKesPercents = calcRemainEpocePercent;
-		}
-		
-		if(remainKesPercents != 0) {
-			MessagePrompter.promptMessage(MessageFactory.getInstance().getMessage("- KES Key 잔여 Periods가 약 %s %% 남았습니다.", "M00124", String.valueOf(remainKesPercents)), true);
-		}
-		MessagePrompter.promptMessage(MessageFactory.getInstance().getMessage("------------------------------ KES Key 정보 ------------------------------ ", "M00119"), true);
-		
-		String listenCommand = CommandListener.getInstance().listenCommand(MessageFactory.getInstance().getMessage("KES Key Rotation을 진행하시겠습니까?.(Y/n) : ", "M00125"), false);
 		if("Y".equalsIgnoreCase(listenCommand)) {
 			String cardanoKeysFolderString = NodeProperties.getString("cardano.keys.folder");
 			String cardanoKeysColdSkeyString = cardanoKeysFolderString + NodeConstants.PATH_DELIMITER + NodeProperties.getString("cardano.keys.cold.skey");
@@ -90,15 +104,6 @@ public class KesKeyRotateHandler extends AbstractCommandHandler{
 			File cardanoKeysFolder = new File(cardanoKeysFolderString);
 			if(!cardanoKeysFolder.exists()) {
 				cardanoKeysFolder.mkdirs();
-			}
-			
-			File cardanoKeysNewKesVkeyFile = new File(cardanoKeysNewKesVkeyString);
-			File cardanoKeysNewKesSkeyFile = new File(cardanoKeysNewKesSkeyString);
-			
-			if(cardanoKeysNewKesVkeyFile.exists() || cardanoKeysNewKesSkeyFile.exists()) {
-				cardanoKeysNewKesVkeyFile.delete();
-				cardanoKeysNewKesSkeyFile.delete();
-				MessagePrompter.promptMessage(MessageFactory.getInstance().getMessage("기존의 KES Verification Key, KES, Signing Key를 삭제했습니다.", "M00126"), true);
 			}
 			
 			File cardanoKeysColdSkeyFile = new File(cardanoKeysColdSkeyString);
@@ -113,6 +118,15 @@ public class KesKeyRotateHandler extends AbstractCommandHandler{
 				MessagePrompter.promptMessage(MessageFactory.getInstance().getMessage("Cold Counter가 생성되지 않습니다. 키 생성 후 다시 시도하세요.", "M00045"), true);
 				processResultDomain.setSuccess(false);
 				return processResultDomain;
+			}
+			
+			File cardanoKeysNewKesVkeyFile = new File(cardanoKeysNewKesVkeyString);
+			File cardanoKeysNewKesSkeyFile = new File(cardanoKeysNewKesSkeyString);
+			
+			if(cardanoKeysNewKesVkeyFile.exists() || cardanoKeysNewKesSkeyFile.exists()) {
+				cardanoKeysNewKesVkeyFile.delete();
+				cardanoKeysNewKesSkeyFile.delete();
+				MessagePrompter.promptMessage(MessageFactory.getInstance().getMessage("기존의 KES Verification Key, KES, Signing Key를 삭제했습니다.", "M00126"), true);
 			}
 			
 			String command = null;
