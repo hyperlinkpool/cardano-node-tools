@@ -157,7 +157,7 @@ public class Step5 implements PoolRegisterResult, Ordered, JobProcess{
 					}
 				}else {
 					if(failureResultString.indexOf("ValueNotConservedUTxO") > -1) {
-						MessagePrompter.promptMessage(MessageFactory.getInstance().getMessage("현재 계좌에 ADA 잔고가 충분하지 않습니다. 100 ADA 정도 입금 후에 재시도 하시기 바랍니다.", "M00151"), true);
+						MessagePrompter.promptMessage(MessageFactory.getInstance().getMessage("현재 계좌에 ADA 잔고가 충분하지 않습니다. 10 ADA 정도 입금 후에 재시도 하시기 바랍니다.", "M00151"), true);
 					}else {
 						MessagePrompter.promptMessage(MessageFactory.getInstance().getMessage("Pool 등록에 실패하였습니다.", "M00094"), true);
 					}
