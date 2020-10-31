@@ -91,7 +91,7 @@ public class Step1 implements RewardsWithdrawResult, Ordered, JobProcess{
 		initializeProcessBuilder = CommandExecutor.initializeProcessBuilder(command);
 		JSONArray rewardsData = new JSONArray(initializeProcessBuilder.getSuccessResultString());
 		if(rewardsData.length() == 0) {
-			MessagePrompter.promptMessage(MessageFactory.getInstance().getMessage("Stake Key가 Blockchain에 등록되지 않았습니다. 키 생성 후 다시 시도하세요.", "M00002"), true);
+			MessagePrompter.promptMessage(MessageFactory.getInstance().getMessage("Stake Key가 Blockchain에 등록되지 않았습니다. 키 등록 후 다시 시도하세요.", "M00002"), true);
 			MessagePrompter.promptMessage(MessageFactory.getInstance().getMessage("(메인 메뉴 -> 3번 -> 1번 선택)", "M00003"), true);
 			rewardsWithdrawDomain.setNextOrder(StepOrder.EXIT.getStepOrder());
 			result.setSuccess(false);
