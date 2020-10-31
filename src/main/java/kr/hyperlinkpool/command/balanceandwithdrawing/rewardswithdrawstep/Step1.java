@@ -67,8 +67,13 @@ public class Step1 implements RewardsWithdrawResult, Ordered, JobProcess{
 			cardanoKeysProtocolJsonFile.delete();
 		}
 		command = CommandExecutor.generateCommand(NodeCommandFormats.GENERATE_PROTOCOL_FILE, cardanoCliName, cardanoKeysProtocolJsonString);
-		CommandExecutor.initializeProcessBuilder(command);
-		
+		ProcessResponse initializeProcessBuilder = CommandExecutor.initializeProcessBuilder(command);
+		if(initializeProcessBuilder.getFailureResultString() != null && initializeProcessBuilder.getFailureResultString().length() > 0) {
+			rewardsWithdrawDomain.setNextOrder(StepOrder.EXIT.getStepOrder());
+			result.setResponseData(rewardsWithdrawDomain);
+			result.setSuccess(false);
+			return;
+		}
 		/**
 		 * Stake 보상량 확인
 		 */
@@ -83,7 +88,7 @@ public class Step1 implements RewardsWithdrawResult, Ordered, JobProcess{
 		
 		String stakeAddressString = CommandExecutor.readFile(cardanoKeysStakeAddressPathString);
 		command = CommandExecutor.generateCommand(NodeCommandFormats.STAKE_ADDRESS_BALANCE_CHECK, cardanoCliName, stakeAddressString);
-		ProcessResponse initializeProcessBuilder = CommandExecutor.initializeProcessBuilder(command);
+		initializeProcessBuilder = CommandExecutor.initializeProcessBuilder(command);
 		JSONArray rewardsData = new JSONArray(initializeProcessBuilder.getSuccessResultString());
 		if(rewardsData.length() == 0) {
 			MessagePrompter.promptMessage(MessageFactory.getInstance().getMessage("Stake Key가 Blockchain에 등록되지 않았습니다. 키 생성 후 다시 시도하세요.", "M00002"), true);

@@ -295,7 +295,7 @@ public class NodeCommandFormats {
 			+ " shelley"
 			+ " stake-pool"
 			+ " id"
-			+ " --verification-key-file %s"
+			+ " --cold-verification-key-file %s"
 			+ " --output-format hex";
 	
 	public static final String POOL_REGISTRATION_YOUR_POOLID_IN_THE_NETWORK_LEDGER_STATE = ""

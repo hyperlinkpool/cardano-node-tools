@@ -65,7 +65,13 @@ public class Step1 implements WithdrawResult, Ordered, JobProcess{
 			cardanoKeysProtocolJsonFile.delete();
 		}
 		command = CommandExecutor.generateCommand(NodeCommandFormats.GENERATE_PROTOCOL_FILE, cardanoCliName, cardanoKeysProtocolJsonString);
-		CommandExecutor.initializeProcessBuilder(command);
+		ProcessResponse initializeProcessBuilder = CommandExecutor.initializeProcessBuilder(command);
+		if(initializeProcessBuilder.getFailureResultString() != null && initializeProcessBuilder.getFailureResultString().length() > 0) {
+			withdrawDomain.setNextOrder(StepOrder.EXIT.getStepOrder());
+			result.setResponseData(withdrawDomain);
+			result.setSuccess(false);
+			return;
+		}
 		
 		/**
 		 * 현재 풀 주소에서 ADA TxHash 추출
@@ -82,7 +88,7 @@ public class Step1 implements WithdrawResult, Ordered, JobProcess{
 		
 		String paymentAddressString = CommandExecutor.readFile(cardanoKeysPaymentAddressPathString);
 		command = CommandExecutor.generateCommand(NodeCommandFormats.PAYMENT_ADDRESS_BALANCE_CHECK, cardanoCliName, paymentAddressString);
-		ProcessResponse initializeProcessBuilder = CommandExecutor.initializeProcessBuilder(command);
+		initializeProcessBuilder = CommandExecutor.initializeProcessBuilder(command);
 		MessagePrompter.promptMessage(initializeProcessBuilder.getSuccessResultString(), true);
 		
 		List<Map<String,String>> parseTxHashList = CommandExecutor.parseTxHashString(initializeProcessBuilder.getSuccessResultString());
