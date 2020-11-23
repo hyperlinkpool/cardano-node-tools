@@ -21,7 +21,7 @@
 
 ## 진행중인 개발 목록(List of ongoing developments)
 ```jsx
-- Withdrawing rewards 개발중(on development)
+- ...
 ```
 
 ## Supported OS
