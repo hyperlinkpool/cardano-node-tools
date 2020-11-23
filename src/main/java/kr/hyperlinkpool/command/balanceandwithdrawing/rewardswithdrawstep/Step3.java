@@ -77,7 +77,7 @@ private RewardsWithdrawDomain rewardsWithdrawDomain;
 			JSONObject mainnetCurrentTipJsonObject = new JSONObject(mainnetCurrentTip);
 			int slotNo = mainnetCurrentTipJsonObject.getInt("slotNo");
 			
-			String ttl = String.valueOf(slotNo+200);
+			String ttl = String.valueOf(slotNo+1000);
 			
 			String txRawFilePath = cardanoKeysFolderString + NodeConstants.PATH_DELIMITER + NodeProperties.getString("cardano.keys.tx.raw");
 			
