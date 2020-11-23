@@ -62,10 +62,9 @@ private RewardsWithdrawDomain rewardsWithdrawDomain;
 		long withdrawableAmount = rewardsWithdrawDomain.getWithdrawableAmount();
 		List<Map<String,String>> parseTxHashList = rewardsWithdrawDomain.getParseTxHashList();
 		long sumLovelace = CommandExecutor.sumLoveLaceOnTxList(parseTxHashList);
-		
-		MessagePrompter.promptMessage(MessageFactory.getInstance().getMessage("인출 가능한 Rewards 수량 : %s" + NodeConstants.POSTFIX_LOVELACE, "M00007", String.valueOf(rewardsWithdrawDomain.getWithdrawableAmount())), true);
+		MessagePrompter.promptMessage(MessageFactory.getInstance().getMessage("인출 가능한 Rewards 수량 : %s" + NodeConstants.POSTFIX_LOVELACE, "M00007", String.valueOf(withdrawableAmount)), true);
 		try {
-			long withdrawAmount = rewardsWithdrawDomain.getWithdrawableAmount();
+			long withdrawAmount = withdrawableAmount;
 			
 			String txIn = CommandExecutor.getTxInDataOnTxList(parseTxHashList);
 			/**
