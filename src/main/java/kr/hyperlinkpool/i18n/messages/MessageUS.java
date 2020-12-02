@@ -210,7 +210,7 @@ public class MessageUS {
 		messageFormats.put("M00172", "Failed to register for pool retirement.");
 		messageFormats.put("M00173", "Please enter a wallet address.(ex. Ddz... , Ae2... , addr1...)");
 		messageFormats.put("M00174", "Please enter a stake address.(ex. stake1... )");
-		messageFormats.put("M00175", "It's Not a Block Producer. But you can proceed KES Key Roation if you have the relevant Keys (KES singing key, Cold signing key, Cold Counter key).");
+		messageFormats.put("M00175", "It's Not a Block Producer. But you can proceed KES Key Rotation if you have the relevant Keys (KES singing key, Cold signing key, Cold Counter key).");
 		messageFormats.put("M00176", "Are you preceed KES Key Rotation on this node?(Y/n) :");
 		messageFormats.put("E99999", "It is under development.");
 	}

@@ -42,7 +42,7 @@ public class KesKeyRotateHandler extends AbstractCommandHandler{
 			remainingKesPeriods = Integer.parseInt(cardanoCoreNodeMetricsInfo.get(NodeConstants.CARDANO_NODE_FORGE_METRICS_REMAINING_KES_PERIODS_INT_KEY));
 		} catch (Exception e) {
 			MessagePrompter.promptMessage("", true);
-			MessagePrompter.promptMessage(MessageFactory.getInstance().getMessage("Block Producer가 아닙니다. Block Producer가 아닐 경우, 관련 Key(KES singing key, Cold signing key, Cold Counter key)가 있다면 KES Roation을 진행할 수 있습니다.", "M00175"), true);
+			MessagePrompter.promptMessage(MessageFactory.getInstance().getMessage("Block Producer가 아닙니다. Block Producer가 아닐 경우, 관련 Key(KES singing key, Cold signing key, Cold Counter key)가 있다면 KES Rotation을 진행할 수 있습니다.", "M00175"), true);
 			String isPreceedNotCoreNodeCommand = CommandListener.getInstance().listenCommand(MessageFactory.getInstance().getMessage("현재 Node에서 KES Rotation을 진행하시겠습니까? (Y/n) : ", "M00176"), false);
 			if("Y".equalsIgnoreCase(isPreceedNotCoreNodeCommand)) {
 				isPreceedNotCoreNode = true;
