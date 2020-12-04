@@ -132,7 +132,7 @@ public class MessageUS {
 		messageFormats.put("M00123", "- KES Key Remaining Periods: ");
 		messageFormats.put("M00124", "- About %s %% of KES Key Periods remain.");
 		messageFormats.put("M00125", "Do you want to proceed with KES Key Rotation?.(Y/n) : ");
-		messageFormats.put("M00126", "We have deleted the existing KES Verification Key, KES, and Signing Key.");
+		messageFormats.put("M00126", "We have deleted old KES Verification Key and old KES Signing Key.");
 		messageFormats.put("M00127", "New KES Verification Key, KES Signing Key have been created.");
 		messageFormats.put("M00128", "The Node Certificate file with the new KES Period applied has been created.");
 		messageFormats.put("M00129", "After copying the new KES Signing Key and Node Certificate file to the Block Producer node Config path, restart Block Producer.");

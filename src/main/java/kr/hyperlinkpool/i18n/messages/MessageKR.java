@@ -132,7 +132,7 @@ public class MessageKR {
 		messageFormats.put("M00123", "- KES Key 잔여 Periods : ");
 		messageFormats.put("M00124", "- KES Key 잔여 Periods가 약 %s %% 남았습니다.");
 		messageFormats.put("M00125", "KES Key Rotation을 진행하시겠습니까?.(Y / n) : ");
-		messageFormats.put("M00126", "기존의 KES Verification Key, KES, Signing Key를 삭제했습니다.");
+		messageFormats.put("M00126", "기존의 KES Verification Key, KES Signing Key를 삭제했습니다.");
 		messageFormats.put("M00127", "신규 KES Verification Key, KES Signing Key가 생성되었습니다.");
 		messageFormats.put("M00128", "신규 KES Period가 적용된 Node Certificate파일이 생성되었습니다.");
 		messageFormats.put("M00129", "신규 KES Signing Key와 Node Certificate파일을 Block Producer노드 Config 경로에 복사한 후 Block Producer를 재시작 해주세요.");

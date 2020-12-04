@@ -126,7 +126,7 @@ public class KesKeyRotateHandler extends AbstractCommandHandler{
 			if(cardanoKeysNewKesVkeyFile.exists() || cardanoKeysNewKesSkeyFile.exists()) {
 				cardanoKeysNewKesVkeyFile.delete();
 				cardanoKeysNewKesSkeyFile.delete();
-				MessagePrompter.promptMessage(MessageFactory.getInstance().getMessage("기존의 KES Verification Key, KES, Signing Key를 삭제했습니다.", "M00126"), true);
+				MessagePrompter.promptMessage(MessageFactory.getInstance().getMessage("기존의 KES Verification Key, KES Signing Key를 삭제했습니다.", "M00126"), true);
 			}
 			
 			String command = null;
