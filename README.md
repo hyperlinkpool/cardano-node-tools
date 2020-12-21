@@ -1,4 +1,7 @@
 # Introduction
+
+**Cardano Node Version 1.24.2 compatible, Allegra Era compatible**
+
 - 안녕하세요. 한국 카르다노 Stake Pool Operator HYPER입니다. 노드 설치 후에 셋팅과 관리를 도와주는 서버용 지갑을 제작하게 되었습니다.(Dear Community. This is Korea Cardano Stake Pool Operator a.k.a. HYPER. We have created a wallet for the server that helps setting and management after installing the node.)
 
 - ADA 송수신, ADA Rewards 인출, [Stake Pool 위임, 철회], [Pool 등록, 철회]등 Cardano 노드에서 사용하는 지갑입니다.(It is a wallet used by Cardano nodes such as ADA transmission and reception, ADA Rewards withdrawal, [Stake Pool delegation, withdrawal], and [Pool registration, withdrawal], etc.)

@@ -4,7 +4,6 @@ public class NodeCommandFormats {
 
 	public static final String PAYMENT_KEY_PAIR = ""
 			+ "%s"
-			+ " shelley"
 			+ " address"
 			+ " key-gen"
 			+ " --verification-key-file %s"
@@ -12,7 +11,6 @@ public class NodeCommandFormats {
 	
 	public static final String STAKE_KEY_PAIR = ""
 			+ "%s"
-			+ " shelley"
 			+ " stake-address"
 			+ " key-gen"
 			+ " --verification-key-file %s"
@@ -20,57 +18,55 @@ public class NodeCommandFormats {
 	
 	public static final String PAYMENT_ADDRESS = ""
 			+ "%s"
-			+ " shelley"
 			+ " address"
 			+ " build"
 			+ " --payment-verification-key-file %s"
 			+ " --stake-verification-key-file %s"
 			+ " --out-file %s"
-			+ " --mainnet";
+			+ " --mainnet"
+			+ " --allegra-era";
 
 	public static final String STAKE_ADDRESS = ""
 			+ "%s"
-			+ " shelley"
 			+ " stake-address"
 			+ " build"
 			+ " --stake-verification-key-file %s"
 			+ " --out-file %s"
-			+ " --mainnet";
+			+ " --mainnet"
+			+ " --allegra-era";
 	
 	public static final String PAYMENT_ADDRESS_BALANCE_CHECK = ""
 			+ "%s"
-			+ " shelley"
 			+ " query"
 			+ " utxo"
 			+ " --address %s"
-			+ " --mainnet";
+			+ " --mainnet"
+			+ " --allegra-era";
 	
 	public static final String STAKE_ADDRESS_BALANCE_CHECK = ""
 			+ "%s"
-			+ " shelley"
 			+ " query"
 			+ " stake-address-info"
 			+ " --mainnet"
+			+ " --allegra-era"
 			+ " --address %s";
 	
 	public static final String MAINNET_CURRENT_TIP = ""
 			+ "%s"
-			+ " shelley"
 			+ " query"
 			+ " tip"
 			+ " --mainnet";
 	
 	public static final String GENERATE_PROTOCOL_FILE = ""
 			+ "%s"
-			+ " shelley"
 			+ " query"
 			+ " protocol-parameters"
 			+ " --mainnet"
+			+ " --allegra-era"
 			+ " --out-file %s";
 
 	public static final String DRAFT_TRANSACTION = ""
 			+ "%s"
-			+ " shelley"
 			+ " transaction"
 			+ " build-raw"
 			+ " %s"
@@ -81,7 +77,6 @@ public class NodeCommandFormats {
 	
 	public static final String CALCULATE_FEE = ""
 			+ "%s"
-			+ " shelley"
 			+ " transaction"
 			+ " calculate-min-fee"
 			+ " --tx-body-file %s"
@@ -94,7 +89,6 @@ public class NodeCommandFormats {
 	
 	public static final String BUILD_THE_TRANSACTION = ""
 			+ "%s"
-			+ " shelley"
 			+ " transaction"
 			+ " build-raw"
 			+ " %s"
@@ -105,7 +99,6 @@ public class NodeCommandFormats {
 	
 	public static final String SIGN_THE_TRANSACTION = ""
 			+ "%s"
-			+ " shelley"
 			+ " transaction"
 			+ " sign"
 			+ " --tx-body-file %s"
@@ -115,7 +108,6 @@ public class NodeCommandFormats {
 	
 	public static final String SUBMIT_TRANSACTION = ""
 			+ "%s"
-			+ " shelley"
 			+ " transaction"
 			+ " submit"
 			+ " --tx-file %s"
@@ -123,7 +115,6 @@ public class NodeCommandFormats {
 	
 	public static final String STAKE_POOL_CREATE_A_REGISTRATION_CERTIFICATE = ""
 			+ "%s"
-			+ " shelley"
 			+ " stake-address"
 			+ " registration-certificate"
 			+ " --stake-verification-key-file %s"
@@ -131,7 +122,6 @@ public class NodeCommandFormats {
 	
 	public static final String STAKE_POOL_DEREGISTRATION_CERTIFICATE = ""
 			+ "%s"
-			+ " shelley"
 			+ " stake-address"
 			+ " deregistration-certificate"
 			+ " --stake-verification-key-file %s"
@@ -139,7 +129,6 @@ public class NodeCommandFormats {
 	
 	public static final String STAKE_POOL_DELEGATE_STAKE_CERTIFICATE = ""
 			+ "%s"
-			+ " shelley"
 			+ " stake-address"
 			+ " delegation-certificate"
 			+ " --stake-verification-key-file %s"
@@ -148,7 +137,6 @@ public class NodeCommandFormats {
 			
 	public static final String STAKE_POOL_DRAFT_TRANSACTION = ""
 			+ "%s"
-			+ " shelley"
 			+ " transaction"
 			+ " build-raw"
 			+ " %s"
@@ -160,7 +148,6 @@ public class NodeCommandFormats {
 	
 	public static final String STAKE_POOL_SUBMIT_THE_CERTIFICATE_WITH_A_TRANSACTION = ""
 			+ "%s"
-			+ " shelley"
 			+ " transaction"
 			+ " build-raw"
 			+ " %s"
@@ -172,7 +159,6 @@ public class NodeCommandFormats {
 	
 	public static final String STAKE_POOL_SIGN_THE_TRACSACTION = ""
 			+ "%s"
-			+ " shelley"
 			+ " transaction"
 			+ " sign"
 			+ " --tx-body-file %s"
@@ -183,7 +169,6 @@ public class NodeCommandFormats {
 	
 	public static final String POOL_REGISTRATION_GENERATE_COLD_KEY_AND_COLD_COUNTER = ""
 			+ "%s"
-			+ " shelley"
 			+ " node"
 			+ " key-gen"
 			+ " --cold-verification-key-file %s"
@@ -192,7 +177,6 @@ public class NodeCommandFormats {
 	
 	public static final String POOL_REGISTRATION_GENERATE_VRF_KEY_PAIR = ""
 			+ "%s"
-			+ " shelley"
 			+ " node"
 			+ " key-gen-VRF"
 			+ " --verification-key-file %s"
@@ -200,7 +184,6 @@ public class NodeCommandFormats {
 	
 	public static final String POOL_REGISTRATION_GENERATE_KES_KEY_PAIR = ""
 			+ "%s"
-			+ " shelley"
 			+ " node"
 			+ " key-gen-KES"
 			+ " --verification-key-file %s"
@@ -208,7 +191,6 @@ public class NodeCommandFormats {
 	
 	public static final String POOL_REGISTRATION_GENERATE_CERTIFICATE = ""
 			+ "%s"
-			+ " shelley"
 			+ " node"
 			+ " issue-op-cert"
 			+ " --kes-verification-key-file %s"
@@ -219,7 +201,6 @@ public class NodeCommandFormats {
 	
 	public static final String POOL_REGISTRATION_GENERATE_METADATA_HASH = ""
 			+ "%s"
-			+ " shelley"
 			+ " stake-pool"
 			+ " metadata-hash"
 			+ " --pool-metadata-file"
@@ -227,7 +208,6 @@ public class NodeCommandFormats {
 	
 	public static final String POOL_REGISTRATION_GENERATE_STAKE_POOL_REGISTRATION_CERTIFICATE = ""
 			+ "%s"
-			+ " shelley"
 			+ " stake-pool"
 			+ " registration-certificate"
 			+ " --cold-verification-key-file %s"
@@ -245,7 +225,6 @@ public class NodeCommandFormats {
 
 	public static final String POOL_REGISTRATION_GENERATE_DELEGATION_CERTIFICATE_PLEDGE = ""
 			+ "%s"
-			+ " shelley"
 			+ " stake-address"
 			+ " delegation-certificate"
 			+ " --stake-verification-key-file %s"
@@ -254,7 +233,6 @@ public class NodeCommandFormats {
 	
 	public static final String POOL_REGISTRATION_DRAFT_THE_TRANSACTION = ""
 			+ "%s"
-			+ " shelley"
 			+ " transaction"
 			+ " build-raw"
 			+ " %s"
@@ -267,7 +245,6 @@ public class NodeCommandFormats {
 	
 	public static final String POOL_REGISTRATION_BUILD_THE_TRANSACTION = ""
 			+ "%s"
-			+ " shelley"
 			+ " transaction"
 			+ " build-raw"
 			+ " %s"
@@ -280,7 +257,6 @@ public class NodeCommandFormats {
 	
 	public static final String POOL_REGISTRATION_SIGN_THE_TRANSACTION = ""
 			+ "%s"
-			+ " shelley"
 			+ " transaction"
 			+ " sign"
 			+ " --tx-body-file %s"
@@ -292,7 +268,6 @@ public class NodeCommandFormats {
 	
 	public static final String POOL_REGISTRATION_GET_POOL_ID = ""
 			+ "%s"
-			+ " shelley"
 			+ " stake-pool"
 			+ " id"
 			+ " --cold-verification-key-file %s"
@@ -300,10 +275,10 @@ public class NodeCommandFormats {
 	
 	public static final String POOL_REGISTRATION_YOUR_POOLID_IN_THE_NETWORK_LEDGER_STATE = ""
 			+ "%s"
-			+ " shelley"
 			+ " query"
 			+ " ledger-state"
 			+ " --mainnet"
+			+ " --allegra-era"
 			+ " | grep"
 			+ " publicKey"
 			+ " | grep"
@@ -311,15 +286,14 @@ public class NodeCommandFormats {
 	
 	public static final String WITHDRAWING_REWARDS_BALANCE_CHECK = ""
 			+ "%s"
-			+ " shelley"
 			+ " query"
 			+ " stake-address-info"
 			+ " --mainnet"
+			+ " --allegra-era"
 			+ " --address %s";
 	
 	public static final String WITHDRAWING_REWARDS_BUILD_DRAFT_TRANSACTION = ""
 			+ "%s"
-			+ " shelley"
 			+ " transaction"
 			+ " build-raw"
 			+ " %s"
@@ -331,7 +305,6 @@ public class NodeCommandFormats {
 	
 	public static final String WITHDRAWING_REWARDS_BUILD_THE_RAW_TRANSACTION = ""
 			+ "%s"
-			+ " shelley"
 			+ " transaction"
 			+ " build-raw"
 			+ " %s"
@@ -343,7 +316,6 @@ public class NodeCommandFormats {
 	
 	public static final String WITHDRAWING_REWARDS_SIGN_THE_TRANSACTIONS = ""
 			+ "%s"
-			+ " shelley"
 			+ " transaction"
 			+ " sign"
 			+ " --mainnet"
@@ -355,7 +327,6 @@ public class NodeCommandFormats {
 	
 	public static final String POOL_DEREGIST_CREATE_DEREGISTRATION_CERTIFICATE = ""
 			+ "%s"
-			+ " shelley"
 			+ " stake-pool"
 			+ " deregistration-certificate"
 			+ " --cold-verification-key-file %s"
@@ -364,7 +335,6 @@ public class NodeCommandFormats {
 	
 	public static final String POOL_DEREGIST_DRAFT_THE_TRANSACTION = ""
 			+ "%s"
-			+ " shelley"
 			+ " transaction"
 			+ " build-raw"
 			+ " %s"
@@ -376,7 +346,6 @@ public class NodeCommandFormats {
 
 	public static final String POOL_DEREGIST_BUILD_THE_TRANSACTION = ""
 			+ "%s"
-			+ " shelley"
 			+ " transaction"
 			+ " build-raw"
 			+ " %s"
@@ -388,7 +357,6 @@ public class NodeCommandFormats {
 	
 	public static final String POOL_DEREGIST_SIGN_THE_TRANSACTION = ""
 			+ "%s"
-			+ " shelley"
 			+ " transaction"
 			+ " sign"
 			+ " --tx-body-file %s"
