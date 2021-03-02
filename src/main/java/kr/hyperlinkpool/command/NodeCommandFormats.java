@@ -24,7 +24,7 @@ public class NodeCommandFormats {
 			+ " --stake-verification-key-file %s"
 			+ " --out-file %s"
 			+ " --mainnet"
-			+ " --allegra-era";
+			+ " --mary-era";
 
 	public static final String STAKE_ADDRESS = ""
 			+ "%s"
@@ -33,7 +33,7 @@ public class NodeCommandFormats {
 			+ " --stake-verification-key-file %s"
 			+ " --out-file %s"
 			+ " --mainnet"
-			+ " --allegra-era";
+			+ " --mary-era";
 	
 	public static final String PAYMENT_ADDRESS_BALANCE_CHECK = ""
 			+ "%s"
@@ -41,14 +41,14 @@ public class NodeCommandFormats {
 			+ " utxo"
 			+ " --address %s"
 			+ " --mainnet"
-			+ " --allegra-era";
+			+ " --mary-era";
 	
 	public static final String STAKE_ADDRESS_BALANCE_CHECK = ""
 			+ "%s"
 			+ " query"
 			+ " stake-address-info"
 			+ " --mainnet"
-			+ " --allegra-era"
+			+ " --mary-era"
 			+ " --address %s";
 	
 	public static final String MAINNET_CURRENT_TIP = ""
@@ -62,7 +62,7 @@ public class NodeCommandFormats {
 			+ " query"
 			+ " protocol-parameters"
 			+ " --mainnet"
-			+ " --allegra-era"
+			+ " --mary-era"
 			+ " --out-file %s";
 
 	public static final String DRAFT_TRANSACTION = ""
@@ -278,7 +278,7 @@ public class NodeCommandFormats {
 			+ " query"
 			+ " ledger-state"
 			+ " --mainnet"
-			+ " --allegra-era"
+			+ " --mary-era"
 			+ " | grep"
 			+ " publicKey"
 			+ " | grep"
@@ -289,7 +289,7 @@ public class NodeCommandFormats {
 			+ " query"
 			+ " stake-address-info"
 			+ " --mainnet"
-			+ " --allegra-era"
+			+ " --mary-era"
 			+ " --address %s";
 	
 	public static final String WITHDRAWING_REWARDS_BUILD_DRAFT_TRANSACTION = ""
