@@ -1,6 +1,6 @@
 # Introduction
 
-**Cardano Node Version 1.25.1 compatible, Mary Era compatible**
+**Cardano Node Version 1.27.0 compatible, Mary Era compatible**
 
 - 안녕하세요. 한국 카르다노 Stake Pool Operator HYPER입니다. 노드 설치 후에 셋팅과 관리를 도와주는 서버용 지갑을 제작하게 되었습니다.(Dear Community. This is Korea Cardano Stake Pool Operator a.k.a. HYPER. We have created a wallet for the server that helps setting and management after installing the node.)
 
