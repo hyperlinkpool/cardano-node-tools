@@ -73,7 +73,7 @@ public class Step4 implements DeRegisterPoolResult, Ordered, JobProcess{
 			String cardanoKeysFolderString = NodeProperties.getString("cardano.keys.folder");
 			String mainnetCurrentTip = CommandExecutor.mainnetCurrentTip();
 			JSONObject mainnetCurrentTipJsonObject = new JSONObject(mainnetCurrentTip);
-			int slotNo = mainnetCurrentTipJsonObject.getInt("slotNo");
+			int slotNo = mainnetCurrentTipJsonObject.getInt("slot");
 			String ttl = String.valueOf(slotNo+200);
 			String txRawFilePath = cardanoKeysFolderString + NodeConstants.PATH_DELIMITER + NodeProperties.getString("cardano.keys.tx.raw");
 			String cardanoKeysPoolDeRegistrationCertFileString = cardanoKeysFolderString + NodeConstants.PATH_DELIMITER + NodeProperties.getString("cardano.keys.pool.deregistration.cert");

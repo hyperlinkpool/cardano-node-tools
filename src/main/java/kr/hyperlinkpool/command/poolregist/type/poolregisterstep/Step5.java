@@ -81,7 +81,7 @@ public class Step5 implements PoolRegisterResult, Ordered, JobProcess{
 			
 			String mainnetCurrentTip = CommandExecutor.mainnetCurrentTip();
 			JSONObject mainnetCurrentTipJsonObject = new JSONObject(mainnetCurrentTip);
-			int slotNo = mainnetCurrentTipJsonObject.getInt("slotNo");
+			int slotNo = mainnetCurrentTipJsonObject.getInt("slot");
 			
 			String ttl = String.valueOf(slotNo+200);
 			

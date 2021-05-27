@@ -73,7 +73,7 @@ private RegisterStakeDomain registerStakeDomain;
 			
 			String mainnetCurrentTip = CommandExecutor.mainnetCurrentTip();
 			JSONObject mainnetCurrentTipJsonObject = new JSONObject(mainnetCurrentTip);
-			int slotNo = mainnetCurrentTipJsonObject.getInt("slotNo");
+			int slotNo = mainnetCurrentTipJsonObject.getInt("slot");
 			
 			String ttl = String.valueOf(slotNo+200);
 			

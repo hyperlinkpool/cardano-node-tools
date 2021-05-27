@@ -156,7 +156,7 @@ public class KesKeyRotateHandler extends AbstractCommandHandler{
 			
 			String mainnetCurrentTipResultString = CommandExecutor.mainnetCurrentTip();
 			JSONObject mainnetCurrentTipJsonObject = new JSONObject(mainnetCurrentTipResultString);
-			int slotNo = mainnetCurrentTipJsonObject.getInt("slotNo");
+			int slotNo = mainnetCurrentTipJsonObject.getInt("slot");
 			/**
 			 * 1 Epoch를 빼주라고 한다.
 			 */

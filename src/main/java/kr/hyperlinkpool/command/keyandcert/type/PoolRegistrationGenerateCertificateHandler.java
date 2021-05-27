@@ -73,7 +73,7 @@ public class PoolRegistrationGenerateCertificateHandler extends AbstractCommandH
 		
 		String mainnetCurrentTipResultString = CommandExecutor.mainnetCurrentTip();
 		JSONObject mainnetCurrentTipJsonObject = new JSONObject(mainnetCurrentTipResultString);
-		int slotNo = mainnetCurrentTipJsonObject.getInt("slotNo");
+		int slotNo = mainnetCurrentTipJsonObject.getInt("slot");
 		int resultKesPeriod = slotNo / slotsPerKESPeriod;
 		
 		String command = null;
