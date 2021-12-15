@@ -137,7 +137,7 @@ public class Step2 implements RegisterStakeResult, Ordered, JobProcess{
 		 */
 		String cardanoKeysProtocolJsonFileReadFile = CommandExecutor.readFile(cardanoKeysProtocolJsonString);
 		JSONObject protocolJsonObject = new JSONObject(cardanoKeysProtocolJsonFileReadFile);
-		long keyDeposit = protocolJsonObject.getLong("keyDeposit");
+		long keyDeposit = protocolJsonObject.getLong(NodeConstants.STAKE_ADDRESS_DEPOSIT_KEY);
 		
 		/**
 		 * 현재 보유량에서 fee, keyDeposit을 제했을 때 총량이 0보다 낮으면 등록 불가. 

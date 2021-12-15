@@ -20,10 +20,11 @@ public class PoolRegistContextMenu implements JobProcess, Menu{
 			+ "2. Stake Key 철회(보증금으로 등록한 2ADA를 돌려 받을 수 있습니다.)\n"
 			+ "3. Stake Key를 Pool에 위임\n"
 			+ "4. Metadata JSON 파일 생성\n"
-			+ "5. Pool 등록 또는 갱신 (Stake Key를 먼저 등록해야 하며, Pool 등록은 500ADA가 소요되고, 이 후 갱신 시부터는 전송 수수료만 추가 소요됩니다.)\n"
-			+ "6. Pool 철회 (보증금으로 등록한 500ADA를 돌려 받을 수 있습니다.)\n"
-			+ "7. Pool 등록 상태 확인\n"
-			+ "8. KES Key Rotation\n"
+			+ "5. Pool 등록 (Stake Key를 먼저 등록해야 하며, Pool 등록은 500ADA가 소요되고, 이 후 갱신 시부터는 전송 수수료만 추가 소요됩니다.)\n"
+			+ "6. Pool 수정\n"
+			+ "7. Pool 철회 (보증금으로 등록한 500ADA를 돌려 받을 수 있습니다.)\n"
+			+ "8. Pool 등록 상태 확인\n"
+			+ "9. KES Key Rotation\n"
 			+ "99. 뒤로 가기", "M00138");
 	
 	private boolean menuRunningState = false;
@@ -75,6 +76,9 @@ public class PoolRegistContextMenu implements JobProcess, Menu{
 					break;
 				case REGISTER_POOL:
 					processResultDomain = CommandFactory.INSTANCE.createCommandHandler(NodeCommands.REGISTER_POOL_HANDLER).handleCommand(command);
+					break;
+				case MODIFY_POOL:
+					processResultDomain = CommandFactory.INSTANCE.createCommandHandler(NodeCommands.MODIFY_POOL_HANDLER).handleCommand(command);
 					break;
 				case DEREGISTER_POOL:
 					processResultDomain = CommandFactory.INSTANCE.createCommandHandler(NodeCommands.DEREGISTER_POOL_HANDLER).handleCommand(command);

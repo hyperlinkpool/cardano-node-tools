@@ -9,6 +9,8 @@ public class NodeConstants {
 	public static final String DEFAULT_LANGUAGE = "ko";
 	
 	public static final long POOL_COST_MINIMUM = 340000000L	;
+	public static final String STAKE_ADDRESS_DEPOSIT_KEY = "stakeAddressDeposit";
+	public static final String STAKE_POOL_DEPOSIT_KEY = "stakePoolDeposit";
 	
 	public static final String CARDANO_NODE_FORGE_METRICS_OPERATIONAL_CERTIFICATE_START_KES_PERIOD_INT_KEY = "cardano_node_Forge_metrics_operationalCertificateStartKESPeriod_int";
 	public static final String CARDANO_NODE_FORGE_METRICS_OPERATIONAL_CERTIFICATE_EXPIRY_KES_PERIOD_INT_KEY = "cardano_node_Forge_metrics_operationalCertificateExpiryKESPeriod_int";

@@ -1,8 +1,28 @@
 package kr.hyperlinkpool.command;
 
-import kr.hyperlinkpool.command.keyandcert.type.*;
-import kr.hyperlinkpool.command.balanceandwithdrawing.type.*;
-import kr.hyperlinkpool.command.poolregist.type.*;
+import kr.hyperlinkpool.command.balanceandwithdrawing.type.BalanceCheckAnotherAddressAdaHandler;
+import kr.hyperlinkpool.command.balanceandwithdrawing.type.BalanceCheckAnotherStakePoolRewardsHandler;
+import kr.hyperlinkpool.command.balanceandwithdrawing.type.BalanceCheckStakePoolAdaHandler;
+import kr.hyperlinkpool.command.balanceandwithdrawing.type.BalanceCheckStakePoolRewardsHandler;
+import kr.hyperlinkpool.command.balanceandwithdrawing.type.CurrentStakePoolAdaWithdrawingHandler;
+import kr.hyperlinkpool.command.balanceandwithdrawing.type.CurrentStakePoolRewardsWithdrawingHandler;
+import kr.hyperlinkpool.command.keyandcert.type.PaymentAddressHandler;
+import kr.hyperlinkpool.command.keyandcert.type.PaymentKeyPairHandler;
+import kr.hyperlinkpool.command.keyandcert.type.PoolRegistrationGenerateCertificateHandler;
+import kr.hyperlinkpool.command.keyandcert.type.PoolRegistrationGenerateColdKeyAndColdCounterHandler;
+import kr.hyperlinkpool.command.keyandcert.type.PoolRegistrationGenerateKesKeyPairHandler;
+import kr.hyperlinkpool.command.keyandcert.type.PoolRegistrationGenerateVrfKeyPairHandler;
+import kr.hyperlinkpool.command.keyandcert.type.StakeAddressHandler;
+import kr.hyperlinkpool.command.keyandcert.type.StakeKeyPairHandler;
+import kr.hyperlinkpool.command.poolregist.type.DeRegisterPoolHandler;
+import kr.hyperlinkpool.command.poolregist.type.DeRegisterStakeAddressOnTheBlockchainHandler;
+import kr.hyperlinkpool.command.poolregist.type.DelegateStakeAddressOnPoolHandler;
+import kr.hyperlinkpool.command.poolregist.type.GenerateMetaJsonHandler;
+import kr.hyperlinkpool.command.poolregist.type.KesKeyRotateHandler;
+import kr.hyperlinkpool.command.poolregist.type.PoolStatusHandler;
+import kr.hyperlinkpool.command.poolregist.type.RegisterPoolHandler;
+import kr.hyperlinkpool.command.poolregist.type.ModifyPoolHandler;
+import kr.hyperlinkpool.command.poolregist.type.RegisterStakeAddressOnTheBlockchainHandler;
 
 public enum NodeCommands {
 	
@@ -28,6 +48,7 @@ public enum NodeCommands {
 	,DELEGATE_STAKE_ADDRESS_ON_POOL_HANDLER(DelegateStakeAddressOnPoolHandler.class)
 	,GENERATE_META_JSON_HANDLER(GenerateMetaJsonHandler.class)
 	,REGISTER_POOL_HANDLER(RegisterPoolHandler.class)
+	,MODIFY_POOL_HANDLER(ModifyPoolHandler.class)
 	,DEREGISTER_POOL_HANDLER(DeRegisterPoolHandler.class)
 	,POOL_STATUS_HANDLER(PoolStatusHandler.class)
 	,KES_KEY_ROTATE_HANDLER(KesKeyRotateHandler.class)

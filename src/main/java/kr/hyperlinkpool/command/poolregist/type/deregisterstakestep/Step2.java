@@ -153,7 +153,7 @@ public class Step2 implements DeRegisterStakeAddressResult, Ordered, JobProcess{
 		 */
 		String cardanoKeysProtocolJsonFileReadFile = CommandExecutor.readFile(cardanoKeysProtocolJsonString);
 		JSONObject protocolJsonObject = new JSONObject(cardanoKeysProtocolJsonFileReadFile);
-		long keyDeposit = protocolJsonObject.getLong("keyDeposit");
+		long keyDeposit = protocolJsonObject.getLong(NodeConstants.STAKE_ADDRESS_DEPOSIT_KEY);
 		
 		/**
 		 * 돌려받는 보증금과 수수료를 제외한 txOut설정

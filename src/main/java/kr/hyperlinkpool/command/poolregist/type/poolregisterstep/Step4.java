@@ -195,7 +195,7 @@ public class Step4 implements PoolRegisterResult, Ordered, JobProcess{
 		 */
 		String cardanoKeysProtocolJsonFileReadFile = CommandExecutor.readFile(cardanoKeysProtocolJsonString);
 		JSONObject protocolJsonObject = new JSONObject(cardanoKeysProtocolJsonFileReadFile);
-		long poolDeposit = protocolJsonObject.getLong("poolDeposit");
+		long poolDeposit = protocolJsonObject.getLong(NodeConstants.STAKE_POOL_DEPOSIT_KEY);
 		
 		/**
 		 * Pool이 등록된 상태이면 현재 프로세스는 갱신이기 때문에 poolDeposit이 필요하지 않으므로 0으로 셋팅

@@ -111,7 +111,7 @@ public class Step5 implements PoolRegisterResult, Ordered, JobProcess{
 			
 			String failureResultString = initializeProcessBuilder.getFailureResultString();
 			MessagePrompter.promptMessage(failureResultString, true);
-			if(failureResultString.indexOf("Shelley command failed") > -1) {
+			if(failureResultString.indexOf("ShelleyTxValidationError") > -1) {
 				if(failureResultString.indexOf("FeeTooSmallUTxO") > -1) {
 					/**
 					 * 수수료 부족일 경우 수수료만 입력한 수수료로 재시도한다.

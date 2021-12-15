@@ -98,7 +98,7 @@ public class Step3 implements DeRegisterPoolResult, Ordered, JobProcess{
 		String cardanoKeysProtocolJsonString = cardanoKeysFolderString + NodeConstants.PATH_DELIMITER + NodeProperties.getString("cardano.keys.protocol.json");
 		String cardanoKeysProtocolJsonFileReadFile = CommandExecutor.readFile(cardanoKeysProtocolJsonString);
 		JSONObject protocolJsonObject = new JSONObject(cardanoKeysProtocolJsonFileReadFile);
-		long poolDeposit = protocolJsonObject.getLong("poolDeposit");
+		long poolDeposit = protocolJsonObject.getLong(NodeConstants.STAKE_POOL_DEPOSIT_KEY);
 		deRegisterPoolDomain.setPoolDeposit(poolDeposit);
 		
 		/**
