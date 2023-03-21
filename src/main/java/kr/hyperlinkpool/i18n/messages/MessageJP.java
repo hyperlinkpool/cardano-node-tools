@@ -110,7 +110,7 @@ public class MessageJP {
 		messageFormats.put("M00101", "StakeのKeyを登録しますか？(Y/n) : ");
 		messageFormats.put("M00102", "Stakeのeyの登録に失敗しました。");
 		messageFormats.put("M00103", "プールの登録用のMetaDataの作成を行います。");
-		messageFormats.put("M00104", "예시) [HYPER] プール");
+		messageFormats.put("M00104", "例) [HYPER] プール");
 		messageFormats.put("M00105", "プールの名 : Hyperlink Pool");
 		messageFormats.put("M00106", "プールの説明 : We prepare for the era of hyperconnectivitydelegateStakeAddressDomain.setNextOrder(StepOrder.EXIT.getStepOrder());\n"
 				+ "			result.setSuccess(false);。");
